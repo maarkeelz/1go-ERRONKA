@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrari Gida | Dokumentazioa - SISA 1</title>
+  <link rel="stylesheet" href="../css/estiloak.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-kontenedorea">
+      <a href="../index.html" class="logo-blokea">
+        <img src="../irudiak/orokorrak/logo.svg" alt="Logoa">
+        <span>SISA 1 - 6. TALDEA</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Hasiera</a></li>
+          <li><a href="../sareak.html">Sareak</a></li>
+          <li><a href="../datu-baseak.html">Datu-baseak</a></li>
+          <li><a href="../sistema-eragileak.html">Sistema Eragileak</a></li>
+          <li><a href="../digitalizazioa.html">Digitalizazioa</a></li>
+          <li><a href="README.html" class="aktiboa">Dokumentazioa</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="orri-sarrera">
+      <h1>Windows Server 2019 - Administrari Gida</h1>
+      <p>WindowsServer6Taldea zerbitzariaren konfigurazio ofiziala eta administrazio-gidalerroak.</p>
+      <a href="administrari-gida.md" class="botoia" download>Deskargatu .md</a>
+      <a href="README.html" class="botoia">Aurkibidea</a>
+    </section>
+
+    <section>
+      <h2>1. Zerbitzariaren Datuak eta IsardVDI Hardwarea</h2>
+      <ul>
+        <li><strong>Ekipoaren Izena:</strong> <code>WindowsServer6Taldea</code> (WORKGROUP)</li>
+        <li><strong>Sistema Eragilea:</strong> Windows Server 2019 Standard (1809 GUI) eguneratua</li>
+        <li><strong>IsardVDI Hardwarea:</strong> 6 vCPU, 16 GB RAM, Virtio disko busa, Vlan 70</li>
+        <li><strong>MAC Helbidea:</strong> <code>52:54:00:1e:ab:f1</code></li>
+        <li><strong>IPv4 Estatikoa:</strong> <code>192.168.70.2 / 24</code> (Atebidea: <code>192.168.70.254</code>)</li>
+        <li><strong>DNS Zerbitzariak:</strong> <code>8.8.8.8</code> (Nagusia), <code>6.6.6.6</code> (Alternatiboa)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>2. Tokiko Erabiltzaileak eta Taldeak</h2>
+      <table>
+        <thead>
+          <tr><th>Erabiltzailea</th><th>Pasahitza</th><th>Taldea</th><th>Funtzioa</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>Editorea</code></td><td><code>Admin_123</code></td><td><code>Erronka Editoreak</code></td><td>Fitxategiak editatzeko eta kudeatzeko erabiltzailea</td></tr>
+          <tr><td><code>Irakurlea</code></td><td><code>Admin_123</code></td><td><code>Erronka Irakurleak</code></td><td>Fitxategiak soilik irakurtzeko baimena duen erabiltzailea</td></tr>
+          <tr><td><code>Administrador</code></td><td><em>(Sistemakoa)</em></td><td><code>Administradores</code></td><td>Kontrol osoa zerbitzari osoan</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>3. Segurtasun Zuzentarau Lokalak (secpol.msc)</h2>
+      <div class="flex-kaxak">
+        <div class="kaxa">
+          <h3>Pasahitz Gidalerroak</h3>
+          <ul>
+            <li>Gutxieneko luzera: 8 karaktere</li>
+            <li>Konplexutasuna: Gaituta</li>
+            <li>Historiala: 24 pasahitz gogoratu</li>
+            <li>Indarraldia: Gehieneko 90 egun, gutxieneko 1 egun</li>
+          </ul>
+        </div>
+        <div class="kaxa">
+          <h3>Kontua Blokeatzeko Gidalerroak</h3>
+          <ul>
+            <li>Blokeo-muga: 10 saiakera oker</li>
+            <li>Blokeoaren iraupena: 15 minutu</li>
+            <li>Kontagailua berrezartzeko epea: 10 minutu</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. NTFS Baimenak eta Karpeta Egitura</h2>
+      <p>Hasierako proba karpetan (<code>C:\Erronka Proba</code>) eta RAID web karpetan:</p>
+      <ul>
+        <li><code>Erronka Editoreak</code>: Modificar baimena</li>
+        <li><code>Erronka Irakurleak</code>: Lectura y ejecucion baimena</li>
+        <li><code>Administradores</code> eta <code>CREATOR OWNER</code>: Control total</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. IIS Web Zerbitzaria eta Windows Defender Firewall</h2>
+      <p>IIS zerbitzaria HTTP 80 atakan konfiguratuta dago <code>192.168.70.2</code> helbidean. Sarrerako araua PowerShell bidez:</p>
+      <div class="kontsola">New-NetFirewallRule -Name "IIS-HTTP-Inbound" -DisplayName "IIS Web Zerbitzaria (Port 80 HTTP)" -Enabled True -Direction Inbound -Protocol TCP -LocalPort 80 -Action Allow</div>
+    </section>
+
+    <section>
+      <h2>6. Windows Server Backup</h2>
+      <p>Eguneroko babeskopia automatikoak programatuta kanpoko disko batera (sistema-egoera eta web karpeta). Ezabatze-proba baten ondoren fitxategia segundotan leheneratu da.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-edukia">
+      <div class="footer-zutabea">
+        <h4>Informazioaren Digitalizazioa</h4>
+        <p>SISA 1 (6. Taldea) - 2026/2027<br>Zerbitzaria: WindowsServer6Taldea (192.168.70.2)</p>
+      </div>
+      <div class="footer-zutabea">
+        <h4>Atalak</h4>
+        <ul>
+          <li><a href="../index.html">Hasiera</a></li>
+          <li><a href="../sareak.html">Sareak</a></li>
+          <li><a href="../datu-baseak.html">Datu-baseak</a></li>
+          <li><a href="../sistema-eragileak.html">Sistema Eragileak</a></li>
+          <li><a href="../digitalizazioa.html">Digitalizazioa</a></li>
+        </ul>
+      </div>
+      <div class="footer-zutabea">
+        <h4>Dokumentazioa</h4>
+        <ul>
+          <li><a href="README.html">Aurkibidea</a></li>
+          <li><a href="administrari-gida.html">Administrari Gida</a></li>
+          <li><a href="memoria-sareak.html">Memoria: Sareak</a></li>
+          <li><a href="memoria-datu-baseak.html">Memoria: Datu-baseak</a></li>
+          <li><a href="memoria-sistema-eragileak.html">Memoria: Sistema Eragileak</a></li>
+          <li><a href="memoria-digitalizazioa.html">Memoria: Digitalizazioa</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-behea">
+      <p>2026 SISA 1 - 6. Taldea - IsardVDI ingurunean hedatua</p>
+    </div>
+  </footer>
+
+</body>
+</html>

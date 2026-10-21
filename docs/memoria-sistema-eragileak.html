@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema Eragileak | Dokumentazioa - SISA 1</title>
+  <link rel="stylesheet" href="../css/estiloak.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-kontenedorea">
+      <a href="../index.html" class="logo-blokea">
+        <img src="../irudiak/orokorrak/logo.svg" alt="Logoa">
+        <span>SISA 1 - 6. TALDEA</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Hasiera</a></li>
+          <li><a href="../sareak.html">Sareak</a></li>
+          <li><a href="../datu-baseak.html">Datu-baseak</a></li>
+          <li><a href="../sistema-eragileak.html">Sistema Eragileak</a></li>
+          <li><a href="../digitalizazioa.html">Digitalizazioa</a></li>
+          <li><a href="README.html" class="aktiboa">Dokumentazioa</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="orri-sarrera">
+      <h1>Sistema Eragileak eta Zerbitzaria - Memoria Teknikoa</h1>
+      <p>Sistema Eragileak Ezartzea moduluaren memoria teknikoa eta azpiegitura.</p>
+      <a href="sistema-eragileak.md" class="botoia" download>Deskargatu .md</a>
+      <a href="README.html" class="botoia">Aurkibidea</a>
+    </section>
+
+    <section>
+      <h2>1. IsardVDI eta WindowsServer6Taldea</h2>
+      <ul>
+        <li><strong>Plataforma:</strong> IsardVDI birtualizazioa</li>
+        <li><strong>Baliabideak:</strong> 6 vCPU, 16 GB RAM, Virtio diskoa, Vlan 70</li>
+        <li><strong>Hostname:</strong> <code>WindowsServer6Taldea</code> (WORKGROUP)</li>
+        <li><strong>IP Estatikoa:</strong> <code>192.168.70.2 / 24</code> (Atebidea: <code>192.168.70.254</code>)</li>
+        <li><strong>DNS:</strong> <code>8.8.8.8</code> / <code>6.6.6.6</code></li>
+        <li><strong>Sistema:</strong> Windows Server 2019 GUI eguneraketekin</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>2. Segurtasun Zuzentarauak eta Erabiltzaileak</h2>
+      <div class="flex-kaxak">
+        <div class="kaxa">
+          <h3>Tokiko Erabiltzaileak</h3>
+          <ul>
+            <li><code>Editorea</code> (Erronka Editoreak taldea)</li>
+            <li><code>Irakurlea</code> (Erronka Irakurleak taldea)</li>
+            <li>Pasahitza bi erabiltzaileentzat: <code>Admin_123</code></li>
+          </ul>
+        </div>
+        <div class="kaxa">
+          <h3>Politikak (secpol.msc)</h3>
+          <ul>
+            <li>Gutxieneko luzera: 8 karaktere</li>
+            <li>Konplexutasuna: Gaituta</li>
+            <li>Historiala: 24 pasahitz</li>
+            <li>Blokeoa: 10 saiakera oker (15 minutu)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. Disko-Kudeaketa, RAID eta IIS</h2>
+      <ul>
+        <li><strong>RAID 1 (Ispilua):</strong> 2 disko dinamiko erabiliz (% 50 erabilgarri). Webgunea bertan gordetzen da.</li>
+        <li><strong>RAID 5 (Paritatea):</strong> 3 disko dinamiko (% 66 erabilgarri).</li>
+        <li><strong>IIS Web Zerbitzaria:</strong> HTTP 80 atakan, <code>192.168.70.2</code> helbidean.</li>
+      </ul>
+      <p>Firewall sarrerako araua gaitzeko PowerShell komandoa:</p>
+      <div class="kontsola">New-NetFirewallRule -Name "IIS-HTTP-Inbound" -DisplayName "IIS Web Zerbitzaria (Port 80 HTTP)" -Enabled True -Direction Inbound -Protocol TCP -LocalPort 80 -Action Allow</div>
+    </section>
+
+    <section>
+      <h2>4. Babeskopiak eta Berreskuratze Prozedura</h2>
+      <p><em>Copias de seguridad de Windows Server</em> bidez eguneroko babeskopiak programatu dira. <code>index.html</code> ezabaketaren proban, fitxategia segundotan leheneratu da datu-galerarik gabe.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-edukia">
+      <div class="footer-zutabea">
+        <h4>Informazioaren Digitalizazioa</h4>
+        <p>SISA 1 (6. Taldea) - 2026/2027<br>Zerbitzaria: WindowsServer6Taldea (192.168.70.2)</p>
+      </div>
+      <div class="footer-zutabea">
+        <h4>Atalak</h4>
+        <ul>
+          <li><a href="../index.html">Hasiera</a></li>
+          <li><a href="../sareak.html">Sareak</a></li>
+          <li><a href="../datu-baseak.html">Datu-baseak</a></li>
+          <li><a href="../sistema-eragileak.html">Sistema Eragileak</a></li>
+          <li><a href="../digitalizazioa.html">Digitalizazioa</a></li>
+        </ul>
+      </div>
+      <div class="footer-zutabea">
+        <h4>Dokumentazioa</h4>
+        <ul>
+          <li><a href="README.html">Aurkibidea</a></li>
+          <li><a href="administrari-gida.html">Administrari Gida</a></li>
+          <li><a href="memoria-sareak.html">Memoria: Sareak</a></li>
+          <li><a href="memoria-datu-baseak.html">Memoria: Datu-baseak</a></li>
+          <li><a href="memoria-sistema-eragileak.html">Memoria: Sistema Eragileak</a></li>
+          <li><a href="memoria-digitalizazioa.html">Memoria: Digitalizazioa</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-behea">
+      <p>2026 SISA 1 - 6. Taldea - IsardVDI ingurunean hedatua</p>
+    </div>
+  </footer>
+
+</body>
+</html>
