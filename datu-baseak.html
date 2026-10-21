@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datu-Baseak | Informazioaren Digitalizazioa - SISA 1</title>
+  <link rel="stylesheet" href="css/estiloak.css">
+</head>
+<body>
+
+    <header>
+    <div class="header-kontenedorea">
+      <a href="index.html" class="logo-blokea">
+        <img src="irudiak/orokorrak/logo.svg" alt="Logoa">
+        <span>SISA 1 • 6. TALDEA</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Hasiera</a></li>
+          <li><a href="sareak.html">Sareak</a></li>
+          <li><a href="datu-baseak.html" class="aktiboa">Datu-baseak</a></li>
+          <li><a href="sistema-eragileak.html">Sistema Eragileak</a></li>
+          <li><a href="digitalizazioa.html">Digitalizazioa</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+    <main>
+    <section class="orri-sarrera">
+      <h1>Streaming Plataformaren Datu-Eredua</h1>
+      <p>Ikus-entzunezkoen zerbitzu baterako datu-base erlazionalaren diseinua: bi E-R proposamenen analisia, Accounts/Profiles behin betiko eredua, 3NF normalizazioa eta Access inplementazioa.</p>
+    </section>
+
+        <section>
+      <h2>1. Beharren Azterketa eta DBKG baten Abantailak</h2>
+      <p>Plataformak kontu nagusiak (Accounts), profil anitzak (Profiles), planak, edukiak eta ikustaldiak kudeatzen ditu.</p>
+      <table>
+        <thead>
+          <tr><th>Ezaugarria</th><th>Kalkulu-orria (Fitxategi laua)</th><th>DBKG Erlazionala</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Erredundantzia</td><td>Datuak behin eta berriz errepikatzen dira</td><td>Taula independenteak gakoekin lotuta</td></tr>
+          <tr><td>Osotasuna</td><td>Erregistro umezurtzak sor daitezke</td><td>Kanpoko Gakoek (FK) osotasuna bermatzen dute</td></tr>
+          <tr><td>Aldiberekotasuna</td><td>Fitxategia blokeatu egiten da idaztean</td><td>Milaka erabiltzailek aldi berean sar daitezke</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+        <section>
+      <h2>2. Entitate-Erlazio (E-R) Proposamenak</h2>
+      <div class="flex-kaxak">
+        <div class="kaxa">
+          <h3>1. Proposamena: Orokorra (Baztertua)</h3>
+          <p>Users, Roles, User_Roles, Subscriptions, Plans, Content, Views.</p>
+          <div class="irudi-koadroa">
+            <img src="irudiak/datu-baseak/er-eredua-baztertua.png" alt="1. Proposamena (Baztertua)">
+            <p class="oin-testua"><em>1. irudia: 1. Proposamena (Baztertua) - Ez du baimentzen profil anitzik kontu berean.</em></p>
+          </div>
+        </div>
+        <div class="kaxa hautatua">
+          <h3>2. Proposamena: Banatua (Hautatua)</h3>
+          <p>Accounts, Profiles, Plans, Subscriptions, Titles, Episodes, Genres, Watch_History.</p>
+          <div class="irudi-koadroa">
+            <img src="irudiak/datu-baseak/er-eredua-hautatua.jpg" alt="2. Proposamena (Hautatua)">
+            <p class="oin-testua"><em>2. irudia: 2. Proposamena (Hautatua) - Kontuak eta profilak (Is_Kids) bereizita.</em></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <section>
+      <h2>3. Eredu Erlazionala eta 3NF Normalizazioa</h2>
+      <table>
+        <thead>
+          <tr><th>Taula</th><th>PK (Lehen Mailakoa)</th><th>FK (Kanpokoa)</th><th>Beste Eremuak</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Accounts</td><td><span class="pk">PK</span> Account_ID</td><td>-</td><td>Email, Password_Hash, Country, Created_At</td></tr>
+          <tr><td>Profiles</td><td><span class="pk">PK</span> Profile_ID</td><td><span class="fk">FK</span> Account_ID</td><td>Name, Is_Kids</td></tr>
+          <tr><td>Plans</td><td><span class="pk">PK</span> Plan_ID</td><td>-</td><td>Name, Monthly_Price, Max_Screens, Video_Quality</td></tr>
+          <tr><td>Subscriptions</td><td><span class="pk">PK</span> Subscription_ID</td><td><span class="fk">FK</span> Account_ID, Plan_ID</td><td>Start_Date, End_Date, Status</td></tr>
+          <tr><td>Titles</td><td><span class="pk">PK</span> Title_ID</td><td>-</td><td>Name, Type, Release_Year, Age_Rating</td></tr>
+          <tr><td>Episodes</td><td><span class="pk">PK</span> Episode_ID</td><td><span class="fk">FK</span> Title_ID</td><td>Season, Ep_Number, Duration_Min</td></tr>
+          <tr><td>Genres</td><td><span class="pk">PK</span> Genre_ID</td><td>-</td><td>Name</td></tr>
+          <tr><td>Title_Genres</td><td><span class="pk">PK</span> Title_ID, Genre_ID</td><td><span class="fk">FK</span> Title_ID, Genre_ID</td><td>N:M Erlazioa (Erlazio taula)</td></tr>
+          <tr><td>Watch_History</td><td><span class="pk">PK</span> Watch_ID</td><td><span class="fk">FK</span> Profile_ID, Episode_ID</td><td>Watched_At, Progress_Sec</td></tr>
+        </tbody>
+      </table>
+      <div class="ohar-blokea">
+        <p><strong>3NF Normalizazioa:</strong> Eremu guztiak atomikoak dira (1NF), dependentzia osoa dute PK-rekiko (2NF) eta dependentzia iragankor guztiak kendu dira (3NF).</p>
+      </div>
+    </section>
+
+        <section>
+      <h2>4. Access Inplementazioa eta Eragiketa Hurrenkera</h2>
+      <div class="flex-kaxak">
+        <div class="kaxa">
+          <h3>Txertaketa Hurrenkera (Gurasotik Semera):</h3>
+          <ol>
+            <li>Plans, Genres eta Accounts (Guraso nagusiak)</li>
+            <li>Titles, Subscriptions eta Profiles</li>
+            <li>Episodes eta Title_Genres</li>
+            <li>Watch_History (Azkena, menpeko erregistro guztiekin)</li>
+          </ol>
+        </div>
+        <div class="kaxa">
+          <h3>Ezabatze Hurrenkera (Semetik Gurasora):</h3>
+          <ol>
+            <li>Watch_History (Seme-erregistroak lehenik)</li>
+            <li>Title_Genres eta Episodes</li>
+            <li>Profiles eta Subscriptions</li>
+            <li>Titles, Plans, Genres eta Accounts</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <footer>
+    <div class="footer-edukia">
+      <div class="footer-zutabea">
+        <h4>Informazioaren Digitalizazioa</h4>
+        <p>SISA 1 (6. Taldea) • 2026/2027<br>Zerbitzaria: WindowsServer6Taldea (192.168.70.2)</p>
+      </div>
+      <div class="footer-zutabea">
+        <h4>Atalak</h4>
+        <ul>
+          <li><a href="index.html">Hasiera</a></li>
+          <li><a href="sareak.html">Sareak</a></li>
+          <li><a href="datu-baseak.html">Datu-baseak</a></li>
+          <li><a href="sistema-eragileak.html">Sistema Eragileak</a></li>
+          <li><a href="digitalizazioa.html">Digitalizazioa</a></li>
+        </ul>
+      </div>
+      <div class="footer-zutabea">
+        <h4>Dokumentazioa</h4>
+        <ul>
+          <li><a href="docs/administrari-gida.md" target="_blank">Administrari Gida (MD)</a></li>
+          <li><a href="docs/datu-baseak.md" target="_blank">Datu-base Memoria (MD)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-behea">
+      <p>2026 SISA 1 • 6. Taldea - IsardVDI ingurunean hedatua</p>
+    </div>
+  </footer>
+
+</body>
+</html>

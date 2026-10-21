@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-label="SISA 1 Ikurra">
+  <rect x="2" y="2" width="44" height="44" rx="8" fill="#1e3a5f" stroke="#0284c7" stroke-width="2"/>
+  <!-- Network switch ports / server rack -->
+  <rect x="10" y="12" width="28" height="6" rx="2" fill="#ffffff" />
+  <circle cx="14" cy="15" r="1.5" fill="#0284c7"/>
+  <circle cx="19" cy="15" r="1.5" fill="#10b981"/>
+  <rect x="10" y="21" width="28" height="6" rx="2" fill="#ffffff" />
+  <circle cx="14" cy="24" r="1.5" fill="#0284c7"/>
+  <circle cx="19" cy="24" r="1.5" fill="#0284c7"/>
+  <rect x="10" y="30" width="28" height="6" rx="2" fill="#ffffff" />
+  <circle cx="14" cy="33" r="1.5" fill="#0284c7"/>
+  <circle cx="19" cy="33" r="1.5" fill="#10b981"/>
+</svg>

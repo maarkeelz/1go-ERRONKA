@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="auto" aria-label="Seinale Modulazioen Diagrama: ASK, FSK, PSK eta Manchester">
+  <defs>
+    <style>
+      .label-title { font-family: system-ui, sans-serif; font-size: 14px; font-weight: bold; fill: #1b365d; }
+      .label-sub { font-family: system-ui, sans-serif; font-size: 11px; fill: #64748b; }
+      .grid-line { stroke: #e2e8f0; stroke-width: 1; stroke-dasharray: 4,4; }
+      .signal-line { stroke: #0077b6; stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .signal-manchester { stroke: #10b981; stroke-width: 2.5; fill: none; }
+      .bit-label { font-family: monospace; font-size: 14px; font-weight: bold; fill: #0f172a; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="480" fill="#ffffff" rx="8" />
+
+  <!-- Bit references top (Bits: 1, 0, 1, 1, 0) -->
+  <text x="180" y="30" class="bit-label">Bit: 1</text>
+  <text x="300" y="30" class="bit-label">Bit: 0</text>
+  <text x="420" y="30" class="bit-label">Bit: 1</text>
+  <text x="540" y="30" class="bit-label">Bit: 1</text>
+  <text x="660" y="30" class="bit-label">Bit: 0</text>
+
+  <!-- Vertical partition lines -->
+  <line x1="240" y1="40" x2="240" y2="450" class="grid-line" />
+  <line x1="360" y1="40" x2="360" y2="450" class="grid-line" />
+  <line x1="480" y1="40" x2="480" y2="450" class="grid-line" />
+  <line x1="600" y1="40" x2="600" y2="450" class="grid-line" />
+  <line x1="720" y1="40" x2="720" y2="450" class="grid-line" />
+
+  <!-- 1. ASK(2) Row -->
+  <text x="20" y="80" class="label-title">1. ASK (2)</text>
+  <text x="20" y="98" class="label-sub">Anplitudearen modulazioa</text>
+  <path d="M 120,80 Q 135,45 150,80 T 180,80 T 210,80 T 240,80 
+           L 360,80 
+           Q 375,45 390,80 T 420,80 T 450,80 T 480,80 
+           Q 495,45 510,80 T 540,80 T 570,80 T 600,80 
+           L 720,80" class="signal-line" />
+
+  <!-- 2. FSK(2) Row -->
+  <text x="20" y="180" class="label-title">2. FSK (2)</text>
+  <text x="20" y="198" class="label-sub">Maiztasunaren modulazioa</text>
+  <!-- High freq for 1, Low freq for 0 -->
+  <path d="M 120,180 Q 127.5,155 135,180 T 150,180 T 165,180 T 180,180 T 195,180 T 210,180 T 225,180 T 240,180
+           Q 255,155 270,180 T 300,180 T 330,180 T 360,180
+           Q 367.5,155 375,180 T 390,180 T 405,180 T 420,180 T 435,180 T 450,180 T 465,180 T 480,180
+           Q 487.5,155 495,180 T 510,180 T 525,180 T 540,180 T 555,180 T 570,180 T 585,180 T 600,180
+           Q 615,155 630,180 T 660,180 T 690,180 T 720,180" class="signal-line" />
+
+  <!-- 3. PSK(2) Row -->
+  <text x="20" y="280" class="label-title">3. PSK (2)</text>
+  <text x="20" y="298" class="label-sub">Fasearen modulazioa (180°)</text>
+  <path d="M 120,280 Q 135,250 150,280 T 180,280 T 210,280 T 240,280
+           Q 255,310 270,280 T 300,280 T 330,280 T 360,280
+           Q 375,250 390,280 T 420,280 T 450,280 T 480,280
+           Q 495,250 510,280 T 540,280 T 570,280 T 600,280
+           Q 615,310 630,280 T 660,280 T 690,280 T 720,280" class="signal-line" />
+
+  <!-- 4. Manchester Row -->
+  <text x="20" y="380" class="label-title">4. MANCHESTER</text>
+  <text x="20" y="398" class="label-sub">Bit erdiaren trantsizioa</text>
+  <!-- Bit 1: Behetik Gora (edo Goitik Behera arauaren arabera). IEEE 802.3: 0 = Behetik Gora, 1 = Goitik Behera -->
+  <path d="M 120,360 L 180,360 L 180,410 L 240,410
+           L 240,410 L 300,410 L 300,360 L 360,360
+           L 360,360 L 420,360 L 420,410 L 480,410
+           L 480,360 L 540,360 L 540,410 L 600,410
+           L 600,410 L 660,410 L 660,360 L 720,360" class="signal-manchester" />
+</svg>

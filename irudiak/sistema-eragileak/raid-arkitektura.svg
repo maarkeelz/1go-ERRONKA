@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 400" width="100%" height="auto" aria-label="RAID 1 eta RAID 5 Arkitektura Konparaketa">
+  <defs>
+    <style>
+      .disk-frame { fill: #f1f5f9; stroke: #475569; stroke-width: 2; rx: 8; }
+      .block-a { fill: #38bdf8; stroke: #0284c7; stroke-width: 1.5; rx: 4; }
+      .block-b { fill: #818cf8; stroke: #4f46e5; stroke-width: 1.5; rx: 4; }
+      .block-p { fill: #facc15; stroke: #ca8a04; stroke-width: 1.5; rx: 4; }
+      .text-title { font-family: system-ui, sans-serif; font-size: 15px; font-weight: bold; fill: #1b365d; }
+      .text-label { font-family: monospace; font-size: 12px; font-weight: bold; fill: #0f172a; text-anchor: middle; }
+      .text-disk { font-family: system-ui, sans-serif; font-size: 13px; font-weight: bold; fill: #334155; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect width="840" height="400" fill="#ffffff" rx="8" />
+
+  <!-- SECTION 1: RAID 1 (Ispilua - Mirroring) -->
+  <g transform="translate(40, 30)">
+    <text x="140" y="24" class="text-title" text-anchor="middle">RAID 1 (Ispilua - 2 Disko)</text>
+    <text x="140" y="44" font-family="system-ui, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">Segurtasuna eta Erredundantzia (1 Disko gal daiteke)</text>
+
+    <!-- Disko 0 -->
+    <rect x="20" y="70" width="100" height="220" class="disk-frame" />
+    <text x="70" y="95" class="text-disk">Disko 1</text>
+    <rect x="30" y="115" width="80" height="32" class="block-a" />
+    <text x="70" y="136" class="text-label">Datu A</text>
+    <rect x="30" y="155" width="80" height="32" class="block-b" />
+    <text x="70" y="176" class="text-label">Datu B</text>
+    <rect x="30" y="195" width="80" height="32" class="block-a" />
+    <text x="70" y="216" class="text-label">Datu C</text>
+
+    <!-- Disko 1 (Mirror) -->
+    <rect x="160" y="70" width="100" height="220" class="disk-frame" />
+    <text x="210" y="95" class="text-disk">Disko 2 (Kopia)</text>
+    <rect x="170" y="115" width="80" height="32" class="block-a" />
+    <text x="210" y="136" class="text-label">Datu A</text>
+    <rect x="170" y="155" width="80" height="32" class="block-b" />
+    <text x="210" y="176" class="text-label">Datu B</text>
+    <rect x="170" y="195" width="80" height="32" class="block-a" />
+    <text x="210" y="216" class="text-label">Datu C</text>
+
+    <text x="140" y="325" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#0369a1" text-anchor="middle">Edukiera: Disko 1en tamaina (%50 erabilgarri)</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="380" y1="30" x2="380" y2="360" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6,4" />
+
+  <!-- SECTION 2: RAID 5 (Paritatea banatua - 3 Disko) -->
+  <g transform="translate(420, 30)">
+    <text x="200" y="24" class="text-title" text-anchor="middle">RAID 5 (Banaketa Paritatearekin - Gutxienez 3 Disko)</text>
+    <text x="200" y="44" font-family="system-ui, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">Errendimendua eta Paritatea (1 Disko gal daiteke)</text>
+
+    <!-- Disko 1 -->
+    <rect x="20" y="70" width="100" height="220" class="disk-frame" />
+    <text x="70" y="95" class="text-disk">Disko 1</text>
+    <rect x="30" y="115" width="80" height="32" class="block-a" />
+    <text x="70" y="136" class="text-label">Bloke A1</text>
+    <rect x="30" y="155" width="80" height="32" class="block-b" />
+    <text x="70" y="176" class="text-label">Bloke B1</text>
+    <rect x="30" y="195" width="80" height="32" class="block-p" />
+    <text x="70" y="216" class="text-label">Paritatea C</text>
+
+    <!-- Disko 2 -->
+    <rect x="150" y="70" width="100" height="220" class="disk-frame" />
+    <text x="200" y="95" class="text-disk">Disko 2</text>
+    <rect x="160" y="115" width="80" height="32" class="block-a" />
+    <text x="200" y="136" class="text-label">Bloke A2</text>
+    <rect x="160" y="155" width="80" height="32" class="block-p" />
+    <text x="200" y="176" class="text-label">Paritatea B</text>
+    <rect x="160" y="195" width="80" height="32" class="block-b" />
+    <text x="200" y="216" class="text-label">Bloke C1</text>
+
+    <!-- Disko 3 -->
+    <rect x="280" y="70" width="100" height="220" class="disk-frame" />
+    <text x="330" y="95" class="text-disk">Disko 3</text>
+    <rect x="290" y="115" width="80" height="32" class="block-p" />
+    <text x="330" y="136" class="text-label">Paritatea A</text>
+    <rect x="290" y="155" width="80" height="32" class="block-b" />
+    <text x="330" y="176" class="text-label">Bloke B2</text>
+    <rect x="290" y="195" width="80" height="32" class="block-a" />
+    <text x="330" y="216" class="text-label">Bloke C2</text>
+
+    <text x="200" y="325" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#0369a1" text-anchor="middle">Edukiera: (N - 1) * Diskoaren tamaina (%66 erabilgarri)</text>
+  </g>
+</svg>

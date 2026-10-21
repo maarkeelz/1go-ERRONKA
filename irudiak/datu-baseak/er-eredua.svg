@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="100%" height="auto" aria-label="Streaming Datu-basearen Entitate-Erlazio Eredua">
+  <defs>
+    <style>
+      .entity-box { fill: #ffffff; stroke: #1b365d; stroke-width: 2; rx: 6; }
+      .entity-header { fill: #1b365d; font-family: system-ui, sans-serif; font-size: 13px; font-weight: bold; }
+      .entity-header-bg { fill: #1b365d; }
+      .attr-text { font-family: system-ui, monospace; font-size: 11px; fill: #1e293b; }
+      .attr-pk { font-weight: bold; fill: #b45309; }
+      .attr-fk { font-style: italic; fill: #0077b6; }
+      .rel-line { stroke: #64748b; stroke-width: 2; stroke-dasharray: 4,2; }
+      .card-text { font-family: system-ui, sans-serif; font-size: 11px; font-weight: bold; fill: #dc2626; }
+    </style>
+  </defs>
+
+  <rect width="900" height="520" fill="#f8fafc" rx="8" />
+
+  <!-- 1. PLANAK -->
+  <g transform="translate(40, 40)">
+    <rect width="180" height="120" class="entity-box" />
+    <rect width="180" height="28" fill="#1b365d" rx="4" />
+    <text x="90" y="19" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-weight="bold" font-size="13">PLANAK</text>
+    <text x="12" y="50" class="attr-text attr-pk">PK  IdPlana (AutoZenb)</text>
+    <text x="12" y="70" class="attr-text">     Izena (Testua)</text>
+    <text x="12" y="90" class="attr-text">     Prezioa (Moneta)</text>
+    <text x="12" y="110" class="attr-text">     GehienekoGailuak</text>
+  </g>
+
+  <!-- 2. HARPIDETZAK -->
+  <g transform="translate(360, 40)">
+    <rect width="180" height="120" class="entity-box" />
+    <rect width="180" height="28" fill="#1b365d" rx="4" />
+    <text x="90" y="19" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-weight="bold" font-size="13">HARPIDETZAK</text>
+    <text x="12" y="50" class="attr-text attr-pk">PK  IdHarpidetza</text>
+    <text x="12" y="70" class="attr-text attr-fk">FK  IdErabiltzailea</text>
+    <text x="12" y="90" class="attr-text attr-fk">FK  IdPlana</text>
+    <text x="12" y="110" class="attr-text">     HasieraData / Amaiera</text>
+  </g>
+
+  <!-- 3. ERABILTZAILEAK -->
+  <g transform="translate(680, 40)">
+    <rect width="180" height="130" class="entity-box" />
+    <rect width="180" height="28" fill="#1b365d" rx="4" />
+    <text x="90" y="19" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-weight="bold" font-size="13">ERABILTZAILEAK</text>
+    <text x="12" y="50" class="attr-text attr-pk">PK  IdErabiltzailea</text>
+    <text x="12" y="70" class="attr-text">     Posta (Bakarra)</text>
+    <text x="12" y="90" class="attr-text">     PasahitzaHash</text>
+    <text x="12" y="110" class="attr-text">     JaiotzeData</text>
+    <text x="12" y="125" class="attr-text">     Izena / Abizena</text>
+  </g>
+
+  <!-- 4. ROLAK (Profilak: Haurra, Pertsonala, Familiarra) -->
+  <g transform="translate(680, 280)">
+    <rect width="180" height="130" class="entity-box" />
+    <rect width="180" height="28" fill="#0077b6" rx="4" />
+    <text x="90" y="19" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-weight="bold" font-size="13">ROLAK (PROFILAK)</text>
+    <text x="12" y="50" class="attr-text attr-pk">PK  IdRola</text>
+    <text x="12" y="70" class="attr-text attr-fk">FK  IdErabiltzailea</text>
+    <text x="12" y="90" class="attr-text">     ProfilIzena</text>
+    <text x="12" y="110" class="attr-text">     RolMota (Haur/Pert/Fam)</text>
+    <text x="12" y="125" class="attr-text">     AdinMuga (PIN)</text>
+  </g>
+
+  <!-- 5. IKUSTALDIAK -->
+  <g transform="translate(360, 280)">
+    <rect width="180" height="130" class="entity-box" />
+    <rect width="180" height="28" fill="#1b365d" rx="4" />
+    <text x="90" y="19" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-weight="bold" font-size="13">IKUSTALDIAK</text>
+    <text x="12" y="50" class="attr-text attr-pk">PK  IdIkustaldia</text>
+    <text x="12" y="70" class="attr-text attr-fk">FK  IdRola</text>
+    <text x="12" y="90" class="attr-text attr-fk">FK  IdEdukia</text>
+    <text x="12" y="110" class="attr-text">     DataOrdua</text>
+    <text x="12" y="125" class="attr-text">     IraupenIkusia (Min)</text>
+  </g>
+
+  <!-- 6. EDUKIAK -->
+  <g transform="translate(40, 280)">
+    <rect width="180" height="140" class="entity-box" />
+    <rect width="180" height="28" fill="#1b365d" rx="4" />
+    <text x="90" y="19" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-weight="bold" font-size="13">EDUKIAK</text>
+    <text x="12" y="50" class="attr-text attr-pk">PK  IdEdukia</text>
+    <text x="12" y="70" class="attr-text">     Izenburua</text>
+    <text x="12" y="90" class="attr-text">     Mota (Film/Serie/Dok)</text>
+    <text x="12" y="110" class="attr-text">     Generoa / Urtea</text>
+    <text x="12" y="125" class="attr-text">     AdinGomendatua</text>
+  </g>
+
+  <!-- Connectors with cardinalities -->
+  <!-- Planak to Harpidetzak: 1 to N -->
+  <line x1="220" y1="100" x2="360" y2="100" class="rel-line" />
+  <text x="230" y="92" class="card-text">1</text>
+  <text x="345" y="92" class="card-text">N</text>
+
+  <!-- Erabiltzaileak to Harpidetzak: 1 to N -->
+  <line x1="680" y1="100" x2="540" y2="100" class="rel-line" />
+  <text x="665" y="92" class="card-text">1</text>
+  <text x="550" y="92" class="card-text">N</text>
+
+  <!-- Erabiltzaileak to Rolak: 1 to N -->
+  <line x1="770" y1="170" x2="770" y2="280" class="rel-line" />
+  <text x="755" y="190" class="card-text">1</text>
+  <text x="755" y="270" class="card-text">N</text>
+
+  <!-- Rolak to Ikustaldiak: 1 to N -->
+  <line x1="680" y1="340" x2="540" y2="340" class="rel-line" />
+  <text x="665" y="330" class="card-text">1</text>
+  <text x="550" y="330" class="card-text">N</text>
+
+  <!-- Edukiak to Ikustaldiak: 1 to N -->
+  <line x1="220" y1="340" x2="360" y2="340" class="rel-line" />
+  <text x="230" y="330" class="card-text">1</text>
+  <text x="345" y="330" class="card-text">N</text>
+</svg>

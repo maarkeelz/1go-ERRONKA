@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sareak | Informazioaren Digitalizazioa - SISA 1</title>
+  <link rel="stylesheet" href="css/estiloak.css">
+</head>
+<body>
+
+    <header>
+    <div class="header-kontenedorea">
+      <a href="index.html" class="logo-blokea">
+        <img src="irudiak/orokorrak/logo.svg" alt="Logoa">
+        <span>SISA 1 • 6. TALDEA</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Hasiera</a></li>
+          <li><a href="sareak.html" class="aktiboa">Sareak</a></li>
+          <li><a href="datu-baseak.html">Datu-baseak</a></li>
+          <li><a href="sistema-eragileak.html">Sistema Eragileak</a></li>
+          <li><a href="digitalizazioa.html">Digitalizazioa</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+    <main>
+    <section class="orri-sarrera">
+      <h1>Sare Azpiegitura Fisikoa eta Seinaleak</h1>
+      <p>Ikasgelako rack-ean kableatu egituratuaren muntaia (T568B), OSI 1-2 geruzen analisia, <code>Admin_123</code> pasahitzaren ASCII kodeketa, CRC-6-GSM erroreen kontrola eta konexio probak.</p>
+    </section>
+
+        <section>
+      <h2>1. OSI Ereduaren 1. eta 2. Geruzak</h2>
+      <div class="flex-kaxak">
+        <div class="kaxa">
+          <h3>1. Geruza: Fisikoa (Physical Layer)</h3>
+          <p>Bit-sekuentziak seinale elektriko moduan garraiatzen ditu kobrean zehar:</p>
+          <ul>
+            <li><strong>Bitartekoa:</strong> UTP Cat 6 kableatua (4 pare bihurritu).</li>
+            <li><strong>Konektoreak:</strong> RJ-45 arrak eta patch-paneleko keystone emeak.</li>
+          </ul>
+        </div>
+        <div class="kaxa">
+          <h3>2. Geruza: Datu-Lotura (Data Link Layer)</h3>
+          <p>Sare lokaleko tramen antolaketa eta helbideratze fisikoa kudeatzen ditu:</p>
+          <ul>
+            <li><strong>Helbideratzea:</strong> MAC helbideak (zerbitzaria: <code>52:54:00:1e:ab:f1</code>).</li>
+            <li><strong>Gailua:</strong> 2. geruzako switch-a (talka-domeinuak banatzeko).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+        <section>
+      <h2>2. Kableatua (T568B) eta Tester Emaitzak</h2>
+      <p>T568B estandarraren arabera krimpautako patch kableen jarraitutasun probak:</p>
+      <table>
+        <thead>
+          <tr><th>Kablea</th><th>Ibilbidea</th><th>Pinak (1-8)</th><th>Egoera</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>KBL-01</td><td>Lanpostua -> Patch Panela (1. ataka)</td><td>1-2-3-4-5-6-7-8</td><td>Zuzena (OK)</td></tr>
+          <tr><td>KBL-02</td><td>Patch Panela (1) -> Switch (1)</td><td>1-2-3-4-5-6-7-8</td><td>Zuzena (OK)</td></tr>
+          <tr><td>KBL-03</td><td>WindowsServer6Taldea -> Patch Panela (2)</td><td>1-2-3-4-5-6-7-8</td><td>Zuzena (OK)</td></tr>
+          <tr><td>KBL-04</td><td>Patch Panela (2) -> Switch (2)</td><td>1-2-3-4-5-6-7-8</td><td>Zuzena (OK)</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+        <section>
+      <h2>3. Admin_123 Pasahitzaren ASCII eta CRC-6 Kalkulua</h2>
+      <p>Sistemako probako pasahitza (<code>Admin_123</code>) ASCII formatura pasatuta:</p>
+      <table>
+        <thead>
+          <tr><th>Karakterea</th><th>Hamartarra</th><th>Bitarra (8 bit)</th><th>Hex</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>A / d / m</td><td>65 / 100 / 109</td><td><code>01000001 01100100 01101101</code></td><td>0x41 / 0x64 / 0x6D</td></tr>
+          <tr><td>i / n / _</td><td>105 / 110 / 95</td><td><code>01101001 01101110 01011111</code></td><td>0x69 / 0x6E / 0x5F</td></tr>
+          <tr><td>1 / 2 / 3</td><td>49 / 50 / 51</td><td><code>00110001 00110010 00110011</code></td><td>0x31 / 0x32 / 0x33</td></tr>
+        </tbody>
+      </table>
+
+      <div class="ohar-blokea">
+        <p><strong>CRC-6-GSM Polinomio sortzailea:</strong> <code>G(x) = x^6 + x^5 + x^3 + x^2 + x + 1</code> (Bitarrean: <code>1101111</code>)</p>
+        <p>Kalkulua: 72 biteko mezuari 6 zero gehitu eta modulo-2 XOR zatiketa egin da.</p>
+        <div class="kontsola">Lortutako CRC-6 hondarra: 011010 (Hamaseitarra: 0x1A | Hamartarra: 26)</div>
+      </div>
+    </section>
+
+        <section>
+      <h2>4. Seinale Modulazioak eta Manchester</h2>
+      <div class="irudi-koadroa">
+        <img src="irudiak/sareak/seinaleak.svg" alt="Seinale Modulazioak">
+        <p class="oin-testua"><em>1. irudia: ASK, FSK, PSK eta Manchester modulazio digitalen diagrama.</em></p>
+      </div>
+      <div class="flex-kaxak">
+        <div class="kaxa">
+          <h3>ASK (2)</h3>
+          <p>Anplitudearen aldaketa bitaren arabera ('1' altua, '0' baxua).</p>
+        </div>
+        <div class="kaxa">
+          <h3>FSK (2)</h3>
+          <p>Maiztasunaren aldaketa ('1' maiztasun handia, '0' baxua).</p>
+        </div>
+        <div class="kaxa">
+          <h3>PSK (2)</h3>
+          <p>Fasearen aldaketa 180 gradu bit-aldaketetan (zarata aurrean sendoa).</p>
+        </div>
+        <div class="kaxa">
+          <h3>Manchester</h3>
+          <p>Tentsio-trantsizioa bit bakoitzaren erdian sinkronizaziorako.</p>
+        </div>
+      </div>
+    </section>
+
+        <section>
+      <h2>5. Konektibitate Probak (192.168.70.2)</h2>
+      <table>
+        <thead>
+          <tr><th>Konexio Mota</th><th>Helburua (IP)</th><th>Paketeak</th><th>Galera</th><th>Latentzia</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Kablez (Cat 6)</td><td>192.168.70.2 (WindowsServer6Taldea)</td><td>50 / 50</td><td>% 0</td><td>&lt; 1 ms</td></tr>
+          <tr><td>Wi-Fi (5 GHz)</td><td>192.168.70.2 (WindowsServer6Taldea)</td><td>50 / 50</td><td>% 0</td><td>3.2 ms</td></tr>
+          <tr><td>Wi-Fi (2.4 GHz)</td><td>192.168.70.2 (WindowsServer6Taldea)</td><td>50 / 49</td><td>% 2</td><td>8.7 ms</td></tr>
+        </tbody>
+      </table>
+      <div class="ohar-blokea">
+        <p>Gailu mugikor batetik Wi-Fi bidez <code>http://192.168.70.2</code> atarira sarbide arrakastatsua egiaztatu da.</p>
+      </div>
+    </section>
+  </main>
+
+    <footer>
+    <div class="footer-edukia">
+      <div class="footer-zutabea">
+        <h4>Informazioaren Digitalizazioa</h4>
+        <p>SISA 1 (6. Taldea) • 2026/2027<br>Zerbitzaria: WindowsServer6Taldea (192.168.70.2)</p>
+      </div>
+      <div class="footer-zutabea">
+        <h4>Atalak</h4>
+        <ul>
+          <li><a href="index.html">Hasiera</a></li>
+          <li><a href="sareak.html">Sareak</a></li>
+          <li><a href="datu-baseak.html">Datu-baseak</a></li>
+          <li><a href="sistema-eragileak.html">Sistema Eragileak</a></li>
+          <li><a href="digitalizazioa.html">Digitalizazioa</a></li>
+        </ul>
+      </div>
+      <div class="footer-zutabea">
+        <h4>Dokumentazioa</h4>
+        <ul>
+          <li><a href="docs/administrari-gida.md" target="_blank">Administrari Gida (MD)</a></li>
+          <li><a href="docs/sareak.md" target="_blank">Sareak Memoria (MD)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-behea">
+      <p>2026 SISA 1 • 6. Taldea - IsardVDI ingurunean hedatua</p>
+    </div>
+  </footer>
+
+</body>
+</html>
