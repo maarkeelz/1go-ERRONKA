@@ -1,46 +1,59 @@
-# Digitalizazioa, IT / OT eta THD - Memoria Teknikoa
+# Digitalizazioa: IT, OT, THD eta Cloud
 
-> **Modulua:** Digitalizazioa eta Kudeaketa (SISA 1)
+## IT eta OT teknologiak
 
----
+**IT (Informazioaren Teknologiak)** datuak prozesatzeko, informazioa kudeatzeko eta erabakiak hartzeko erabiltzen diren teknologiak dira. Adibidez: datu-baseak, aplikazioak, sareak, softwarea eta hodeiko zerbitzuak.
 
-## 1. Digitalizazioa Enpresa Ingurunean
+**OT (Operazio edo Eragiketa Teknologiak)** prozesu fisikoak kontrolatzeko eta automatizatzeko erabiltzen dira. Adibidez: sentsoreak, PLCak, robotak, SCADA sistemak, kamerak eta termostatoak.
 
-* **Digitazioa:** Informazio fisikoa digitalera bihurtzea (papera -> PDF).
-* **Digitalizazioa:** Prozesuak teknologia digitalen bidez arintzea eta eraldatzea.
-* **Eraldaketa Digitala:** Negozio-eredu osoa datuen eta teknologiari esker berrasmatzea (adibidez, streaming zerbitzua).
+IT eta OT elkarrekin lan egiten dute: OTk datuak biltzen ditu makinetatik, eta ITk datu horiek aztertu, gorde eta erabakiak hartzeko erabiltzen ditu. Horri esker, mantentze prediktiboa, ekoizpenaren kontrola eta eraginkortasun handiagoa lortzen dira.
 
----
-
-## 2. IT (Informazio Teknologiak) vs OT (Teknologia Operatiboa)
-
-| Ezaugarria | IT (Information Technology) | OT (Operational Technology) |
+| Ikuspegia | IT | OT |
 |---|---|---|
-| **Funtzio Nagusia** | Datuak kudeatzea, transakzioak eta komunikazioa | Mundu fisikoa kontrolatzea eta monitorizatzea |
-| **Gailuak** | Zerbitzariak, ordenagailuak, datu-baseak | PLCak, robotak, sentsoreak, SCADA |
-| **Lehentasuna (CIA)** | Konfidentzialtasuna (C > I > A) | Eskuragarritasuna eta Segurtasun Fisikoa (A > I > C) |
-| **Latentzia** | Segundotan / minutuetan onargarria | Denbora erreal zorrotza (mikrosegundotan) |
-| **Zikloa** | 3 - 5 urte | 10 - 25 urte |
+| Helburua | Datuak eta informazioa kudeatzea | Prozesu fisikoak kontrolatzea eta automatizatzea |
+| Teknologia ohikoak | Softwarea, datu-baseak, sareak, aplikazioak | Sentsoreak, PLCak, robotak, SCADA |
+| Segurtasuna | Datuak eta sistemak babestea | Sistema industrialak babestea |
+| Bizi-zikloa | Laburragoa, eguneratze azkarrak | Luzeagoa, egonkortasuna lehenetsita |
 
-### Konbergentziaren Erronkak
-* OT sareak Internetera konektatzean zibererasoen aurrean zaurgarriago bihurtzen dira.
-* Irtenbidea: DMZ industrialak, su-ebaki sendoak eta sare-segmentazio zorrotza.
+## Teknologia Gaitzaile Digitalak (THD/TGD)
 
----
+**Teknologia Gaitzaile Digitalak (THD)** digitalizazioa ahalbidetzen duten teknologiak dira. Gaitasun berriak, automatizazioa, berrikuntza eta negozio-eredu berriak sortzen laguntzen dute.
 
-## 3. Teknologia Gaitzaile Digitalak (THD)
+THD nagusien artean daude:
 
-* **Cloud Computing:** Hodeiko zerbitzuak (IaaS, PaaS, SaaS) eskariaren arabera eskalatzeko.
-* **IoT (Gauzen Internet):** Gailu eta sentsoreen bidezko datu-bilketa masiboa.
-* **Big Data eta Analitika:** Erabiltzaileen joerak aztertu eta erabaki estrategikoak hartzea.
-* **Adimen Artifiziala (AA):** Edukien gomendio-motorrak eta prozesuen optimizazioa.
-* **Zibersegurtasuna:** Transmisioen zifraketa eta datuen babesa (RGPD/LOPD).
-* **Green IT:** Energia-kontsumo baxuko azpiegiturak eta zerbitzarien kudeaketa efizientea.
+- **IoT (Gauzen Internet)**: gailu fisikoak Internetera konektatzea eta datuak denbora errealean biltzea.
+- **Adimen Artifiziala (AA/IA)**: makinei ikasteko eta erabakiak hartzeko aukera ematen dieten teknikak.
+- **Big Data**: datu-bolumen handiak biltzea, gordetzea eta aztertzea.
+- **Cloud computing**: datuak eta aplikazioak Internet bidez gordetzea eta prozesatzea.
+- **Zibersegurtasuna**: sistemak, sareak eta datuak eraso digitalen aurka babestea.
+- **Errealitate areagotua (AR) eta birtuala (VR)**: esperientzia digital murgiltzaileak sortzea.
+- **Blockchain**: transakzioen erregistro deszentralizatu eta segurua.
+- **5G**: konektibitate azkarragoa eta fidagarriagoa.
+- **Robotika, 3D inprimaketa eta biometria**: automatizazioa, fabrikazio digitala eta identifikazio segurua.
 
----
+THDek ezaugarri hauek dituzte: moldakortasuna, automatizazioa, interkonexioa, analitika aurreratua, segurtasuna, eskalagarritasuna, pertsonalizazioa, aurreztea eta berrikuntza.
 
-## 4. Proiektuaren Kudeaketa: GitHub Projects
+## Cloud computing (hodeiko konputazioa)
 
-* **Metodologia:** Kanban arina.
-* **Faseak:** To Do (Egiteke), In Progress (Garapenean), In Review (Berrikuspena) eta Done (Eginda).
-* **Jarraipena:** Irakasleek GitHub Projects bidez proiektuaren eguneroko bilakaera ebaluatzen dute.
+**Cloud computing** datuak, aplikazioak eta zerbitzuak Internet bidez gordetzeko eta erabiltzeko teknologia da. Erabiltzaileak ez du beti bere hardware fisikoaren mende egon behar; datuak hodeian gordetzen dira eta edozein gailutik atzitu daitezke.
+
+Adibideak: **Google Drive, Dropbox eta iCloud**.
+
+Streaming plataforma batean Cloud oso erabilgarria da, bideo-edukiak, erabiltzaile-datuak, harpidetzak eta bistaratze-erregistroak eskalagarri moduan gorde ditzakeelako.
+
+## THD, IT eta OTren erlazioa
+
+THDek IT eta OT integratzen ditu: datuak biltzen ditu (**OT**), informazioa prozesatzen du (**IT**) eta automatizazio, analisi eta zerbitzu digital berriak ahalbidetzen ditu (**THD**).
+
+Streaming plataforma batean:
+
+- **IT**: erabiltzaileak, rolak, harpidetzak, datu-basea eta web zerbitzaria kudeatzen ditu.
+- **OT**: bideoak transmititzeko zerbitzariak, sarearen kontrola eta gailuen monitorizazioa kudeatzen ditu.
+- **Cloud**: edukia eta datuak eskalagarri moduan gordetzen ditu.
+- **THD**: iruzurren detekzioa, gomendio pertsonalizatuak eta analitika ahalbidetzen ditu.
+
+## Ingurumen-inpaktua
+
+THDek ondorio positiboak ditu, hala nola paperaren erabilera murriztea, energia-kudeaketa eraginkorragoa, telelana eta ingurumenaren monitorizazioa.
+
+Baina ondorio negatiboak ere baditu: hondakin elektronikoak, datu-zentroen energia-kontsumoa, karbono-aztarna eta baliabide naturalen kontsumoa.
