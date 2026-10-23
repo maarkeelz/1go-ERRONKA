@@ -31,7 +31,7 @@
     <main>
     <section class="orri-sarrera">
       <h1>Sare Azpiegitura Fisikoa eta Seinaleak</h1>
-      <p>Ikasgelako rack-ean kableatu egituratuaren muntaia (T568B), OSI 1-2 geruzen analisia, <code>Admin_123</code> pasahitzaren ASCII kodeketa, CRC-6-GSM erroreen kontrola eta konexio probak.</p>
+      <p>Ikasgelako rack-ean kableatu egituratuaren muntaia (T568B), OSI 1-2 geruzen analisia, <code>Admin_121</code> pasahitzaren ASCII kodeketa, CRC-6-GSM erroreen kontrola eta konexio probak.</p>
     </section>
 
         <section>
@@ -55,26 +55,9 @@
         </div>
       </div>
     </section>
-
         <section>
-      <h2>2. Kableatua (T568B) eta Tester Emaitzak</h2>
-      <p>T568B estandarraren arabera krimpautako patch kableen jarraitutasun probak:</p>
-      <table>
-        <thead>
-          <tr><th>Kablea</th><th>Ibilbidea</th><th>Pinak (1-8)</th><th>Egoera</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>KBL-01</td><td>Lanpostua -> Patch Panela (1. ataka)</td><td>1-2-3-4-5-6-7-8</td><td>Zuzena (OK)</td></tr>
-          <tr><td>KBL-02</td><td>Patch Panela (1) -> Switch (1)</td><td>1-2-3-4-5-6-7-8</td><td>Zuzena (OK)</td></tr>
-          <tr><td>KBL-03</td><td>WindowsServer6Taldea -> Patch Panela (2)</td><td>1-2-3-4-5-6-7-8</td><td>Zuzena (OK)</td></tr>
-          <tr><td>KBL-04</td><td>Patch Panela (2) -> Switch (2)</td><td>1-2-3-4-5-6-7-8</td><td>Zuzena (OK)</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-        <section>
-      <h2>3. Admin_123 Pasahitzaren ASCII eta CRC-6 Kalkulua</h2>
-      <p>Sistemako probako pasahitza (<code>Admin_123</code>) ASCII formatura pasatuta:</p>
+      <h2>2. Admin_121 Pasahitzaren ASCII eta CRC-6 Kalkulua</h2>
+      <p>Sistemako probako pasahitza (<code>Admin_121</code>) ASCII formatura pasatuta. 9 karaktere, 72 bit:</p>
       <table>
         <thead>
           <tr><th>Karakterea</th><th>Hamartarra</th><th>Bitarra (8 bit)</th><th>Hex</th></tr>
@@ -82,22 +65,42 @@
         <tbody>
           <tr><td>A / d / m</td><td>65 / 100 / 109</td><td><code>01000001 01100100 01101101</code></td><td>0x41 / 0x64 / 0x6D</td></tr>
           <tr><td>i / n / _</td><td>105 / 110 / 95</td><td><code>01101001 01101110 01011111</code></td><td>0x69 / 0x6E / 0x5F</td></tr>
-          <tr><td>1 / 2 / 3</td><td>49 / 50 / 51</td><td><code>00110001 00110010 00110011</code></td><td>0x31 / 0x32 / 0x33</td></tr>
+          <tr><td>1 / 2 / 1</td><td>49 / 50 / 49</td><td><code>00110001 00110010 00110001</code></td><td>0x31 / 0x32 / 0x31</td></tr>
         </tbody>
       </table>
 
       <div class="ohar-blokea">
         <p><strong>CRC-6-GSM Polinomio sortzailea:</strong> <code>G(x) = x^6 + x^5 + x^3 + x^2 + x + 1</code> (Bitarrean: <code>1101111</code>)</p>
-        <p>Kalkulua: 72 biteko mezuari 6 zero gehitu eta modulo-2 XOR zatiketa egin da.</p>
-        <div class="kontsola">Lortutako CRC-6 hondarra: 011010 (Hamaseitarra: 0x1A | Hamartarra: 26)</div>
+        <p>Kalkulua: 72 biteko mezuari 6 zero gehitu eta modulo-2 XOR zatiketa egin da (78 bit guztira).</p>
+        <div class="kontsola">Lortutako CRC-6 hondarra: 101011 (Hamaseitarra: 0x2B | Hamartarra: 43)</div>
+        <p>Egiaztapena: mezuari hondarra (101011) gehituta zatiketak <code>000000</code> ematen du, beraz marko osoa zuzena da.</p>
+      </div>
+      <div class="flex-kaxak">
+        <div class="kaxa">
+          <h3>CRC kalkulua</h3>
+          <div class="irudi-koadroa">
+            <img src="img/sareak/crc-kalkulua.jpg" alt="Admin_121 pasahitzaren CRC-6 kalkulua eskuz egina, koadernoan">
+            <p class="oin-testua"><em>Erantzuna 101011</em></p>
+          </div>
+        </div>
+        <div class="kaxa">
+          <h3>CRC baieztapena</h3>
+          <div class="irudi-koadroa">
+            <img src="img/sareak/crc-baieztapena.jpg" alt="CRC baieztapena eskuz egina, hondarra zero">
+            <p class="oin-testua"><em>Hondarra 000000</em></p>
+          </div>
+        </div>
       </div>
     </section>
 
         <section>
-      <h2>4. Seinale Modulazioak eta Manchester</h2>
+      <h2>3. Seinale Modulazioak eta Manchester</h2>
+      <p>Marko osoa (78 bit: 72 bit mezua + 6 bit CRC) 6 biteko 13 bloketan banatuta dago, eta bloke bakoitza seinale bihurtu da:</p>
       <div class="irudi-koadroa">
-        <img src="img/sareak/seinaleak.svg" alt="Seinale Modulazioak">
-        <p class="oin-testua"><em>1. irudia: ASK, FSK, PSK eta Manchester modulazio digitalen diagrama.</em></p>
+        <img src="img/sareak/psk-ask-fsk.jpg" alt="PSK, ASK eta FSK modulazioen seinaleak, 6 biteko blokeetan banatutako bit-sekuentziarentzat">
+      </div>
+      <div class="irudi-koadroa">
+        <img src="img/sareak/manchester-normala-diferentziala.jpg" alt="Manchester eta Manchester diferentziala kodifikazioen seinaleak, bit-sekuentzia berarekin">
       </div>
       <div class="flex-kaxak">
         <div class="kaxa">
@@ -116,23 +119,6 @@
           <h3>Manchester</h3>
           <p>Tentsio-trantsizioa bit bakoitzaren erdian sinkronizaziorako.</p>
         </div>
-      </div>
-    </section>
-
-        <section>
-      <h2>5. Konektibitate Probak (192.168.70.2)</h2>
-      <table>
-        <thead>
-          <tr><th>Konexio Mota</th><th>Helburua (IP)</th><th>Paketeak</th><th>Galera</th><th>Latentzia</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Kablez (Cat 6)</td><td>192.168.70.2 (WindowsServer6Taldea)</td><td>50 / 50</td><td>% 0</td><td>&lt; 1 ms</td></tr>
-          <tr><td>Wi-Fi (5 GHz)</td><td>192.168.70.2 (WindowsServer6Taldea)</td><td>50 / 50</td><td>% 0</td><td>3.2 ms</td></tr>
-          <tr><td>Wi-Fi (2.4 GHz)</td><td>192.168.70.2 (WindowsServer6Taldea)</td><td>50 / 49</td><td>% 2</td><td>8.7 ms</td></tr>
-        </tbody>
-      </table>
-      <div class="ohar-blokea">
-        <p>Gailu mugikor batetik Wi-Fi bidez <code>http://192.168.70.2</code> atarira sarbide arrakastatsua egiaztatu da.</p>
       </div>
     </section>
   </main>
@@ -155,7 +141,7 @@
       </div>
     </div>
     <div class="footer-behea">
-      <p>2026 SISA 1 • 6. Taldea - IsardVDI ingurunean hedatua</p>
+      <p>2026 SISA 1 • 6. Taldea - VirtualBox ingurunean hedatua</p>
     </div>
   </footer>
 
