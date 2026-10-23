@@ -52,43 +52,42 @@
       <div class="flex-kaxak">
         <div class="kaxa">
           <h3>1. Proposamena: Orokorra (Baztertua)</h3>
-          <p>Users, Roles, User_Roles, Subscriptions, Plans, Content, Views.</p>
+          <p>Accounts, Profiles, Watch History, Episodes, Titles, Genres, Subscriptions, Plans.</p>
           <div class="irudi-koadroa">
-            <img src="img/datu-baseak/er-eredua-baztertua.png" alt="1. Proposamena (Baztertua)">
-            <p class="oin-testua"><em>1. irudia: 1. Proposamena (Baztertua) - Ez du baimentzen profil anitzik kontu berean.</em></p>
+            <img src="img/datu-baseak/er-eredua-baztertua.jpg" alt="1. Proposamena (Baztertua)">
           </div>
         </div>
         <div class="kaxa hautatua">
           <h3>2. Proposamena: Banatua (Hautatua)</h3>
-          <p>Accounts, Profiles, Plans, Subscriptions, Titles, Episodes, Genres, Watch_History.</p>
+          <p>Accounts, Profiles, Watch History, Episodes, Titles, Genres, Subscriptions, Plans.</p>
           <div class="irudi-koadroa">
             <img src="img/datu-baseak/er-eredua-hautatua.jpg" alt="2. Proposamena (Hautatua)">
-            <p class="oin-testua"><em>2. irudia: 2. Proposamena (Hautatua) - Kontuak eta profilak (Is_Kids) bereizita.</em></p>
           </div>
         </div>
       </div>
     </section>
 
         <section>
-      <h2>3. Eredu Erlazionala eta 3NF Normalizazioa</h2>
+      <h2>3. Relational Model and 3NF Normalization</h2>
       <table>
         <thead>
-          <tr><th>Taula</th><th>PK (Lehen Mailakoa)</th><th>FK (Kanpokoa)</th><th>Beste Eremuak</th></tr>
+          <tr><th>Entities</th><th>PK (Primary Key)</th><th>FK (Foreign Key)</th><th>Attributes</th></tr>
         </thead>
         <tbody>
-          <tr><td>Accounts</td><td><span class="pk">PK</span> Account_ID</td><td>-</td><td>Email, Password_Hash, Country, Created_At</td></tr>
-          <tr><td>Profiles</td><td><span class="pk">PK</span> Profile_ID</td><td><span class="fk">FK</span> Account_ID</td><td>Name, Is_Kids</td></tr>
-          <tr><td>Plans</td><td><span class="pk">PK</span> Plan_ID</td><td>-</td><td>Name, Monthly_Price, Max_Screens, Video_Quality</td></tr>
-          <tr><td>Subscriptions</td><td><span class="pk">PK</span> Subscription_ID</td><td><span class="fk">FK</span> Account_ID, Plan_ID</td><td>Start_Date, End_Date, Status</td></tr>
-          <tr><td>Titles</td><td><span class="pk">PK</span> Title_ID</td><td>-</td><td>Name, Type, Release_Year, Age_Rating</td></tr>
-          <tr><td>Episodes</td><td><span class="pk">PK</span> Episode_ID</td><td><span class="fk">FK</span> Title_ID</td><td>Season, Ep_Number, Duration_Min</td></tr>
-          <tr><td>Genres</td><td><span class="pk">PK</span> Genre_ID</td><td>-</td><td>Name</td></tr>
-          <tr><td>Title_Genres</td><td><span class="pk">PK</span> Title_ID, Genre_ID</td><td><span class="fk">FK</span> Title_ID, Genre_ID</td><td>N:M Erlazioa (Erlazio taula)</td></tr>
-          <tr><td>Watch_History</td><td><span class="pk">PK</span> Watch_ID</td><td><span class="fk">FK</span> Profile_ID, Episode_ID</td><td>Watched_At, Progress_Sec</td></tr>
+          <tr><td>Accounts</td><td> Account_ID</td><td>-</td><td>Email, Password Hash, Country, Created At</td></tr>
+          <tr><td>Profiles</td><td> Profile_ID</td><td> Account_ID</td><td>Name, ID Kids, Max age rating</td></tr>
+          <tr><td>Plans</td><td> Plan_ID</td><td>-</td><td>Name, Monthly Price, Max Screens, Video Quality</td></tr>
+          <tr><td>Subscriptions</td><td> Subscription_ID</td><td> Account_ID, Plan_ID</td><td>Start Date, End Date, Status</td></tr>
+          <tr><td>Titles</td><td> Title_ID</td><td>-</td><td>Name, Type, Release Year, Age Rating</td></tr>
+          <tr><td>Episodes</td><td> Episode_ID</td><td> Title_ID</td><td>Season, Ep Number, Duration Min</td></tr>
+          <tr><td>Plan_Titles</td><td> Plan_ID, Title_ID</td><td>Plan_ID, Title_ID</td><td>N:M Erlazioa</td></tr>
+          <tr><td>Genres</td><td> Genre_ID</td><td>-</td><td>Name</td></tr>
+          <tr><td>Title_Genres</td><td> Title_ID, Genre_ID</td><td> Title_ID, Genre_ID</td><td>N:M Erlazioa</td></tr>
+          <tr><td>Watch_History</td><td> Watch_ID</td><td> Profile_ID, Episode_ID</td><td>Watched At, Progress Sec</td></tr>
         </tbody>
       </table>
       <div class="ohar-blokea">
-        <p><strong>3NF Normalizazioa:</strong> Eremu guztiak atomikoak dira (1NF), dependentzia osoa dute PK-rekiko (2NF) eta dependentzia iragankor guztiak kendu dira (3NF).</p>
+        <p><strong>3NF Normalization:</strong> All fields are atomic (1NF), they have full dependency on the PK (2NF), and all transitive dependencies have been removed (3NF).</p>
       </div>
     </section>
 
