@@ -22,7 +22,6 @@
           <li><a href="sareak.html">Sareak</a></li>
           <li><a href="datu-baseak.html">Datu-baseak</a></li>
           <li><a href="sistema-eragileak.html" class="aktiboa">Sistema Eragileak</a></li>
-          <li><a href="digitalizazioa.html">Digitalizazioa</a></li>
         </ul>
       </nav>
     </div>
@@ -30,26 +29,24 @@
 
     <main>
     <section class="orri-sarrera">
-      <h1>Windows Server 2019, Erabiltzaileak eta RAID</h1>
-      <p>IsardVDI-n <strong>WindowsServer6Taldea</strong> (192.168.70.2) zerbitzariaren konfigurazioa: tokiko erabiltzaileak, segurtasun-politikak, NTFS baimenak, RAID bolumenak eta Windows Backup.</p>
+      <h1>Windows Server 2025, Erabiltzaileak eta RAID</h1>
+      <p>VirtualBox-n <strong>WindowsServer6Taldea</strong> (192.168.70.2) zerbitzariaren konfigurazioa: tokiko erabiltzaileak, segurtasun-politikak, NTFS baimenak, RAID bolumenak eta Windows Backup.</p>
     </section>
 
         <section>
-      <h2>1. IsardVDI eta WindowsServer6Taldea</h2>
-      <p>IsardVDI plataforman Windows Server 2019 makina birtuala prestatu dugu:</p>
+      <h2>1. Virtual Box eta WindowsServer6Taldea</h2>
+      <p>VirtualBox plataforman Windows Server 2025 makina birtuala prestatu dugu:</p>
       <div class="flex-kaxak">
         <div class="kaxa">
           <h3>Hardware Birtuala</h3>
           <div class="irudi-koadroa">
-            <img src="img/sistema-eragileak/isardvdi-makina.png" alt="IsardVDI Makina">
-            <p class="oin-testua"><em>1. irudia: 6 vCPU, 16 GB RAM, Vlan 70 eta Virtio diskoa.</em></p>
+            <img src="img/sistema-eragileak/vm-parametroak.png" alt="VirtualBox Makina">
           </div>
         </div>
         <div class="kaxa">
           <h3>Sare Konfigurazioa</h3>
           <div class="irudi-koadroa">
             <img src="img/sistema-eragileak/ip-konfigurazioa.png" alt="IP Konfigurazioa">
-            <p class="oin-testua"><em>2. irudia: IPv4 estatikoa (192.168.70.2, Gateway 192.168.70.254).</em></p>
           </div>
         </div>
       </div>
@@ -63,7 +60,7 @@
           <ul>
             <li><strong>Editorea:</strong> <code>Erronka Editoreak</code> taldekoa (Modificar baimena).</li>
             <li><strong>Irakurlea:</strong> <code>Erronka Irakurleak</code> taldekoa (Lectura y ejecucion).</li>
-            <li><strong>Pasahitza:</strong> <code>Admin_123</code> bi erabiltzaileentzat.</li>
+            <li><strong>Pasahitza:</strong> <code>Admin_121</code> bi erabiltzaileentzat.</li>
           </ul>
         </div>
         <div class="kaxa">
@@ -75,17 +72,28 @@
           </ul>
         </div>
       </div>
-      <div class="irudi-koadroa">
-        <img src="img/sistema-eragileak/ntfs-baimenak-proba.png" alt="NTFS Baimenak">
-        <p class="oin-testua"><em>3. irudia: NTFS baimen aurreratuak (aurrerago RAID bolumenera pasako da).</em></p>
+      <div class="flex-kaxak">
+        <div class="kaxa">
+          <h3>Erabiltzaileak eta Taldeak</h3>
+          <div class="irudi-koadroa">
+            <img src="img/sistema-eragileak/tokiko-erabiltzaileak.png" alt="VirtualBox Taldeak">
+            <img src="img/sistema-eragileak/tokiko-taldeak.png" alt="VirtualBox Taldeak">
+          </div>
+        </div>
+        <div class="kaxa">
+          <h3>Segurtasun Zuzentarauak</h3>
+          <div class="irudi-koadroa">
+            <img src="img/sistema-eragileak/pasahitz-politikak.png" alt="Pasahitz Politika">
+             <img src="img/sistema-eragileak/blokeo-politikak.png" alt="Pasahitz Politika">
+          </div>
+        </div>
       </div>
     </section>
 
         <section>
       <h2>3. Disko-Kudeaketa eta RAID Arkitektura</h2>
       <div class="irudi-koadroa">
-        <img src="img/sistema-eragileak/raid-arkitektura.svg" alt="RAID 1 eta RAID 5">
-        <p class="oin-testua"><em>4. irudia: RAID 1 (Ispilua) eta RAID 5 (Paritatea) arkitekturen diagrama.</em></p>
+        <img src="img/sistema-eragileak/raid-kudeaketa.png" alt="RAID 1 eta RAID 5">
       </div>
       <div class="flex-kaxak">
         <div class="kaxa">
@@ -104,23 +112,16 @@
         </div>
       </div>
     </section>
-
         <section>
-      <h2>4. IIS Web Zerbitzaria eta Firewall</h2>
-      <p>Webgunea IIS bidez zerbitzatzen da (80 ataka HTTP, <code>192.168.70.2</code>). Sarrerako araua PowerShell komandoz gaitu da:</p>
-      <div class="kontsola">
-New-NetFirewallRule -Name "IIS-HTTP-Inbound" -DisplayName "IIS Web Zerbitzaria (Port 80 HTTP)" -Enabled True -Direction Inbound -Protocol TCP -LocalPort 80 -Action Allow
-      </div>
-    </section>
-
-        <section>
-      <h2>5. Windows Server Backup eta Berreskuratzea</h2>
+      <h2>4. Windows Server Backup eta Berreskuratzea</h2>
       <div class="irudi-koadroa">
         <img src="img/sistema-eragileak/backup-instalazioa.png" alt="Backup instalazioa">
-        <p class="oin-testua"><em>5. irudia: Windows Server Backup eginbidearen instalazio arrakastatsua.</em></p>
       </div>
-      <div class="ohar-blokea">
-        <p><strong>Berreskuratze Prozedura:</strong> <code>index.html</code> ezabaketa simulatu da; babeskopiatik fitxategia segundotan leheneratu da datu-galerarik gabe.</p>
+    </section>
+    <section>
+      <h2>5. Windows Server Actualizazioak</h2>
+      <div class="irudi-koadroa">
+        <img src="img/sistema-eragileak/windows-update.png" alt="Backup instalazioa">
       </div>
     </section>
   </main>
@@ -143,7 +144,7 @@ New-NetFirewallRule -Name "IIS-HTTP-Inbound" -DisplayName "IIS Web Zerbitzaria (
       </div>
     </div>
     <div class="footer-behea">
-      <p>2026 SISA 1 • 6. Taldea - IsardVDI ingurunean hedatua</p>
+      <p>2026 SISA 1 • 6. Taldea - VirtualBox ingurunean hedatua</p>
     </div>
   </footer>
 
