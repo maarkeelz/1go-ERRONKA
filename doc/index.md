@@ -12,7 +12,3 @@ Ongi etorri proiektuaren dokumentaziora. Hautatu atal bat dagokion dokumentua ik
 - [Digitalizazioa](./Digitalizazioa.html)
 - [Sareak](./Sareak.html)
 - [Sistema Eragileak](./Sistema%20Eragileak.html)
-
----
-
-[← Webgunera itzuli](../)
