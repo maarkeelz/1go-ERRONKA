@@ -43,6 +43,12 @@ THD nagusien artean daude:
 
 THDek ezaugarri hauek dituzte: moldakortasuna, automatizazioa, interkonexioa, analitika aurreratua, segurtasuna, eskalagarritasuna, pertsonalizazioa, aurreztea eta berrikuntza.
 
+## Ingurumen-inpaktua
+
+THDek ondorio positiboak ditu, hala nola paperaren erabilera murriztea, energia-kudeaketa eraginkorragoa, telelana eta ingurumenaren monitorizazioa.
+
+Baina ondorio negatiboak ere baditu: hondakin elektronikoak, datu-zentroen energia-kontsumoa, karbono-aztarna eta baliabide naturalen kontsumoa.
+
 ## Cloud computing (hodeiko konputazioa)
 
 **Cloud computing** datuak, aplikazioak eta zerbitzuak Internet bidez gordetzeko eta erabiltzeko teknologia da. Erabiltzaileak ez du beti bere hardware fisikoaren mende egon behar; datuak hodeian gordetzen dira eta edozein gailutik atzitu daitezke.
@@ -53,7 +59,7 @@ Hodei-konputazioan (cloud computing) **hiru hodei mota nagusi daude**: publikoa,
 
 | Hodei mota | Nork erabiltzen du | Ezaugarriak | Abantailak | Desabantailak | Adibidea |
 |---|---|---|---|---|---|
-| **Hodei publikoa** | Erabiltzaile edo enpresa askok | Zerbitzariak eta baliabideak partekatuta daude; Internet bidez sartzen da; hornitzaileak kudeatzen du azpiegitura | Kostu baxua, eskalatzeko erraza eta mantentze-lan gutxiago | Kontrol eta pribatutasun gutxiago; baliabideak beste bezeroekin partekatzen dira | Enpresa txiki batek bere webgunea **Microsoft Azure**, **AWS** edo **Google Cloud**-en ostatatzea |
+| **Hodei publikoa** | Erabiltzaile edo enpresa askok | Zerbitzariak eta baliabideak partekatuta daude; Internet bidez sartzen da; hornitzaileak kudeatzen du azpiegitura | Kostu baxua, eskalatzeko erraza eta mantentze-lan gutxiago | Kontrol eta pribatutasun gutxiago; baliabideak beste bezeroekin partekatzen dira | Enpresa txiki batek bere webgunea Microsoft Azure, AWS edo Google Cloud-en ostatatzea |
 | **Hodei pribatua** | Erakunde bakarra | Baliabideak enpresa bakarrarentzat dira; enpresaren datazentroan edo hornitzaile espezializatu batean egon daiteke | Segurtasun, kontrol eta pribatutasun handiagoa | Garestiagoa; hardware, mantentze-lan eta kudeaketa propioak behar ditu | Banku batek bezeroen datuak eta finantza-informazioa gordetzeko hodei pribatua erabiltzea |
 | **Hodei hibridoa** | Erakunde bakarra, bi hodeiak konbinatuz | Datu eta aplikazio batzuk hodei pribatuan daude eta beste batzuk hodei publikoan | Malgutasuna, segurtasuna eta eskalagarritasuna uztartzen ditu | Kudeaketa eta integrazio konplexuagoa; bi inguruneak ondo konektatu behar dira | Ospitale batek gaixoen datu medikoak hodei pribatuan gordetzea eta hitzorduak kudeatzeko aplikazioa hodei publikoan jartzea |
 
@@ -63,9 +69,9 @@ Hodei-konputazioan hiru zerbitzu mota nagusi daude: **IaaS, PaaS eta SaaS**. Bak
 
 | Zerbitzu mota | Esan nahi du | Zer eskaintzen du | Erabiltzaileak kudeatzen du | Hornitzaileak kudeatzen du | Adibideak |
 |---|---|---|---|---|---|
-| **IaaS** | *Infrastructure as a Service* (Azpiegitura zerbitzu gisa) | Makina birtualak, zerbitzariak, biltegiratzea, sareak eta sistema eragileak | Aplikazioak, datuak, sistema eragilea eta konfigurazioa | Hardware fisikoa, sareak eta datazentroa | **AWS EC2**, **Microsoft Azure Virtual Machines**, **Google Compute Engine** |
-| **PaaS** | *Platform as a Service* (Plataforma zerbitzu gisa) | Aplikazioak garatzeko eta exekutatzeko plataforma: sistema eragilea, datu-baseak, garapen-tresnak eta exekuzio-ingurunea | Aplikazioa eta datuak | Sistema eragilea, zerbitzariak, biltegiratzea eta azpiegitura | **Google App Engine**, **Azure App Service**, **Heroku** |
-| **SaaS** | *Software as a Service* (Softwarea zerbitzu gisa) | Erabiltzeko prest dagoen softwarea, Internet bidez eta normalean nabigatzailetik | Ez du ezer teknikorik kudeatzen; aplikazioa erabiltzen du soilik | Aplikazioa, datu-baseak, zerbitzariak, eguneratzeak eta segurtasuna | **Gmail**, **Microsoft 365**, **Google Drive**, **Netflix** |
+| **IaaS** | *Infrastructure as a Service* (Azpiegitura zerbitzu gisa) | Makina birtualak, zerbitzariak, biltegiratzea, sareak eta sistema eragileak | Aplikazioak, datuak, sistema eragilea eta konfigurazioa | Hardware fisikoa, sareak eta datazentroa | AWS EC2, Microsoft Azure Virtual Machines, Google Compute Engine |
+| **PaaS** | *Platform as a Service* (Plataforma zerbitzu gisa) | Aplikazioak garatzeko eta exekutatzeko plataforma: sistema eragilea, datu-baseak, garapen-tresnak eta exekuzio-ingurunea | Aplikazioa eta datuak | Sistema eragilea, zerbitzariak, biltegiratzea eta azpiegitura | Google App Engine, Azure App Service, Heroku |
+| **SaaS** | *Software as a Service* (Softwarea zerbitzu gisa) | Erabiltzeko prest dagoen softwarea, Internet bidez eta normalean nabigatzailetik | Ez du ezer teknikorik kudeatzen; aplikazioa erabiltzen du soilik | Aplikazioa, datu-baseak, zerbitzariak, eguneratzeak eta segurtasuna | Gmail, Microsoft 365, Google Drive |
 
 ### IaaS: Azpiegitura zerbitzu gisa
 
@@ -120,8 +126,3 @@ Streaming plataforma batean:
 - **Cloud**: edukia eta datuak eskalagarri moduan gordetzen ditu.
 - **THD**: iruzurren detekzioa, gomendio pertsonalizatuak eta analitika ahalbidetzen ditu.
 
-## Ingurumen-inpaktua
-
-THDek ondorio positiboak ditu, hala nola paperaren erabilera murriztea, energia-kudeaketa eraginkorragoa, telelana eta ingurumenaren monitorizazioa.
-
-Baina ondorio negatiboak ere baditu: hondakin elektronikoak, datu-zentroen energia-kontsumoa, karbono-aztarna eta baliabide naturalen kontsumoa.
