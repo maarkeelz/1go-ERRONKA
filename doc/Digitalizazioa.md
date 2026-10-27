@@ -1,5 +1,13 @@
 # Digitalizazioa: IT, OT, THD eta Cloud
 
+# Digitalizazioa
+
+Digitalizazioa da errealitate fisikoko prozesuak, zerbitzuak, informazioa eta negozio-ereduak teknologia digitalak erabiliz eraldatzea. Helburua lanak azkarrago, eraginkorrago, seguruago eta konektatuago egitea da.
+
+Askotan paper bateko dokumentu bat eskaneatzea besterik ez dela pentsatzen dugu, baina digitalizazioa harago doa: ez du bakarrik informazioa digitu batean gordetzen, baizik eta datuak erabiliz prozesuak automatizatzea, erabakiak hobetzea eta bezeroei edo erabiltzaileei zerbitzu berriak eskaintzea lortzen du.
+
+Adibidez, denda bat digitalizatzen bada, online saldu dezake, bezeroen datuak kudeatu, ordainketak automatizatu eta salmenten datuak aztertu erabaki hobeak hartzeko.
+
 ## IT eta OT teknologiak
 
 **IT (Informazioaren Teknologiak)** datuak prozesatzeko, informazioa kudeatzeko eta erabakiak hartzeko erabiltzen diren teknologiak dira. Adibidez: datu-baseak, aplikazioak, sareak, softwarea eta hodeiko zerbitzuak.
@@ -30,6 +38,8 @@ THD nagusien artean daude:
 - **Blockchain**: transakzioen erregistro deszentralizatu eta segurua.
 - **5G**: konektibitate azkarragoa eta fidagarriagoa.
 - **Robotika, 3D inprimaketa eta biometria**: automatizazioa, fabrikazio digitala eta identifikazio segurua.
+- **Robotika kolaboratzailea (cobots)**: gizakiekin batera lan egiten duten robotak dira; errepikakorrak edo arriskutsuak diren atazak automatizatzen dituzte fabriketan, biltegi eta osasun-zerbitzuetan.
+- **Digital twins (biki digitalak)**: objektu, makina edo prozesu fisiko baten eredu digitala da, datuak erabiliz denbora errealean simulatzeko, kontrolatzeko eta hobetzeko.
 
 THDek ezaugarri hauek dituzte: moldakortasuna, automatizazioa, interkonexioa, analitika aurreratua, segurtasuna, eskalagarritasuna, pertsonalizazioa, aurreztea eta berrikuntza.
 
@@ -37,9 +47,67 @@ THDek ezaugarri hauek dituzte: moldakortasuna, automatizazioa, interkonexioa, an
 
 **Cloud computing** datuak, aplikazioak eta zerbitzuak Internet bidez gordetzeko eta erabiltzeko teknologia da. Erabiltzaileak ez du beti bere hardware fisikoaren mende egon behar; datuak hodeian gordetzen dira eta edozein gailutik atzitu daitezke.
 
-Adibideak: **Google Drive, Dropbox eta iCloud**.
+Hodei-konputazioan (cloud computing) **hiru hodei mota nagusi daude**: publikoa, pribatua eta hibridoa. Denek datuak eta aplikazioak Internet edo sare pribatu baten bidez gordetzeko eta prozesatzeko aukera ematen dute, baina nork kudeatzen duen eta nork erabiltzen duen aldatzen da.
 
-Streaming plataforma batean Cloud oso erabilgarria da, bideo-edukiak, erabiltzaile-datuak, harpidetzak eta bistaratze-erregistroak eskalagarri moduan gorde ditzakeelako.
+## Hodei motak
+
+| Hodei mota | Nork erabiltzen du | Ezaugarriak | Abantailak | Desabantailak | Adibidea |
+|---|---|---|---|---|---|
+| **Hodei publikoa** | Erabiltzaile edo enpresa askok | Zerbitzariak eta baliabideak partekatuta daude; Internet bidez sartzen da; hornitzaileak kudeatzen du azpiegitura | Kostu baxua, eskalatzeko erraza eta mantentze-lan gutxiago | Kontrol eta pribatutasun gutxiago; baliabideak beste bezeroekin partekatzen dira | Enpresa txiki batek bere webgunea **Microsoft Azure**, **AWS** edo **Google Cloud**-en ostatatzea |
+| **Hodei pribatua** | Erakunde bakarra | Baliabideak enpresa bakarrarentzat dira; enpresaren datazentroan edo hornitzaile espezializatu batean egon daiteke | Segurtasun, kontrol eta pribatutasun handiagoa | Garestiagoa; hardware, mantentze-lan eta kudeaketa propioak behar ditu | Banku batek bezeroen datuak eta finantza-informazioa gordetzeko hodei pribatua erabiltzea |
+| **Hodei hibridoa** | Erakunde bakarra, bi hodeiak konbinatuz | Datu eta aplikazio batzuk hodei pribatuan daude eta beste batzuk hodei publikoan | Malgutasuna, segurtasuna eta eskalagarritasuna uztartzen ditu | Kudeaketa eta integrazio konplexuagoa; bi inguruneak ondo konektatu behar dira | Ospitale batek gaixoen datu medikoak hodei pribatuan gordetzea eta hitzorduak kudeatzeko aplikazioa hodei publikoan jartzea |
+
+## Hodeiko zerbitzu motak: IaaS, PaaS eta SaaS
+
+Hodei-konputazioan hiru zerbitzu mota nagusi daude: **IaaS, PaaS eta SaaS**. Bakoitzak erabiltzaileari teknologia-maila desberdin bat eskaintzen dio eta kudeatu beharreko elementu kopurua aldatzen da.
+
+| Zerbitzu mota | Esan nahi du | Zer eskaintzen du | Erabiltzaileak kudeatzen du | Hornitzaileak kudeatzen du | Adibideak |
+|---|---|---|---|---|---|
+| **IaaS** | *Infrastructure as a Service* (Azpiegitura zerbitzu gisa) | Makina birtualak, zerbitzariak, biltegiratzea, sareak eta sistema eragileak | Aplikazioak, datuak, sistema eragilea eta konfigurazioa | Hardware fisikoa, sareak eta datazentroa | **AWS EC2**, **Microsoft Azure Virtual Machines**, **Google Compute Engine** |
+| **PaaS** | *Platform as a Service* (Plataforma zerbitzu gisa) | Aplikazioak garatzeko eta exekutatzeko plataforma: sistema eragilea, datu-baseak, garapen-tresnak eta exekuzio-ingurunea | Aplikazioa eta datuak | Sistema eragilea, zerbitzariak, biltegiratzea eta azpiegitura | **Google App Engine**, **Azure App Service**, **Heroku** |
+| **SaaS** | *Software as a Service* (Softwarea zerbitzu gisa) | Erabiltzeko prest dagoen softwarea, Internet bidez eta normalean nabigatzailetik | Ez du ezer teknikorik kudeatzen; aplikazioa erabiltzen du soilik | Aplikazioa, datu-baseak, zerbitzariak, eguneratzeak eta segurtasuna | **Gmail**, **Microsoft 365**, **Google Drive**, **Netflix** |
+
+### IaaS: Azpiegitura zerbitzu gisa
+
+**IaaS**-ek erabiltzaileari oinarrizko azpiegitura digitala eskaintzen dio: makina birtualak, biltegiratzea, sareak eta prozesatzeko ahalmena. Erabiltzaileak bertan instalatu eta konfiguratzen ditu sistema eragileak, aplikazioak eta datuak.
+
+**Ezaugarriak:**
+- Kontrol handia ematen du sistemaren gainean.
+- Enpresa edo teknikariek kudeatzeko aukera ematen du.
+- Hardware fisikoa erosi beharrik gabe, zerbitzari birtualak sortzen dira.
+- Baliabideak eskatu eta askatu daitezke beharren arabera.
+
+**Adibidea:** enpresa batek Azure-n makina birtual bat sortzen du eta bertan Windows Server instalatzen du bere aplikazioak exekutatzeko.
+
+### PaaS: Plataforma zerbitzu gisa
+
+**PaaS**-ek aplikazioak garatu, probatu eta exekutatzeko plataforma eskaintzen du. Erabiltzaileak ez du zerbitzariak, sistema eragilea edo azpiegitura kudeatu behar; aplikazioaren garapenean zentratzen da.
+
+**Ezaugarriak:**
+- Garapen azkarragoa ahalbidetzen du.
+- Datu-baseak, garapen-tresnak eta exekuzio-ingurunea eskaintzen ditu.
+- Azpiegitura kudeatzeko beharrik gabe aplikazioak sortzeko egokia da.
+- Garatzaileentzat eta software-proiektuentzat erabiltzen da gehien.
+
+**Adibidea:** garatzaile batek **Heroku** edo **Azure App Service** erabiltzen du bere web aplikazioa argitaratzeko, zerbitzari bat konfiguratu beharrik gabe.
+
+### SaaS: Softwarea zerbitzu gisa
+
+**SaaS**-ek erabiltzeko prest dagoen aplikazio bat eskaintzen du Internet bidez. Erabiltzaileak ez du instalaziorik, eguneraketarik edo mantentze-lanik egin behar; kontu batekin sartu eta aplikazioa erabiltzen du.
+
+**Ezaugarriak:**
+- Erabiltzeko errazena da.
+- Normalean harpidetzaren bidez ordaintzen da.
+- Eguneratzeak eta segurtasuna hornitzaileak kudeatzen ditu.
+- Edonon erabil daiteke, Internet konexioa badago.
+
+**Adibidea:** ikasle batek **Gmail**, **Google Drive** edo **Microsoft 365** erabiltzen du dokumentuak idazteko eta gordetzeko.
+
+### Laburbilduz
+
+- **IaaS**: azpiegitura ematen du; erabiltzaileak sistema eragilea eta aplikazioak kudeatzen ditu.
+- **PaaS**: aplikazioak garatzeko plataforma ematen du; erabiltzaileak aplikazioa eta datuak kudeatzen ditu.
+- **SaaS**: software prestua ematen du; erabiltzaileak aplikazioa erabiltzen du bakarrik.
 
 ## THD, IT eta OTren erlazioa
 
