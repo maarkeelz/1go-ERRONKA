@@ -35,16 +35,18 @@
       <div class="flex-kaxak">
         <div class="kaxa">
           <h3>1. Proposal: Rejected</h3>
-          <p>Accounts, Profiles, Watch History, Episodes, Titles, Genres, Subscriptions, Plans.</p>
           <div class="irudi-koadroa">
+            <a href="img/datu-baseak/er-eredua-baztertua.jpg" target="_blank">
             <img src="img/datu-baseak/er-eredua-baztertua.jpg" alt="1. Proposamena (Baztertua)">
+            </a>
           </div>
         </div>
         <div class="kaxa hautatua">
           <h3>2. Proposal: Selected</h3>
-          <p>Accounts, Profiles, Watch History, Episodes, Titles, Genres, Subscriptions, Plans.</p>
           <div class="irudi-koadroa">
+            <a href="img/datu-baseak/er-eredua-hautatua.jpg" target="_blank">
             <img src="img/datu-baseak/er-eredua-hautatua.jpg" alt="2. Proposamena (Hautatua)">
+            </a>
           </div>
         </div>
       </div>
@@ -52,23 +54,27 @@
 
         <section>
       <h2>3. Relational Model and 3NF Normalization</h2>
-      <table>
-        <thead>
-          <tr><th>Entities</th><th>PK (Primary Key)</th><th>FK (Foreign Key)</th><th>Attributes</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Accounts</td><td> Account_ID</td><td>-</td><td>Email, Password Hash, Country, Created At</td></tr>
-          <tr><td>Profiles</td><td> Profile_ID</td><td> Account_ID</td><td>Name, ID Kids, Max age rating</td></tr>
-          <tr><td>Plans</td><td> Plan_ID</td><td>-</td><td>Name, Monthly Price, Max Screens, Video Quality</td></tr>
-          <tr><td>Subscriptions</td><td> Subscription_ID</td><td> Account_ID, Plan_ID</td><td>Start Date, End Date, Status</td></tr>
-          <tr><td>Titles</td><td> Title_ID</td><td>-</td><td>Name, Type, Release Year, Age Rating</td></tr>
-          <tr><td>Episodes</td><td> Episode_ID</td><td> Title_ID</td><td>Season, Ep Number, Duration Min</td></tr>
-          <tr><td>Plan_Titles</td><td> Plan_ID, Title_ID</td><td>Plan_ID, Title_ID</td><td>N:M Erlazioa</td></tr>
-          <tr><td>Genres</td><td> Genre_ID</td><td>-</td><td>Name</td></tr>
-          <tr><td>Title_Genres</td><td> Title_ID, Genre_ID</td><td> Title_ID, Genre_ID</td><td>N:M Erlazioa</td></tr>
-          <tr><td>Watch_History</td><td> Watch_ID</td><td> Profile_ID, Episode_ID</td><td>Watched At, Progress Sec</td></tr>
-        </tbody>
-      </table>
+<table>
+  <thead>
+    <tr><th>Entities</th><th>PK (Primary Key)</th><th>FK (Foreign Key)</th><th>Attributes</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Accounts</td><td>Account_ID</td><td>-</td><td>Email (UQ), Password_Hash, Creation_Date, Country</td></tr>
+    <tr><td>Profiles</td><td>Profile_ID</td><td>Account_ID</td><td>Name, Is_Kids, Max_Age_Rating</td></tr>
+    <tr><td>Plans</td><td>Plan_ID</td><td>-</td><td>Name (UQ), Monthly_Price, Max_Screens, Video_Quality</td></tr>
+    <tr><td>Subscriptions</td><td>Subscription_ID</td><td>Account_ID, Plan_ID</td><td>Start_Date, End_Date, Status, Auto_Renew</td></tr>
+    <tr><td>Renewals</td><td>Renewal_ID</td><td>Subscription_ID</td><td>Renewal_Date, Period_Start, Period_End, Amount, Payment_Status</td></tr>
+    <tr><td>Content</td><td>Content_ID</td><td>-</td><td>Title, Description, Release_Year, Age_Rating, Content_Type</td></tr>
+    <tr><td>Genres</td><td>Genre_ID</td><td>-</td><td>Name (UQ)</td></tr>
+    <tr><td>Content_Genres</td><td>Content_ID, Genre_ID</td><td>Content_ID, Genre_ID</td><td>-</td></tr>
+    <tr><td>Films</td><td>Content_ID</td><td>Content_ID</td><td>Duration_Min</td></tr>
+    <tr><td>Series</td><td>Content_ID</td><td>Content_ID</td><td>-</td></tr>
+    <tr><td>Seasons</td><td>Season_ID</td><td>Series_ID</td><td>Season_Number, Name, UNIQUE (Series_ID, Season_Number)</td></tr>
+    <tr><td>Episodes</td><td>Episode_ID</td><td>Season_ID</td><td>Episode_Number, Name, Duration_Min, UNIQUE (Season_ID, Episode_Number)</td></tr>
+    <tr><td>Film_Views</td><td>Profile_ID, Film_ID, Watched_At</td><td>Profile_ID, Film_ID</td><td>Progress_Sec</td></tr>
+    <tr><td>Episode_Views</td><td>Profile_ID, Episode_ID, Watched_At</td><td>Profile_ID, Episode_ID</td><td>Progress_Sec</td></tr>
+  </tbody>
+</table>
       <div class="ohar-blokea">
         <p><strong>3NF Normalization:</strong> All fields are atomic (1NF), they have full dependency on the PK (2NF), and all transitive dependencies have been removed (3NF).</p>
       </div>
@@ -79,11 +85,10 @@
       <div class="flex-kaxak">
         <div class="kaxa">
          <p> This database models a streaming platform with films and series. It manages accounts, viewer profiles, subscriptions and payments, the content catalog, and the viewing history of each profile. It is designed in Third Normal Form (3NF). </p>
-        <p>Accounts and profiles: An account stores the login data (unique email, password hash, country and creation date). Each account can have several profiles, one for each person who uses it. A profile has a name, a Kids flag (Is_Kids) and a maximum age rating. A Kids profile can only see content whose age rating is lower than or equal to that limit.</p>  
-      <p>Plans, subscriptions and renewals: Plans define the tiers with their monthly price, maximum number of screens and video quality. A subscription links an account to a plan and records its dates, status and automatic renewal setting. Each subscription has many renewals, each with its billing period, amount and payment status. An account can have only one active subscription, and only successful renewals extend access.</p>
-      <p>Content catalog: Content holds what is common to every title: title, description, release year and age rating. It is specialized into Films (with their duration) and Series (total and disjoint, so every title is exactly one of them). Series are divided into Seasons, and each season contains Episodes with a number, name and duration. Episodes inherit the age rating of their series. Genres classify content through the junction table Content_Genres, since a title can have several genres and a genre applies to many titles.</p>
-      <p>Viewing history: Film_Views and Episode_Views record what each profile watches, with the date and time and the progress in seconds. This keeps a separate history per profile and allows “continue watching”.</p>
-
+         <p>Accounts and profiles: An account stores the login data (unique email, password hash, country and creation date). Each account can have several profiles, one for each person who uses it. A profile has a name, a Kids flag (Is_Kids) and a maximum age rating. A Kids profile can only see content whose age rating is lower than or equal to that limit.</p>  
+         <p>Plans, subscriptions and renewals: Plans define the tiers with their monthly price, maximum number of screens and video quality. A subscription links an account to a plan and records its dates, status and automatic renewal setting. Each subscription has many renewals, each with its billing period, amount and payment status. An account can have only one active subscription, and only successful renewals extend access.</p>
+         <p>Content catalog: Content holds what is common to every title: title, description, release year and age rating. It is specialized into Films (with their duration) and Series (total and disjoint, so every title is exactly one of them). Series are divided into Seasons, and each season contains Episodes with a number, name and duration. Episodes inherit the age rating of their series. Genres classify content through the junction table Content_Genres, since a title can have several genres and a genre applies to many titles.</p>
+         <p>Viewing history: Film_Views and Episode_Views record what each profile watches, with the date and time and the progress in seconds. This keeps a separate history per profile and allows “continue watching”.</p>
         </div>
       </div>
     </section>
