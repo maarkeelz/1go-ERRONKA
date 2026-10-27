@@ -78,7 +78,12 @@
       <h2>4. Description</h2>
       <div class="flex-kaxak">
         <div class="kaxa">
-          
+         <p> This database models a streaming platform with films and series. It manages accounts, viewer profiles, subscriptions and payments, the content catalog, and the viewing history of each profile. It is designed in Third Normal Form (3NF). </p>
+        <p>Accounts and profiles: An account stores the login data (unique email, password hash, country and creation date). Each account can have several profiles, one for each person who uses it. A profile has a name, a Kids flag (Is_Kids) and a maximum age rating. A Kids profile can only see content whose age rating is lower than or equal to that limit.</p>  
+      <p>Plans, subscriptions and renewals: Plans define the tiers with their monthly price, maximum number of screens and video quality. A subscription links an account to a plan and records its dates, status and automatic renewal setting. Each subscription has many renewals, each with its billing period, amount and payment status. An account can have only one active subscription, and only successful renewals extend access.</p>
+      <p>Content catalog: Content holds what is common to every title: title, description, release year and age rating. It is specialized into Films (with their duration) and Series (total and disjoint, so every title is exactly one of them). Series are divided into Seasons, and each season contains Episodes with a number, name and duration. Episodes inherit the age rating of their series. Genres classify content through the junction table Content_Genres, since a title can have several genres and a genre applies to many titles.</p>
+      <p>Viewing history: Film_Views and Episode_Views record what each profile watches, with the date and time and the progress in seconds. This keeps a separate history per profile and allows “continue watching”.</p>
+
         </div>
       </div>
     </section>
