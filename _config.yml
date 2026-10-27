@@ -1,0 +1,11 @@
+title: 1.Erronka Dokumentazioa
+theme: minima
+
+header_pages:
+
+  - doc/index.md
+  - doc/digi.md
+  - doc/db.md
+  - doc/markatze.md
+  - doc/sareak.md
+  - doc/sistemak.md
