@@ -1,6 +1,18 @@
-# Moduluak
+---
+title: Dokumentazioa
+---
 
-- [Sistemak](sistemak.md)
-- [Datu baseak](datu-baseak.md)
-- [Sareak](sareak.md)
-- [Digitalizazioa](digitalizazioa.md)
+# 1. Erronka — Dokumentazioa
+
+Ongi etorri proiektuaren dokumentaziora. Hautatu atal bat dagokion dokumentua ikusteko.
+
+## Dokumentazioaren menua
+
+- [Datu-baseak](./Datu%20Baseak.html)
+- [Digitalizazioa](./Digitalizazioa.html)
+- [Sareak](./Sareak.html)
+- [Sistema Eragileak](./Sistema%20Eragileak.html)
+
+---
+
+[← Webgunera itzuli](../)
