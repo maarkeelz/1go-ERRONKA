@@ -1,5 +1,6 @@
 title: "6T - Erronka 1"
 theme: minima
+baseurl: "/1go-ERRONKA"
 
 header_pages:
   - doc/index.md
