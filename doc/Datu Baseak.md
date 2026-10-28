@@ -20,11 +20,9 @@ We have chosen Microsoft Access to store the information for our streaming platf
 
 ## E-R Diagram Proposal
 
-![Relationships in Access](../img/datu-baseak/datubaseak.png)
+![Relationships in Access](../img/datu-baseak/database.png)
 
-In the selected proposal, we separated content into films and series, added seasons to organize series episodes, and included subscription renewals. We also defined separate viewing relationships for films and episodes, recording the viewing date and playback progress.
-
-Finally, we specified the relationships and cardinalities between the entities. We chose this second proposal as the basis for our database design.
+This is the proposal we have selected to move forward with. To reach this point, we had to make several decisions about how the streaming platform would work.
 
 ## Main Design Decisions
 
