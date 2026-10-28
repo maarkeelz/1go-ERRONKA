@@ -1,9 +1,6 @@
 title: "6T - Erronka 1"
-url: "https://maarkeelz.github.io"
-description: Dokumentazioa - Erronka 1
-markdown: kramdown
-permalink: pretty
-theme: minimal
+theme: minima
+
 header_pages:
   - doc/index.md
   - doc/datu_baseak.md
@@ -11,3 +8,4 @@ header_pages:
   - doc/markatze.md
   - doc/sareak.md
   - doc/sistema_eragileak.md
+
