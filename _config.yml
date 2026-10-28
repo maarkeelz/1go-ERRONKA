@@ -1,12 +1,19 @@
-title: "1. ERRONKA - 6. TALDEA"
-description: "Datu-baseak, digitalizazioa, sareak eta sistema eragileak"
+title: "1. ERRONKA"
+description: "Streaming plataforma baten webgunea eta dokumentazio teknikoa"
 
 lang: eu
 theme: jekyll-theme-cayman
+markdown: kramdown
 
 url: "https://maarkeelz.github.io"
 baseurl: "/1go-ERRONKA-"
 
+defaults:
+  - scope:
+      path: "doc"
+      type: "pages"
+    values:
+      layout: "default"
+
 exclude:
   - README.md
-  - index.html
