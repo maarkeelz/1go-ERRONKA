@@ -28,7 +28,7 @@ IT eta OT elkarrekin lan egiten dute: OTk datuak biltzen ditu makinetatik, eta I
 | Segurtasuna | Datuak eta sistemak babestea | Sistema industrialak babestea |
 | Bizi-zikloa | Laburragoa, eguneratze azkarrak | Luzeagoa, egonkortasuna lehenetsita |
 
-# Teknologia Gaitzaile Digitalak (THD/TGD)
+## Teknologia Gaitzaile Digitalak (THD/TGD)
 
 **Teknologia Gaitzaile Digitalak (THD)** digitalizazioa ahalbidetzen duten teknologiak dira. Gaitasun berriak, automatizazioa, berrikuntza eta negozio-eredu berriak sortzen laguntzen dute.
 
@@ -48,13 +48,13 @@ THD nagusien artean daude:
 
 THDek ezaugarri hauek dituzte: moldakortasuna, automatizazioa, interkonexioa, analitika aurreratua, segurtasuna, eskalagarritasuna, pertsonalizazioa, aurreztea eta berrikuntza.
 
-## Ingurumen-inpaktua
+### Ingurumen-inpaktua
 
 THDek ondorio positiboak ditu, hala nola paperaren erabilera murriztea, energia-kudeaketa eraginkorragoa, telelana eta ingurumenaren monitorizazioa.
 
 Baina ondorio negatiboak ere baditu: hondakin elektronikoak, datu-zentroen energia-kontsumoa, karbono-aztarna eta baliabide naturalen kontsumoa.
 
-# THD, IT eta OTren erlazioa
+## THD, IT eta OTren erlazioa
 
 THDek IT eta OT integratzen ditu: datuak biltzen ditu (**OT**), informazioa prozesatzen du (**IT**) eta automatizazio, analisi eta zerbitzu digital berriak ahalbidetzen ditu (**THD**).
 
@@ -65,13 +65,13 @@ Streaming plataforma batean:
 - **Cloud**: edukia eta datuak eskalagarri moduan gordetzen ditu.
 - **THD**: iruzurren detekzioa, gomendio pertsonalizatuak eta analitika ahalbidetzen ditu.
 
-# Cloud computing (hodeiko konputazioa)
+## Cloud computing (hodeiko konputazioa)
 
 **Cloud computing** datuak, aplikazioak eta zerbitzuak Internet bidez gordetzeko eta erabiltzeko teknologia da. Erabiltzaileak ez du beti bere hardware fisikoaren mende egon behar; datuak hodeian gordetzen dira eta edozein gailutik atzitu daitezke.
 
 Hodei-konputazioan (cloud computing) **hiru hodei mota nagusi daude**: publikoa, pribatua eta hibridoa. Denek datuak eta aplikazioak Internet edo sare pribatu baten bidez gordetzeko eta prozesatzeko aukera ematen dute, baina nork kudeatzen duen eta nork erabiltzen duen aldatzen da.
 
-## Hodei motak
+### Hodei motak
 
 | Hodei mota | Nork erabiltzen du | Ezaugarriak | Abantailak | Desabantailak | Adibidea |
 |---|---|---|---|---|---|
@@ -79,7 +79,7 @@ Hodei-konputazioan (cloud computing) **hiru hodei mota nagusi daude**: publikoa,
 | **Hodei pribatua** | Erakunde bakarra | Baliabideak enpresa bakarrarentzat dira; enpresaren datazentroan edo hornitzaile espezializatu batean egon daiteke | Segurtasun, kontrol eta pribatutasun handiagoa | Garestiagoa; hardware, mantentze-lan eta kudeaketa propioak behar ditu | Banku batek bezeroen datuak eta finantza-informazioa gordetzeko hodei pribatua erabiltzea |
 | **Hodei hibridoa** | Erakunde bakarra, bi hodeiak konbinatuz | Datu eta aplikazio batzuk hodei pribatuan daude eta beste batzuk hodei publikoan | Malgutasuna, segurtasuna eta eskalagarritasuna uztartzen ditu | Kudeaketa eta integrazio konplexuagoa; bi inguruneak ondo konektatu behar dira | Ospitale batek gaixoen datu medikoak hodei pribatuan gordetzea eta hitzorduak kudeatzeko aplikazioa hodei publikoan jartzea |
 
-## Hodeiko zerbitzu motak: IaaS, PaaS eta SaaS
+### Hodeiko zerbitzu motak: IaaS, PaaS eta SaaS
 
 Hodei-konputazioan hiru zerbitzu mota nagusi daude: **IaaS, PaaS eta SaaS**. Bakoitzak erabiltzaileari teknologia-maila desberdin bat eskaintzen dio eta kudeatu beharreko elementu kopurua aldatzen da.
 
@@ -89,7 +89,7 @@ Hodei-konputazioan hiru zerbitzu mota nagusi daude: **IaaS, PaaS eta SaaS**. Bak
 | **PaaS** | *Platform as a Service* (Plataforma zerbitzu gisa) | Aplikazioak garatzeko eta exekutatzeko plataforma: sistema eragilea, datu-baseak, garapen-tresnak eta exekuzio-ingurunea | Aplikazioa eta datuak | Sistema eragilea, zerbitzariak, biltegiratzea eta azpiegitura | Google App Engine, Azure App Service, Heroku |
 | **SaaS** | *Software as a Service* (Softwarea zerbitzu gisa) | Erabiltzeko prest dagoen softwarea, Internet bidez eta normalean nabigatzailetik | Ez du ezer teknikorik kudeatzen; aplikazioa erabiltzen du soilik | Aplikazioa, datu-baseak, zerbitzariak, eguneratzeak eta segurtasuna | Gmail, Microsoft 365, Google Drive |
 
-### IaaS: Azpiegitura zerbitzu gisa
+#### IaaS: Azpiegitura zerbitzu gisa
 
 **IaaS**-ek erabiltzaileari oinarrizko azpiegitura digitala eskaintzen dio: makina birtualak, biltegiratzea, sareak eta prozesatzeko ahalmena. Erabiltzaileak bertan instalatu eta konfiguratzen ditu sistema eragileak, aplikazioak eta datuak.
 
@@ -101,7 +101,7 @@ Hodei-konputazioan hiru zerbitzu mota nagusi daude: **IaaS, PaaS eta SaaS**. Bak
 
 **Adibidea:** enpresa batek Azure-n makina birtual bat sortzen du eta bertan Windows Server instalatzen du bere aplikazioak exekutatzeko.
 
-### PaaS: Plataforma zerbitzu gisa
+#### PaaS: Plataforma zerbitzu gisa
 
 **PaaS**-ek aplikazioak garatu, probatu eta exekutatzeko plataforma eskaintzen du. Erabiltzaileak ez du zerbitzariak, sistema eragilea edo azpiegitura kudeatu behar; aplikazioaren garapenean zentratzen da.
 
@@ -113,7 +113,7 @@ Hodei-konputazioan hiru zerbitzu mota nagusi daude: **IaaS, PaaS eta SaaS**. Bak
 
 **Adibidea:** garatzaile batek **Heroku** edo **Azure App Service** erabiltzen du bere web aplikazioa argitaratzeko, zerbitzari bat konfiguratu beharrik gabe.
 
-### SaaS: Softwarea zerbitzu gisa
+#### SaaS: Softwarea zerbitzu gisa
 
 **SaaS**-ek erabiltzeko prest dagoen aplikazio bat eskaintzen du Internet bidez. Erabiltzaileak ez du instalaziorik, eguneraketarik edo mantentze-lanik egin behar; kontu batekin sartu eta aplikazioa erabiltzen du.
 
@@ -125,18 +125,18 @@ Hodei-konputazioan hiru zerbitzu mota nagusi daude: **IaaS, PaaS eta SaaS**. Bak
 
 **Adibidea:** ikasle batek **Gmail**, **Google Drive** edo **Microsoft 365** erabiltzen du dokumentuak idazteko eta gordetzeko.
 
-### Laburbilduz
+##### Laburbilduz
 
 - **IaaS**: azpiegitura ematen du; erabiltzaileak sistema eragilea eta aplikazioak kudeatzen ditu.
 - **PaaS**: aplikazioak garatzeko plataforma ematen du; erabiltzaileak aplikazioa eta datuak kudeatzen ditu.
 - **SaaS**: software prestua ematen du; erabiltzaileak aplikazioa erabiltzen du bakarrik.
 
 
-## Edge, Fog eta Mist Computing
+# Edge, Fog eta Mist Computing
 
 Edge, Fog eta Mist Computing datuak sortzen diren lekutik hurbil prozesatzeko moduak dira. Hodeira datu guztiak bidali beharrean, prozesamenduaren zati bat lokalean egiten dute, erantzun-denbora eta sareko trafikoa murrizteko.
 
-### Motak eta ezaugarriak
+## Motak eta ezaugarriak
 
 | Kontzeptua | Zer da? | Non prozesatzen dira datuak? | Ezaugarri nagusiak | Adibidea |
 |---|---|---|---|---|
