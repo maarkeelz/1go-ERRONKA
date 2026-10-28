@@ -18,15 +18,7 @@ We have chosen Microsoft Access to store the information for our streaming platf
 | Validating data | Rejecting incorrect prices and dates. | Incorrect data may be stored. |
 | Simplifying maintenance | Changing a genre’s name in one place. | Different names and confusion may arise. |
 
-## E-R Diagram Proposals
-
-### Proposal 1: Rejected
-
-![Relationships in Access](../img/datu-baseak/er-eredua-baztertua.jpg)
-
-First, we created an initial entity–relationship (ER) diagram for the streaming platform. It included accounts, profiles, watch history, subscriptions, plans, episodes, titles, and genres. We rejected this proposal and developed a more detailed version.
-
-### Proposal 2: Selected
+## E-R Diagram Proposal
 
 ![Relationships in Access](../img/datu-baseak/datubaseak.png)
 
