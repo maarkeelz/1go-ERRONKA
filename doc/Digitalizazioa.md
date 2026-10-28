@@ -23,6 +23,8 @@ IT eta OT elkarrekin lan egiten dute: OTk datuak biltzen ditu makinetatik, eta I
 | Segurtasuna | Datuak eta sistemak babestea | Sistema industrialak babestea |
 | Bizi-zikloa | Laburragoa, eguneratze azkarrak | Luzeagoa, egonkortasuna lehenetsita |
 
+<div style="page-break-after: always;"></div>
+
 ## Teknologia Gaitzaile Digitalak (THD/TGD)
 
 **Teknologia Gaitzaile Digitalak (THD)** digitalizazioa ahalbidetzen duten teknologiak dira. Gaitasun berriak, automatizazioa, berrikuntza eta negozio-eredu berriak sortzen laguntzen dute.
@@ -48,6 +50,19 @@ THDek ezaugarri hauek dituzte: moldakortasuna, automatizazioa, interkonexioa, an
 THDek ondorio positiboak ditu, hala nola paperaren erabilera murriztea, energia-kudeaketa eraginkorragoa, telelana eta ingurumenaren monitorizazioa.
 
 Baina ondorio negatiboak ere baditu: hondakin elektronikoak, datu-zentroen energia-kontsumoa, karbono-aztarna eta baliabide naturalen kontsumoa.
+
+## THD, IT eta OTren erlazioa
+
+THDek IT eta OT integratzen ditu: datuak biltzen ditu (**OT**), informazioa prozesatzen du (**IT**) eta automatizazio, analisi eta zerbitzu digital berriak ahalbidetzen ditu (**THD**).
+
+Streaming plataforma batean:
+
+- **IT**: erabiltzaileak, rolak, harpidetzak, datu-basea eta web zerbitzaria kudeatzen ditu.
+- **OT**: bideoak transmititzeko zerbitzariak, sarearen kontrola eta gailuen monitorizazioa kudeatzen ditu.
+- **Cloud**: edukia eta datuak eskalagarri moduan gordetzen ditu.
+- **THD**: iruzurren detekzioa, gomendio pertsonalizatuak eta analitika ahalbidetzen ditu.
+
+<div style="page-break-after: always;"></div>
 
 ## Cloud computing (hodeiko konputazioa)
 
@@ -115,16 +130,7 @@ Hodei-konputazioan hiru zerbitzu mota nagusi daude: **IaaS, PaaS eta SaaS**. Bak
 - **PaaS**: aplikazioak garatzeko plataforma ematen du; erabiltzaileak aplikazioa eta datuak kudeatzen ditu.
 - **SaaS**: software prestua ematen du; erabiltzaileak aplikazioa erabiltzen du bakarrik.
 
-## THD, IT eta OTren erlazioa
-
-THDek IT eta OT integratzen ditu: datuak biltzen ditu (**OT**), informazioa prozesatzen du (**IT**) eta automatizazio, analisi eta zerbitzu digital berriak ahalbidetzen ditu (**THD**).
-
-Streaming plataforma batean:
-
-- **IT**: erabiltzaileak, rolak, harpidetzak, datu-basea eta web zerbitzaria kudeatzen ditu.
-- **OT**: bideoak transmititzeko zerbitzariak, sarearen kontrola eta gailuen monitorizazioa kudeatzen ditu.
-- **Cloud**: edukia eta datuak eskalagarri moduan gordetzen ditu.
-- **THD**: iruzurren detekzioa, gomendio pertsonalizatuak eta analitika ahalbidetzen ditu.
+<div style="page-break-after: always;"></div>
 
 ## Edge, Fog eta Mist Computing
 
