@@ -169,3 +169,9 @@ Edge, Fog eta Mist Computing datuak sortzen diren lekutik hurbil prozesatzeko mo
 - **Fog**: hainbat gailuren eta hodeiaren arteko prozesamendu banatua eta koordinazioa antolatzen ditu.
 - **Mist**: prozesamendurik arinena egiten du, sentsoreetan eta mikrokontrolagailuetan bertan.
 
+# Kasu Praktikoa - Planifikazioa Digitalizatzen
+
+Erronkaren planifikazioa GitHub Projects erabiliz digitalizatu dugu. Zereginak issues bidez antolatu, arduradunak esleitu eta epeak mugarrien bidez zehaztu ditugu. Kanban taula eta Gantt diagrama erabiliz, lanen egoera eta aurrerapena talde osoarekin partekatu ditugu.
+
+[Ikusi erronkaren planifikazioa GitHub-en](https://github.com/users/maarkeelz/projects/2/views/1)
+
