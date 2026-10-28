@@ -126,3 +126,21 @@ Streaming plataforma batean:
 - **Cloud**: edukia eta datuak eskalagarri moduan gordetzen ditu.
 - **THD**: iruzurren detekzioa, gomendio pertsonalizatuak eta analitika ahalbidetzen ditu.
 
+## Edge, Fog eta Mist Computing
+
+Edge, Fog eta Mist Computing datuak sortzen diren lekutik hurbil prozesatzeko moduak dira. Hodeira datu guztiak bidali beharrean, prozesamenduaren zati bat lokalean egiten dute, erantzun-denbora eta sareko trafikoa murrizteko.
+
+### Motak eta ezaugarriak
+
+| Kontzeptua | Zer da? | Non prozesatzen dira datuak? | Ezaugarri nagusiak | Adibidea |
+|---|---|---|---|---|
+| Edge Computing | Datuak jatorrian edo jatorritik hurbil prozesatzea. | Gailuan bertan edo gertuko ordenagailu edo zerbitzari batean. | Erantzun azkarra ematen du eta datu guztiak hodeira bidaltzea saihesten du. | Kamera adimendun batek irudiak lokalean aztertzen ditu pertsonak detektatzeko. |
+| Fog Computing | Gailuen eta hodeiaren artean prozesamendua hainbat nodotan banatzen duen eredua. | Sareko pasabideetan, tokiko zerbitzarietan edo tarteko beste nodo batzuetan. | Hainbat gailuren datuak bildu, prozesatu eta koordinatzen ditu; beharrezko informazioa hodeira bidaltzen du. | Fabrika bateko tokiko zerbitzariak hainbat makinaren datuak aztertzen ditu eta laburpenak hodeira bidaltzen ditu. |
+| Mist Computing | Sarearen muturreko gailu txikietan egiten den prozesamendu arina. | Sentsore adimendunetan eta mikrokontrolagailuetan. | Baliabide eta energia gutxi erabiltzen ditu; iragazketa, neurketak eta oinarrizko erabakiak egiten ditu. | Tenperatura-sentsore baten mikrokontrolagailuak neurketa iragazten du eta muga gainditzean alerta bidaltzen du. |
+
+### Desberdintasun nagusiak
+
+- **Edge**: datuak sortzen diren tokian edo oso hurbil prozesatzeari ematen dio garrantzia.
+- **Fog**: hainbat gailuren eta hodeiaren arteko prozesamendu banatua eta koordinazioa antolatzen ditu.
+- **Mist**: prozesamendurik arinena egiten du, sentsoreetan eta mikrokontrolagailuetan bertan.
+
