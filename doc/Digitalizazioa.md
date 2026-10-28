@@ -3,8 +3,6 @@ layout: default
 title: "Digitalizazioa"
 ---
 
-# Digitalizazioa: IT, OT, THD eta Cloud
-
 ## Digitalizazioa
 
 Digitalizazioa da errealitate fisikoko prozesuak, zerbitzuak,
