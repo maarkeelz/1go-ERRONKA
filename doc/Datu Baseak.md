@@ -150,6 +150,6 @@ Configuring them before entering data helps keep the information consistent from
 | Durations must be positive | Validation rule. |
 | Playback progress must not be negative | Validation rule. |
 
-### Relationships
+### Tables and Relationships
 
 ![Relationships in Access](../img/datu-baseak/accs-rela.jpg)
