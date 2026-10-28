@@ -5,8 +5,6 @@ title: "Digitalizazioa"
 
 # Digitalizazioa: IT, OT, THD eta Cloud
 
-[⬅ Dokumentazioaren menura itzuli]({{ '/doc/' | relative_url }})
-
 ## Digitalizazioa
 
 Digitalizazioa da errealitate fisikoko prozesuak, zerbitzuak,
