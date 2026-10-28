@@ -22,9 +22,13 @@ We have chosen Microsoft Access to store the information for our streaming platf
 
 ### Proposal 1: Rejected
 
+![Selected E-R diagram](img/er-eredua-baztertua.jpg)
+
 First, we created an initial entity–relationship (ER) diagram for the streaming platform. It included accounts, profiles, watch history, subscriptions, plans, episodes, titles, and genres. We rejected this proposal and developed a more detailed version.
 
 ### Proposal 2: Selected
+
+![Selected E-R diagram](img/datubaseak.png)
 
 In the selected proposal, we separated content into films and series, added seasons to organize series episodes, and included subscription renewals. We also defined separate viewing relationships for films and episodes, recording the viewing date and playback progress.
 
@@ -155,3 +159,8 @@ Configuring them before entering data helps keep the information consistent from
 | Episode numbers must not repeat within the same season | Unique composite index on the season ID and episode number. |
 | Durations must be positive | Validation rule. |
 | Playback progress must not be negative | Validation rule. |
+
+### Relationships
+
+![Selected E-R diagram](img/accs-rela.jpg)
+
