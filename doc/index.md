@@ -1,7 +1,5 @@
 ---
-layout: default
 title: "Erronkaren dokumentazioa"
-permalink: /doc/
 ---
 
 # 1. ERRONKA: Proiektuaren dokumentazioa
