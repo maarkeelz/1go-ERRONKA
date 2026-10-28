@@ -28,6 +28,8 @@ IT eta OT elkarrekin lan egiten dute: OTk datuak biltzen ditu makinetatik, eta I
 | **Segurtasuna** | Datuak eta sistemak babestea | Sistema industrialak babestea |
 | **Bizi-zikloa** | Laburragoa, eguneratze azkarrak | Luzeagoa, egonkortasuna lehenetsita |
 
+![Relationships in Access](../img/digitalizazioa/it-ot.jpg)
+
 ## Teknologia Gaitzaile Digitalak (THD)
 
 **Teknologia Gaitzaile Digitalak (THD)** digitalizazioa ahalbidetzen duten teknologiak dira. Gaitasun berriak, automatizazioa, berrikuntza eta negozio-eredu berriak sortzen laguntzen dute.
@@ -167,3 +169,5 @@ Edge, Fog eta Mist Computing datuak sortzen diren lekutik hurbil prozesatzeko mo
 - **Edge**: datuak sortzen diren tokian edo oso hurbil prozesatzeari ematen dio garrantzia.
 - **Fog**: hainbat gailuren eta hodeiaren arteko prozesamendu banatua eta koordinazioa antolatzen ditu.
 - **Mist**: prozesamendurik arinena egiten du, sentsoreetan eta mikrokontrolagailuetan bertan.
+
+![Relationships in Access](../img/digitalizazioa/edge-fog-mist.jpg)
