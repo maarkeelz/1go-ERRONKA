@@ -171,7 +171,11 @@ Edge, Fog eta Mist Computing datuak sortzen diren lekutik hurbil prozesatzeko mo
 
 # Kasu Praktikoa - Planifikazioa Digitalizatzen
 
-Erronkaren planifikazioa GitHub Projects erabiliz digitalizatu dugu. Zereginak issues bidez antolatu, arduradunak esleitu eta epeak mugarrien bidez zehaztu ditugu. Kanban taula eta Gantt diagrama erabiliz, lanen egoera eta aurrerapena talde osoarekin partekatu ditugu.
+Erronkaren planifikazioa **GitHub Projects** erabiliz digitalizatu dugu, taldearen lana modu antolatuan eta partekatuan kudeatzeko. Egin beharreko jarduerak issues bidez erregistratu ditugu, zeregin bakoitzean egin beharreko lana azalduz eta arduradunak esleituz. Gainera, etiketak erabili ditugu jarduerak arloaren arabera sailkatzeko: sistema eragileak, sareak, datu-baseak, markatzeko lengoaiak, digitalizazioa eta dokumentazioa. Lehentasuna adierazteko etiketak ere gehitu ditugu. Horrela, taldeko kide bakoitzak bere ardurak identifika ditzake, eta proiektuaren informazioa leku bakarrean kontsultatu.
+
+Entrega-epeak zehazteko, milestones edo mugarriak sortu ditugu, egun bakoitzean amaitu beharreko zereginak multzokatuz. Mugarri bakoitzean entrega-data, amaitutako jarduerak, egiteko daudenak eta aurrerapenaren ehunekoa ikus daitezke. Planifikazioa bi ikuspegitan antolatu dugu: Kanban taulan zereginak egoeraren arabera sailkatu ditugu, eta Gantt diagraman jardueren hasiera- eta amaiera-datak eta denboran duten banaketa adierazi ditugu. Bi ikuspegi horiek proiektuaren egoera ulertzen, aldi berean egiten diren lanak ikusten eta atzeratutako zereginak identifikatzen lagundu digute.
+
+Lanak amaitu ahala, dagozkien issues itxi ditugu, eta mugarrien aurrerapena eguneratu da. Beraz, digitalizazioa ez da izan zereginen zerrenda ordenagailuan idaztea soilik: lana banatzeko, epeak kontrolatzeko eta aurrerapena partekatzeko modua antolatu dugu tresna digital baten bidez. Taldeko kide guztiek planifikazio bera kontsulta dezakete, zer egin den eta zer falta den jakiteko. Horrek koordinazioa eta lanaren jarraipena erraztu ditu, eta erronkaren garapenaren erregistro partekatua izatea ahalbidetu digu.
 
 [Ikusi erronkaren planifikazioa GitHub-en](https://github.com/users/maarkeelz/projects/2/views/1)
 
