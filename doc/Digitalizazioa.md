@@ -3,15 +3,9 @@ layout: default
 title: "Digitalizazioa"
 ---
 
-## Digitalizazioa
-
-Digitalizazioa da errealitate fisikoko prozesuak, zerbitzuak,
-informazioa eta negozio-ereduak teknologia digitalak erabiliz
-eraldatzea.
-
 # Digitalizazioa: IT, OT, THD eta Cloud
 
-# Digitalizazioa
+## Digitalizazioa
 
 Digitalizazioa da errealitate fisikoko prozesuak, zerbitzuak, informazioa eta negozio-ereduak teknologia digitalak erabiliz eraldatzea. Helburua lanak azkarrago, eraginkorrago, seguruago eta konektatuago egitea da.
 
@@ -34,7 +28,7 @@ IT eta OT elkarrekin lan egiten dute: OTk datuak biltzen ditu makinetatik, eta I
 | Segurtasuna | Datuak eta sistemak babestea | Sistema industrialak babestea |
 | Bizi-zikloa | Laburragoa, eguneratze azkarrak | Luzeagoa, egonkortasuna lehenetsita |
 
-## Teknologia Gaitzaile Digitalak (THD/TGD)
+# Teknologia Gaitzaile Digitalak (THD/TGD)
 
 **Teknologia Gaitzaile Digitalak (THD)** digitalizazioa ahalbidetzen duten teknologiak dira. Gaitasun berriak, automatizazioa, berrikuntza eta negozio-eredu berriak sortzen laguntzen dute.
 
@@ -60,7 +54,7 @@ THDek ondorio positiboak ditu, hala nola paperaren erabilera murriztea, energia-
 
 Baina ondorio negatiboak ere baditu: hondakin elektronikoak, datu-zentroen energia-kontsumoa, karbono-aztarna eta baliabide naturalen kontsumoa.
 
-## THD, IT eta OTren erlazioa
+# THD, IT eta OTren erlazioa
 
 THDek IT eta OT integratzen ditu: datuak biltzen ditu (**OT**), informazioa prozesatzen du (**IT**) eta automatizazio, analisi eta zerbitzu digital berriak ahalbidetzen ditu (**THD**).
 
@@ -71,7 +65,7 @@ Streaming plataforma batean:
 - **Cloud**: edukia eta datuak eskalagarri moduan gordetzen ditu.
 - **THD**: iruzurren detekzioa, gomendio pertsonalizatuak eta analitika ahalbidetzen ditu.
 
-## Cloud computing (hodeiko konputazioa)
+# Cloud computing (hodeiko konputazioa)
 
 **Cloud computing** datuak, aplikazioak eta zerbitzuak Internet bidez gordetzeko eta erabiltzeko teknologia da. Erabiltzaileak ez du beti bere hardware fisikoaren mende egon behar; datuak hodeian gordetzen dira eta edozein gailutik atzitu daitezke.
 
