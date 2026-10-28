@@ -171,7 +171,7 @@ Edge, Fog eta Mist Computing datuak sortzen diren lekutik hurbil prozesatzeko mo
 
 # Kasu Praktikoa - Planifikazioa Digitalizatzen
 
-Erronkaren planifikazioa **GitHub Projects** erabiliz digitalizatu dugu, taldearen lana modu antolatuan eta partekatuan kudeatzeko. Egin beharreko jarduerak issues bidez erregistratu ditugu, zeregin bakoitzean egin beharreko lana azalduz eta arduradunak esleituz. Gainera, etiketak erabili ditugu jarduerak arloaren arabera sailkatzeko: sistema eragileak, sareak, datu-baseak, markatzeko lengoaiak, digitalizazioa eta dokumentazioa. Lehentasuna adierazteko etiketak ere gehitu ditugu. Horrela, taldeko kide bakoitzak bere ardurak identifika ditzake, eta proiektuaren informazioa leku bakarrean kontsultatu.
+Erronkaren planifikazioa **GitHub Projects** erabiliz digitalizatu dugu, taldearen lana modu antolatuan eta partekatuan kudeatzeko. Egin beharreko jarduerak issues bidez erregistratu ditugu, zeregin bakoitzean egin beharreko lana azalduz eta arduradunak esleituz. Gainera, etiketak erabili ditugu jarduerak arloaren arabera sailkatzeko: sistema eragileak, sareak, datu-baseak eta digitalizazioa.
 
 Entrega-epeak zehazteko, milestones edo mugarriak sortu ditugu, egun bakoitzean amaitu beharreko zereginak multzokatuz. Mugarri bakoitzean entrega-data, amaitutako jarduerak, egiteko daudenak eta aurrerapenaren ehunekoa ikus daitezke. Planifikazioa bi ikuspegitan antolatu dugu: Kanban taulan zereginak egoeraren arabera sailkatu ditugu, eta Gantt diagraman jardueren hasiera- eta amaiera-datak eta denboran duten banaketa adierazi ditugu. Bi ikuspegi horiek proiektuaren egoera ulertzen, aldi berean egiten diren lanak ikusten eta atzeratutako zereginak identifikatzen lagundu digute.
 
