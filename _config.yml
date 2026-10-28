@@ -1,11 +1,12 @@
-title: 1. Erronka Dokumentazioa
-theme: minima
+title: "1. ERRONKA - 6. TALDEA"
+description: "Datu-baseak, digitalizazioa, sareak eta sistema eragileak"
 
-header_pages:
+lang: eu
+theme: jekyll-theme-cayman
 
-  - doc/index.md
-  - doc/digi.md
-  - doc/db.md
-  - doc/markatze.md
-  - doc/Sareak.md
-  - doc/sistemak.md
+url: "https://maarkeelz.github.io"
+baseurl: "/1go-ERRONKA-"
+
+exclude:
+  - README.md
+  - index.html
