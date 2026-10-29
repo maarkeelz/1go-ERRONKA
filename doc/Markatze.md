@@ -115,7 +115,7 @@ Webguneko orri guztiak HTML5 estandarrean garatuta daude, etiketa semantikoak er
 Webgune osoak estilo-orri bakar eta bateratua erabiltzen du (`css/estiloak.css`), Markatzeko Lengoaiak moduluaren **UD-02** unitateko edukiak zorrotz jarraituz:
 
 * **Kutxa-eredua (Box Model):** `box-sizing: border-box;` orokorra erabiltzen da elementuen zabalera eta betegarriak (padding) zehatz kontrolatzeko.
-* **Tipografia:** Irakaslearen eta taldearen erabakiz, tipografia serifatua (`"Times New Roman", Times, serif`) ezarri da testu arrunt zein izenburuetan, ikasle-estilo errealista eta soila emateko. Kode zatientzat eta kontsolentzat `Courier New` monoespaziatua erabiltzen da.
+* **Tipografia:** Taldearen erabakiz, tipografia (`"Times New Roman", Times, serif`) ezarri da testu arrunt zein izenburuetan. Kode zatientzat, ordea, `Courier New` erabiltzea erabaki dugu.
 * **Kolore-paleta:** 
   * Goiburua eta oina: `#2b2b2b` (ikatz-gris iluna).
   * Atzeko planoa: `#eeeeee` (gris argi neutroa).
