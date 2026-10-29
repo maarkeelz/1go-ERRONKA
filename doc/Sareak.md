@@ -164,7 +164,7 @@ Gure marrazkian erabilitako irizpidea:
 ![Manchester eta Manchester diferentzialaren marrazkiak](../img/sareak/manchester-normala-diferentziala.jpg)
 
 ## 6. Kableatuaren Muntaia
-Bi kable desberdin montatu genituen bat RJ45 kable bat eta beste hembrara konektatuta bertatik patch panelera konektatu genuen eta frogatu genuen
+Bi kable desberdin montatu ditugu, RJ45 kable bat eta beste bat hembrara konektatuta. Bertatik patch panelera konektatu ditugu eta konexioa egoki zebilela egiaztatu dugu.
 ### 6.1. Erabilitako materiala
 
 - UTP Cat 6 kablea.
@@ -175,11 +175,11 @@ Bi kable desberdin montatu genituen bat RJ45 kable bat eta beste hembrara konekt
 
 ### 6.2. Muntaiaren prozedura
 
-Ondoren, barruko zortzi hariak T568B ordenan jarri ditugu: zuria-laranja, laranja, zuria-berdea, urdina, zuria-urdina, berdea, zuria-marroia eta marroia. Hariak zuzendu eta moztu ondoren, RJ45 konektorean sartu eta krimpagailuarekin finkatu ditugu. Beste kablea RJ45 eme-konektore batera muntatu dugu, eta handik patch panelera konektatu dugu.
+Kablearen barruko zortzi hariak T568B ordenan jarri ditugu: zuria-laranja, laranja, zuria-berdea, urdina, zuria-urdina, berdea, zuria-marroia eta marroia. Hariak zuzendu eta moztu ondoren, RJ45 konektorean sartu eta krimpagailuarekin finkatu ditugu. Beste kablea RJ45 eme-konektore batera muntatu dugu, eta handik patch panelera konektatu dugu.
 
 ### 6.3. Kableatuaren egiaztapena
 
-Kablea tester batekin egiaztatu dugu, konexio guztiak ondo zeuden ikusteko. Emaitzak zuzenak izan dira, eta hari guztiak behar bezala konektatuta zeudela egiaztatu dugu.
+Kablea tester batekin egiaztatu dugu, konexio guztiak ondo daudela ikusteko. Emaitzak zuzenak izan dira, eta hari guztiak behar bezala konektatuta zeudela egiaztatu dugu.
 
 ![Kablea pelatua](../img/sareak/kablea.jpeg)
 
@@ -202,7 +202,7 @@ Zerbitzaria VirtualBox ingurunean dago. Makina birtualaren sare-moldagailuaren k
 
 ### 7.2. Konexio fisikoak
 
-Ordenagailua routera konektatu dugu eta patch panela hembrara konektatu dugu. Azkenik, frogatu eta ondo eginda dagoen frogatu dugu. 
+Ordenagailua routera konektatu dugu eta patch panela hembrara konektatu dugu. Konexioa egiaztatu eta aurrera jarraitu dugu.
 
 ### 7.3. Haririk gabeko konexioa
 
@@ -226,7 +226,7 @@ ping 192.168.70.2
 
 ### 8.2. Gorabeherak eta konponbideak
 
-Probak egitean, hasieran kableen konexioak eta sareko komunikazioa egiaztatu behar izan ditugu. Kableen konexioak berrikusi eta Wi-Fi bidez konektatutako gailuaren komunikazioa probatu dugu ping komandoarekin. Azkenik, konexioa behar bezala funtzionatzen zuela egiaztatu dugu.
+Probak egitean, hasieran kableen konexioak eta sareko komunikazioa egiaztatu behar izan ditugu. Kableen konexioak berrikusi eta Wi-Fi bidez konektatutako gailuaren komunikazioa probatu dugu ping komandoarekin. Bukatzeko, konexioa behar bezala funtzionatzen zuela egiaztatu dugu.
 
 ### 8.3. Azken egiaztapena
 
