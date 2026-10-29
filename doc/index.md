@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Dokumentazioa"
+title: "Hasiera"
 permalink: /doc/
 ---
 
