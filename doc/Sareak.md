@@ -191,11 +191,11 @@ Kablea tester batekin egiaztatu dugu, konexio guztiak ondo zeuden ikusteko. Emai
 
 ### 7.1. Gailuen konfigurazioa
 
-| Gailua | Konexio mota | IP helbidea | Azpisare-maskara | Pasabidea |
-|---|---|---|---|---|
-| WindowsServer6Taldea | [OSATU] | 192.168.70.2 | [OSATU] | [OSATU] |
-| Bezeroaren ordenagailua | [OSATU] | [OSATU] | [OSATU] | [OSATU] |
-| Wi-Fi bidezko gailua | Wi-Fi | [OSATU] | [OSATU] | [OSATU] |
+| Gailua | Konexio mota | IP helbidea | Azpisare-maskara | 
+|---|---|---|---|
+| WindowsServer6Taldea | RJ-45 | 192.168.70.2 | 255.255.255.0 |
+| Bezeroaren ordenagailua | RJ-45 | 192.168.70.229 | 255.255.255.0 |
+| Wi-Fi bidezko gailua | Wi-Fi | 192.168.70.240 | 255.255.255.0 |
 
 Zerbitzaria VirtualBox ingurunean dago. Makina birtualaren sare-moldagailuaren konfigurazioa:
 
