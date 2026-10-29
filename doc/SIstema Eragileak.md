@@ -27,3 +27,37 @@ Windows Server instalatu ondoren, ekipoaren izena eta sare-konfigurazioa aldatu 
 
 ![Ekipoaren Izena](../img/sistema-eragileak/doc%20img/image19.png)
 ![IP-a Aldatu](../img/sistema-eragileak/doc%20img/image37.png)
+
+## 3. Windows Update Eguneraketak
+
+Hasierako konfigurazioa amaitzeko, Windows Server-en zain zeuden eguneraketak instalatu ditugu.
+
+![Eguneraketak Instalatu](../img/sistema-eragileak/doc%20img/image21.png)
+
+## 4. Tokiko Segurtasun-direktibak
+
+Tokiko segurtasun-direktibak aldatu ditugu, pasahitzen erabilera kontrolatzeko.
+
+Konfigurazioaren bidez:
+
+- Pasahitz luzeagoak eta konplexuagoak erabiltzea ezarri dugu.
+- Aurreko pasahitzen berrerabilpena mugatu dugu.
+- Pasahitzen biltegiratzearekin lotutako beharrezkoak ez diren arriskuak saihestu ditugu.
+- Pasahitzen gehieneko indarraldia 90 egunetan ezarri dugu, praktika honetarako hartutako erabaki gisa.
+
+![Tokiko Segurtasun Direktibak](../img/sistema-eragileak/doc%20img/image34.png)
+
+### 4.1. Kontuak blokeatzeko direktibak
+
+Tokiko segurtasun-direktibetan (`secpol.msc`), kontuak blokeatzeko arauak konfiguratu ditugu, saioa hasteko huts egindako saiakerak mugatzeko.
+
+| Direktiba | Ezarritako balioa |
+|---|---|
+| Kontua blokeatzeko atalasea | Saioa hasteko 10 saiakera oker. |
+| Kontuaren blokeoaren iraupena | 15 minutu. |
+| Saiakera okerren kontagailua berrezartzeko denbora | 10 minutu. |
+| Administratzaile-kontua blokeatzea baimentzea | Gaituta. |
+
+![Kontuak Blokeatzeko Direktibak](../img/sistema-eragileak/doc%20img/image34.png)
+
+
