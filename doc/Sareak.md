@@ -164,24 +164,22 @@ Gure marrazkian erabilitako irizpidea:
 ![Manchester eta Manchester diferentzialaren marrazkiak](../img/sareak/manchester-normala-diferentziala.jpg)
 
 ## 6. Kableatuaren Muntaia
-
-> Atal hau benetan egindako muntaiaren datuekin eta argazkiekin osatu.
-
+Bi kable desberdin montatu genituen bat RJ45 kable bat eta beste hembrara konektatuta bertatik patch panelera konektatu genuen eta frogatu genuen
 ### 6.1. Erabilitako materiala
 
 - UTP Cat 6 kablea.
 - RJ-45 konektoreak.
 - Patch-panela eta keystone konektoreak.
-- [OSATU: erabilitako tresnak].
-- [OSATU: egiaztapenerako erabilitako tresna].
+- RJ45 kablea.
+- Cable tester.
 
 ### 6.2. Muntaiaren prozedura
 
-[OSATU: azaldu kablea nola prestatu duzuen, T568B ordena nola aplikatu duzuen eta konektoreak nola muntatu dituzuen.]
+Ondoren, barruko zortzi hariak T568B ordenan jarri ditugu: zuria-laranja, laranja, zuria-berdea, urdina, zuria-urdina, berdea, zuria-marroia eta marroia. Hariak zuzendu eta moztu ondoren, RJ45 konektorean sartu eta krimpagailuarekin finkatu ditugu. Beste kablea RJ45 eme-konektore batera muntatu dugu, eta handik patch panelera konektatu dugu.
 
 ### 6.3. Kableatuaren egiaztapena
 
-[OSATU: azaldu nola egiaztatu duzuen kablea eta zer emaitza lortu duzuen.]
+Kablea tester batekin egiaztatu dugu, konexio guztiak ondo zeuden ikusteko. Emaitzak zuzenak izan dira, eta hari guztiak behar bezala konektatuta zeudela egiaztatu dugu.
 
 [GEHITU: kableatuaren, patch-panelaren eta egiaztapenaren argazkiak.]
 

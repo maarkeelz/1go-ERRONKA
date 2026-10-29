@@ -3,7 +3,7 @@ layout: default
 title: "Digitalizazioa"
 ---
 
-# Digitalizazioa: IT, OT, THD eta Cloud
+# Digitalizazioa: Kontzeptuak eta Kasu Praktikoa
 
 ## Digitalizazioa
 
