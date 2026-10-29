@@ -13,4 +13,4 @@ VirtualBox erabiliz, Windows Server instalatu dugu `Windows Server Erronka` izen
 
 Makina birtualaren ezaugarriak dagokion pantaila-argazkian jasota daude.
 
-![VirtualBox Parametroak](../img/sistema-eragileak/doc%20img/image1.png)
+![VirtualBox Parametroak](../img/sistema-eragileak/doc-img/image1.png)
