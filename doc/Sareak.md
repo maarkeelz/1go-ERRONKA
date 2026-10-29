@@ -13,7 +13,7 @@ Dokumentazioaren azken ataletan kableatuaren muntaia, haririk gabeko konexioa et
 
 ### 1.1. Geruza fisikoa
 
-Geruza fisikoak bitak seinale fisikoen bidez transmititzen ditu. Gure kobre-kableatuan, datuak seinale elektrikoen bidez garraiatzen dira.
+Geruza fisikoak bitak seinale fisikoen bidez transmititzen ditu. 
 
 | Osagaia | Gure proiektuan |
 |---|---|
