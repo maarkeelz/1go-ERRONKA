@@ -5,7 +5,7 @@ title: "Sareak"
 
 # Sare Azpiegitura Fisikoa eta Seinaleak
 
-Lan honetan sarearen osagai fisikoak, datuen kodeketa, erroreen detekzioa eta seinaleen adierazpena landu ditugu. Horretarako, ikasgelako rack-eko kableatua, OSI ereduaren lehen bi geruzak, ASCII kodeketa, CRC kalkulua eta modulazio desberdinak aztertu ditugu.
+Dokumentazio honetan sarearen osagai fisikoak, datuen kodeketa, erroreen detekzioa eta seinaleen adierazpena landu ditugu. Horretarako, erronkan rack-eko kableatua, OSI ereduaren lehen bi geruzak, ASCII kodeketa, CRC kalkulua eta modulazio desberdinak aztertu ditugu.
 
 Dokumentazioaren azken ataletan kableatuaren muntaia, haririk gabeko konexioa eta konektibitate-probak jasotzen dira.
 
