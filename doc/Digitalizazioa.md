@@ -35,17 +35,38 @@ IT eta OT elkarrekin lan egiten dute: OTk datuak biltzen ditu makinetatik, eta I
 
 ### THD nagusiak
 
-- **IoT (Gauzen Internet)**: gailu fisikoak Internetera konektatzea eta datuak denbora errealean biltzea.
-- **Adimen Artifiziala (AA/IA)**: makinei ikasteko eta erabakiak hartzeko aukera ematen dieten teknikak.
-- **Big Data**: datu-bolumen handiak biltzea, gordetzea eta aztertzea.
-- **Cloud computing**: datuak eta aplikazioak Internet bidez gordetzea eta prozesatzea.
-- **Zibersegurtasuna**: sistemak, sareak eta datuak eraso digitalen aurka babestea.
-- **Errealitate areagotua (AR) eta birtuala (VR)**: esperientzia digital murgiltzaileak sortzea.
-- **Blockchain**: transakzioen erregistro deszentralizatu eta segurua.
-- **5G**: konektibitate azkarragoa eta fidagarriagoa.
-- **Robotika, 3D inprimaketa eta biometria**: automatizazioa, fabrikazio digitala eta identifikazio segurua.
-- **Robotika kolaboratzailea (cobots)**: gizakiekin batera lan egiten duten robotak; errepikakorrak edo arriskutsuak diren atazak automatizatzen dituzte fabriketan, biltegietan eta osasun-zerbitzuetan.
-- **Digital twins (biki digitalak)**: objektu, makina edo prozesu fisiko baten eredu digitala, datuak erabiliz denbora errealean simulatzeko, kontrolatzeko eta hobetzeko.
+- **IoT (Gauzen Internet)**: gailu fisikoak Internetera konektatzea eta datuak denbora errealean biltzea.  
+  **Adibidea:** biltegi batek sentsore adimendunak erabiltzen ditu tenperatura, hezetasuna eta produktuen kokapena kontrolatzeko.
+
+- **Adimen Artifiziala (AA/IA)**: makinei ikasteko eta erabakiak hartzeko aukera ematen dieten teknikak.  
+  **Adibidea:** online denda batek IA erabiltzen du bezero bakoitzari produktu pertsonalizatuak gomendatzeko.
+
+- **Big Data**: datu-bolumen handiak biltzea, gordetzea eta aztertzea.  
+  **Adibidea:** supermerkatu-kate batek salmenta-datuak aztertzen ditu zein produktu gehiago saltzen diren jakiteko eta stocka hobeto kudeatzeko.
+
+- **Cloud computing**: datuak eta aplikazioak Internet bidez gordetzea eta prozesatzea.  
+  **Adibidea:** enpresa txiki batek bere fitxategiak eta webgunea Microsoft Azure edo Google Cloud-en gordetzen ditu.
+
+- **Zibersegurtasuna**: sistemak, sareak eta datuak eraso digitalen aurka babestea.  
+  **Adibidea:** banku batek autentifikazio bifaktorekoa eta enkriptatzea erabiltzen ditu bezeroen kontuak babesteko.
+
+- **Errealitate areagotua (AR) eta birtuala (VR)**: esperientzia digital murgiltzaileak sortzea.  
+  **Adibidea:** altzari-denda batek AR aplikazioa eskaintzen du bezeroei altzariak beren etxean nola ikusiko diren erakusteko.
+
+- **Blockchain**: transakzioen erregistro deszentralizatu eta segurua.  
+  **Adibidea:** janari-enpresa batek blockchain erabiltzen du produktuaren jatorria eta garraio-bidea jarraitzeko.
+
+- **5G**: konektibitate azkarragoa eta fidagarriagoa.  
+  **Adibidea:** fabrika batek 5G erabiltzen du makinek eta robotek datuak denbora errealean bidaltzeko.
+
+- **Robotika, 3D inprimaketa eta biometria**: automatizazioa, fabrikazio digitala eta identifikazio segurua.  
+  **Adibidea:** enpresa batek 3D inprimaketa erabiltzen du piezaak eskatu ahala fabrikatzeko eta biometria erabiltzen du langileak identifikatzeko.
+
+- **Robotika kolaboratzailea (cobots)**: gizakiekin batera lan egiten duten robotak; errepikakorrak edo arriskutsuak diren atazak automatizatzen dituzte fabriketan, biltegietan eta osasun-zerbitzuetan.  
+  **Adibidea:** auto-fabrika bateko cobot batek langileari pieza astunak mugatzen eta muntatzen laguntzen dio.
+
+- **Digital twins (biki digitalak)**: objektu, makina edo prozesu fisiko baten eredu digitala, datuak erabiliz denbora errealean simulatzeko, kontrolatzeko eta hobetzeko.  
+  **Adibidea:** energia-enpresa batek sorgailu eoliko baten biki digitala sortzen du haize-baldintzen arabera errendimendua simulatzeko.
 
 ### THDren ezaugarriak
 
