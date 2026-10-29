@@ -14,6 +14,7 @@ Ongi etorri gure erronkaren dokumentaziora. Aukeratu atal bat:
 - 💻 [Digitalizazioa]({{ '/doc/Digitalizazioa.html' | relative_url }})
 - 🗄️ [Datu-baseak]({{ '/doc/Datu%20Baseak.html' | relative_url }})
 - ⚙️ [Sistema eragileak]({{ '/doc/Sistema%20Eragileak.html' | relative_url }})
+- 📝 [Markatze Lengoaiak]({{ '/doc/Markatze.html' | relative_url }})
 
 ---
 
