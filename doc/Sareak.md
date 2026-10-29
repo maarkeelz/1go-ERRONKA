@@ -185,7 +185,7 @@ Kablea tester batekin egiaztatu dugu, konexio guztiak ondo zeuden ikusteko. Emai
 
 ![Hembra](../img/sareak/hembra.jpeg)
 
-![Patch panela](..img/sareak/panel.jpeg)
+![Patch-panela](..img/sareak/panel.jpeg)
 
 ## 7. Sare Kableatuaren eta Wi-Fiaren Konfigurazioa
 
