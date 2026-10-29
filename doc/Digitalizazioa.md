@@ -169,6 +169,32 @@ Edge, Fog eta Mist Computing datuak sortzen diren lekutik hurbil prozesatzeko mo
 - **Fog**: hainbat gailuren eta hodeiaren arteko prozesamendu banatua eta koordinazioa antolatzen ditu.
 - **Mist**: prozesamendurik arinena egiten du, sentsoreetan eta mikrokontrolagailuetan bertan.
 
+## Digitalizazioaren arriskuak eta segurtasun-neurriak
+
+Digitalizazioak abantaila asko ekartzen ditu, baina arrisku berriak ere sortzen ditu. Enpresa batek bere datuak, sistemak eta prozesuak digitalki kudeatzen dituenean, horiek babestea ezinbestekoa da.
+
+### Arrisku nagusiak
+
+- **Zibererasoak**: malwarea, phishing-a, ransomware-a edo sistemetara sartzeko saiakerak datuak lapurtu, blokeatu edo aldatu ditzakete.
+- **Datu pertsonalen galera edo filtrazioa**: bezeroen, langileen edo enpresaren informazio sentikorra argitara atera daiteke segurtasun-neurriak ez badira egokiak.
+- **Sistemaren erasoa edo hutsegitea**: zerbitzari batek, sareak edo aplikazio batek funtzionatzeari utziko balio, enpresaren jarduerak gelditu daitezke.
+- **Cloudaren mendekotasuna**: datuak hodeian gordetzeak Interneteko konexioaren eta hornitzailearen mende jartzen du enpresa.
+- **Pribatutasunaren urraketa**: datuak biltzeak eta analizatzeak erabiltzaileen pribatutasuna arriskuan jar dezake, legeak betetzen ez badira.
+- **Brezia digitala**: teknologia berriak erabiltzen ez dakiten langile edo erabiltzaileek zailtasunak izan ditzakete.
+- **Baliabide digitalen gehiegizko erabilera**: datu-zentroek, gailuek eta sareek energia kontsumitzen dute eta hondakin elektronikoak sortzen dituzte.
+
+### Segurtasun-neurriak
+
+- **Babeskopiak egitea**: datu garrantzitsuak aldizka kopiatu eta leku seguruan gorde.
+- **Pasahitz sendoak eta autentifikazio bifaktorekoa (MFA)**: kontuetara sarrera ez baimendua saihesteko.
+- **Suebakiak, antibirusak eta eguneraketak**: sistemak eta sareak mehatxuen aurka babesteko.
+- **Datuak enkriptatzea**: informazioa irakurtezina izatea baimenik gabeko pertsonentzat.
+- **Erabiltzaile-baimenak mugatzea**: pertsona bakoitzak bere lanerako behar duen informazioa bakarrik atzitzeko.
+- **Langileei formakuntza ematea**: phishing-a, pasahitzak eta segurtasun-ohiturak ezagutzeko.
+- **Legeak betetzea**: datu pertsonalak babesteko arauak aplikatu, adibidez RGPD.
+
+Laburbilduz, digitalizazioa segurua izan dadin, enpresak datuak, sareak, sistemak eta erabiltzaileak babestu behar ditu. Segurtasun-neurri egokiak aplikatuz gero, arriskuak murriztu eta digitalizazioaren onurak baliatu daitezke.
+
 # Kasu Praktikoa - Planifikazioa Digitalizatzen
 
 Erronkaren planifikazioa **GitHub Projects** erabiliz digitalizatu dugu, taldearen lana modu antolatuan eta partekatuan kudeatzeko. Egin beharreko jarduerak issues bidez erregistratu ditugu, zeregin bakoitzean egin beharreko lana azalduz eta arduradunak esleituz. Gainera, etiketak erabili ditugu jarduerak arloaren arabera sailkatzeko: sistema eragileak, sareak, datu-baseak eta digitalizazioa.
