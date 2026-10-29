@@ -53,10 +53,10 @@ Webguneko orri guztiak HTML5 estandarrean garatuta daude, etiketa semantikoak er
 ### 3.1. `index.html` (Hasiera)
 * **Helburua:** Proiektuaren aurkezpen orri nagusia da.
 * **Edukiak:**
-  * Erronkaren helburu orokorra eta lortu nahi diren xedeak.
+  * Erronkaren helburu orokorra eta lortu nahi diren ekintzak.
   * Modulu guztietara sartzeko txartel interaktiboak (`.flex-kaxak` bidez antolatuta).
   * Zerbitzariaren fitxa tekniko laburtua (Izena: `WindowsServer6Taldea`, IP: `192.168.70.2`, VirtualBox / IsardVDI parametroak, Windows Server eta IIS 80 ataka).
-  * Nabigazio-menua eta oin-oharra (footer).
+  * Nabigazio-menua eta footer.
 
 ### 3.2. `sareak.html` (Sareak)
 * **Helburua:** Sare fisikoko muntaia eta geruza fisiko/loturako kontzeptuak azaltzea.
@@ -65,9 +65,6 @@ Webguneko orri guztiak HTML5 estandarrean garatuta daude, etiketa semantikoak er
   * `Admin_121` sistemako pasahitzaren ASCII bihurketa (72 bit).
   * CRC-6-GSM errore-kontrolaren kalkulua eta egiaztapena ($G(x) = x^6 + x^5 + x^3 + x^2 + x + 1$).
   * Modulazio digitalak (ASK, FSK, PSK eta Manchester) eta horien irudiak.
-  * Ping bidezko konektibitate probak (kable bidez, Wi-Fi bidez eta gailu mugikorretik sarbidea).
-  * Kablatuaren muntaia
-  * Konektibitate probak
     
 ### 3.3 `datu-baseak.html` (Datu-baseak)
 * **Helburua:** Streaming zerbitzu baten datu-base erlazionalaren diseinu osoa erakustea.
@@ -76,8 +73,7 @@ Webguneko orri guztiak HTML5 estandarrean garatuta daude, etiketa semantikoak er
   * Bi Entitate-Erlazio (E-R) proposamen: baztertutako eredua vs hautatutako eredua (`er-eredua-baztertua.jpg` eta `database.png`).
   * Eredu erlazionala taula formatuan, Lehen Mailako Gakoak (PK) eta Kanpoko Gakoak (FK) etiketatuta.
   * 3. Forma Normalerainoko (3NF) justifikazio teorikoa eta praktikoa.
-  * Datuen erlazio-egitura: `Accounts`, `Profiles`, `Plans`, `Subscriptions`, `Renewals`, `Content`, `Genres`, `Content_Genres`, `Films`, `Series`, `Seasons`, `Episodes`, `Film_Views` eta `Episode_Views`.
-  * Microsoft Access-erako txertatze eta ezabatze hurrenkera egokia (guraso-seme mendekotasunak).
+
 
 ### 3.4. `sistema-eragileak.html` (Sistema Eragileak)
 * **Helburua:** Windows Server zerbitzariaren konfigurazioa, segurtasuna eta hedapena dokumentatzea.
@@ -97,7 +93,7 @@ Webguneko orri guztiak HTML5 estandarrean garatuta daude, etiketa semantikoak er
   * Digitalizazioaren hiru mailak: Digitization (digitalizatzea), Digitalization (prozesuak automatizatzea) eta Digital Transformation (eraldaketa digitala).
   * IT (Informazioaren Teknologiak) vs OT (Teknologia Operatiboak) konparaketa sakona taula bidez.
   * Industria 4.0ko Teknologia Gaitzaile Digitalak (THD): Cloud Computing, IoT, Big Data, Adimen Artifiziala, Zibersegurtasuna eta Green IT.
-  * Proiektuaren planifikazioa eta jarraipena GitHub Projects bidez (Kanban metodologia: To Do, In Progress, In Review, Done).
+  * Proiektuaren planifikazioa eta jarraipena GitHub Projects bidez (Gantt diagrama).
 
 ---
 
