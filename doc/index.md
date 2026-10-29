@@ -4,7 +4,7 @@ title: "Dokumentazioa"
 permalink: /doc/
 ---
 
-# Proiektuaren Deskribapena eta Testuingurua
+# Erronkaren Deskribapena eta Testuingurua
 
 * **Zikloa:** Sareko Informatika Sistemen Administrazioa (SISA 1).
 * **Erronka:** 1. Erronka Integratua — *«Informazioaren digitalizazio webgunea»*.
@@ -14,6 +14,13 @@ permalink: /doc/
 
 ---
 
+# Taldekideen izenak:
+
+- Markel Zatika
+- Jon Mendiguren
+- Ibai Asensio
+
+---
 ## Menua
 
 - 🌐 [Sareak]({{ '/doc/Sareak.html' | relative_url }})
