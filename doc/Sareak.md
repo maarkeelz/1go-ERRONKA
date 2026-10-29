@@ -5,10 +5,6 @@ title: "Sareak"
 
 # Sare Azpiegitura Fisikoa eta Seinaleak
 
-Dokumentazio honetan erronkan ikusitako sarearen osagai fisikoak, datuen kodeketa, erroreen detekzioa eta seinaleen adierazpena landuko ditugu. Horretarako, erronkan eta ikasgaian landutako rack-eko kableatua, OSI ereduaren lehen bi geruzak, ASCII kodeketa, CRC kalkulua eta modulazio desberdinak aztertu ditugu.
-
-Dokumentazioaren azken ataletan kableatuaren muntaia, haririk gabeko konexioa eta konektibitate-probak jasotzen dira.
-
 ## 1. OSI Ereduaren 1. eta 2. Geruzak
 
 ### 1.1. Geruza fisikoa
