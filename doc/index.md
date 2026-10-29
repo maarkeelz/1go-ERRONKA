@@ -4,7 +4,7 @@ title: "Dokumentazioa"
 permalink: /doc/
 ---
 
-# 1. Proiektuaren Deskribapena eta Testuingurua
+# Proiektuaren Deskribapena eta Testuingurua
 
 * **Zikloa:** Sareko Informatika Sistemen Administrazioa (SISA 1).
 * **Erronka:** 1. Erronka Integratua — *«Informazioaren digitalizazio webgunea»*.
