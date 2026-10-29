@@ -183,7 +183,7 @@ Kablea tester batekin egiaztatu dugu, konexio guztiak ondo zeuden ikusteko. Emai
 
 ![Kablea pelatua](../img/sareak/kablea.jpeg)
 
-![Hembra](../img/sareak/hembra.jepg)
+![Hembra](../img/sareak/hembra.jpeg)
 
 ![Patch panela](..img/sareak/patch-panel.jpeg)
 
