@@ -5,7 +5,7 @@ title: "Sareak"
 
 # Sare Azpiegitura Fisikoa eta Seinaleak
 
-Dokumentazio honetan sarearen osagai fisikoak, datuen kodeketa, erroreen detekzioa eta seinaleen adierazpena landu ditugu. Horretarako, erronkan rack-eko kableatua, OSI ereduaren lehen bi geruzak, ASCII kodeketa, CRC kalkulua eta modulazio desberdinak aztertu ditugu.
+Lan honetan sarearen osagai fisikoak, datuen kodeketa, erroreen detekzioa eta seinaleen adierazpena landu ditugu. Horretarako, ikasgelako rack-eko kableatua, OSI ereduaren lehen bi geruzak, ASCII kodeketa, CRC kalkulua eta modulazio desberdinak aztertu ditugu.
 
 Dokumentazioaren azken ataletan kableatuaren muntaia, haririk gabeko konexioa eta konektibitate-probak jasotzen dira.
 
@@ -97,7 +97,7 @@ Lortutako hondarra:
 | Hamaseitarra | 2B |
 | Hamartarra | 43 |
 
-![CRC kalkulua eskuz egina](img/sareak/crc-kalkulua.jpg)
+![CRC kalkulua eskuz egina](../img/sareak/crc-kalkulua.jpg)
 
 ### 3.3. Egiaztapena
 
@@ -117,7 +117,7 @@ Beraz, sortutako sekuentziak CRC egiaztapena gainditzen du.
 
 Hondar nulua lortzeak ez du esan nahi errore posible guztiak baztertu daitezkeenik; CRCak detekta ditzakeen erroreen aurkako egiaztapena da.
 
-![CRC egiaztapena eskuz egina](img/sareak/crc-baieztapena.jpg)
+![CRC egiaztapena eskuz egina](../img/sareak/crc-baieztapena.jpg)
 
 > Ariketa honetan XOR zatiketaren hondar zuzena erabili dugu, azken XOR gehigarririk aplikatu gabe.
 
@@ -153,7 +153,7 @@ BPSK edo PSK bitarrean, bi fase erabiltzen dira, elkarren artean 180 graduko ald
 
 ### 4.4. Egindako irudikapenak
 
-![ASK, FSK eta PSK modulazioen marrazkiak](img/sareak/psk-ask-fsk.jpg)
+![ASK, FSK eta PSK modulazioen marrazkiak](../img/sareak/psk-ask-fsk.jpg)
 
 ## 5. Manchester Kodeketak
 
@@ -180,7 +180,7 @@ Gure marrazkian erabilitako irizpidea:
 
 ### 5.3. Egindako irudikapenak
 
-![Manchester eta Manchester diferentzialaren marrazkiak](img/sareak/manchester-normala-diferentziala.jpg)
+![Manchester eta Manchester diferentzialaren marrazkiak](../img/sareak/manchester-normala-diferentziala.jpg)
 
 ## 6. Kableatuaren Muntaia
 
@@ -258,8 +258,3 @@ Beste gailu batzuk badaude, gehitu horien arteko probak ere.
 ### 8.3. Azken egiaztapena
 
 [OSATU: laburbildu kable bidezko eta Wi-Fi bidezko konexioek funtzionatzen duten, eta zein gailuren arteko ping probak gainditu diren.]
-
-![Irudia: Manchester eta Manchester diferentziala kodifikazioak](img/sareak/manchester-normala-diferentziala.jpg)
-
-
-- **Manchester:** Tentsio-trantsizioa bit bakoitzaren erdian sinkronizaziorako.
