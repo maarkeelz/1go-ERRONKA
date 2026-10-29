@@ -55,8 +55,6 @@ Mezuaren bit-sekuentzia:
 01000001 01100100 01101101 01101001 01101110 01011111 00110001 00110010 00110001
 ```
 
-> Oharra: karaktere-kate hau ikasgelako kodeketa-ariketaren adibidea da. Dokumentazio publikoan ez dira benetako sarbide-pasahitzak argitaratu behar.
-
 ## 3. CRC-6 Kalkulua eta Egiaztapena
 
 CRC erroreak detektatzeko erabiltzen den mekanismoa da. Mezuaren bitetatik hondar bat kalkulatzen da eta mezuari gehitzen zaio.
