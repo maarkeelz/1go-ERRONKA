@@ -19,26 +19,26 @@ Proiektua biltegi bakar batean antolatuta dago, bide erlatiboak erabiliz eramang
 ├── index.html               # Webgunearen hasierako orria (Ataria)
 ├── sareak.html              # Sareen azpiegitura eta seinaleak
 ├── datu-baseak.html         # Streaming datu-basearen diseinua eta 3NF
-├── sistema-eragileak.html   # Windows Server, erabiltzaileak, RAID eta backup
-├── digitalizazioa.html      # IT/OT, THD teknologiak eta GitHub Projects
-├── markatze.html              # Markatze Lengoaiak moduluaren dokumentazio orokorra
+├── sistema-eragileak.html   # Zerbitzariaren konfigurazioa
+├── digitalizazioa.html      # GitHub Projects, IT/OT eta THD teknologiak
+├── markatze.html            # Markatze Lengoaiak moduluaren dokumentazio orokorra
 │
 ├── css/
 │   └── estiloak.css         # Webgune osoko estilo-orri orokorra (CSS3)
 │
 ├── img/                     # Baliabide grafikoak eta ebidentziak
-│   ├── orokorrak/           # Webguneko logo bektoriala (SVG)
+│   ├── orokorrak/           # Webguneko irudi orokorral
 │   ├── sareak/              # Seinaleak, CRC kalkuluak eta eskemen irudiak
 │   ├── datu-baseak/         # E-R diagramak eta Access erlazioak
 │   ├── sistema-eragileak/   # Zerbitzariaren konfigurazioaren kapturak
-│   └── digitalizazioa/      # Kanban, Gantt eta GitHub planifikazioaren irudiak
+│   └── digitalizazioa/      # Gantt eta GitHub planifikazioaren irudiak
 │
-└── doc/                     # GitHub Pages-erako memoria teknikoak (Markdown)
+└── doc/                     # Erronkaren dokumentazioa (Markdown)
     ├── index.md             # Dokumentazioaren aurkibide nagusia
-    ├── Sareak.md            # Sareak moduluaren memoria zehatza
-    ├── Datu Baseak.md       # Datu-baseak moduluaren memoria zehatza
-    ├── Digitalizazioa.md    # Digitalizazioa moduluaren memoria zehatza
-    ├── Sistema Eragileak.md # Sistema eragileak moduluaren memoria
+    ├── Sareak.md            # Sareak moduluaren dokumentazio zehatza
+    ├── Datu Baseak.md       # Datu-baseak moduluaren dokumentazio zehatza
+    ├── Digitalizazioa.md    # Digitalizazioa moduluaren dokumentazio zehatza
+    ├── Sistema Eragileak.md # Sistema eragileak moduluaren dokumentazioa
     ├── Markatze.md          # Markatze Lengoaiak txostena
     └── files/
         └── Streaming.accdb  # Microsoft Access datu-basearen fitxategia
