@@ -119,7 +119,7 @@ Hondar nulua lortzeak ez du esan nahi errore posible guztiak baztertu daitezkeen
 
 > Ariketa honetan XOR zatiketaren hondar zuzena erabili dugu, azken XOR gehigarririk aplikatu gabe.
 
-## 4. ASK, FSK eta PSK Modulazioak
+## 4. PSK(2), ASK(2) eta FSK(2) Modulazioak
 
 Mezuari CRCa gehitu ondoren, 78 biteko sekuentzia lortu dugu. Marrazkiak antolatzeko, sei biteko 13 bloketan banatu dugu.
 
@@ -129,25 +129,13 @@ Banaketa hori irudikapena errazteko erabili dugu; ez du esan nahi bit bakoitzak 
 
 ASK modulazioan, seinale eramailearen anplitudea aldatzen da bitaren arabera.
 
-Gure ariketako irizpidea:
-
-- `1`: anplitude handiagoa.
-- `0`: anplitude txikiagoa.
-
 ### 4.2. FSK
 
 FSK modulazioan, seinale eramailearen maiztasuna aldatzen da bitaren arabera.
 
-Gure ariketako irizpidea:
-
-- `1`: maiztasun handiagoa.
-- `0`: maiztasun txikiagoa.
-
 ### 4.3. PSK
 
 PSK modulazioan, seinale eramailearen fasea aldatzen da.
-
-BPSK edo PSK bitarrean, bi fase erabiltzen dira, elkarren artean 180 graduko aldearekin. Bit bakoitzari fase bat esleitzen zaio; bitaren balioa aldatzean, fasea ere aldatzen da.
 
 ### 4.4. Egindako irudikapenak
 
