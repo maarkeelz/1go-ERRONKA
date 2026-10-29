@@ -182,7 +182,9 @@ Ondoren, barruko zortzi hariak T568B ordenan jarri ditugu: zuria-laranja, laranj
 Kablea tester batekin egiaztatu dugu, konexio guztiak ondo zeuden ikusteko. Emaitzak zuzenak izan dira, eta hari guztiak behar bezala konektatuta zeudela egiaztatu dugu.
 
 ![Kablea pelatua](../img/sareak/kablea.jpeg)
+
 ![Hembra](../img/sareak/hembra.jepg)
+
 ![Patch panela](..img/sareak/patch-panel.jpeg)
 
 ## 7. Sare Kableatuaren eta Wi-Fiaren Konfigurazioa
