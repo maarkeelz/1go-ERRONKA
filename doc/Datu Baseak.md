@@ -153,3 +153,41 @@ Configuring them before entering data helps keep the information consistent from
 ### Tables and Relationships
 
 ![Relationships in Access](../img/datu-baseak/accs-rela.jpg)
+
+## Data Insertion Order
+
+Data must be inserted in an order that respects the foreign keys. First, we insert the main records; after that, we insert the records that depend on them.
+
+1. Insert data into `Accounts`.
+2. Insert data into `Profiles`, using an existing `Account_ID`.
+3. Insert data into `Plans`.
+4. Insert data into `Subscriptions`, using an existing `Account_ID` and `Plan_ID`.
+5. Insert data into `Renewals`, using an existing `Subscription_ID`.
+6. Insert data into `Content`.
+7. Insert data into `Genres`.
+8. Insert data into `Content_Genres`, using existing `Content_ID` and `Genre_ID` values.
+9. Insert data into `Films` or `Series`, using an existing `Content_ID`.
+10. Insert data into `Seasons`, using an existing `Series_ID`.
+11. Insert data into `Episodes`, using an existing `Season_ID`.
+12. Insert data into `Film_Views`, using an existing `Profile_ID` and `Film_ID`.
+13. Insert data into `Episode_Views`, using an existing `Profile_ID` and `Episode_ID`.
+
+For example, before inserting a profile, its account must already exist. Before inserting an episode, its season and series must already exist.
+
+## Deleting Data
+
+When deleting data, we must follow the same order in reverse to avoid breaking referential integrity.
+
+1. Delete viewing records from `Film_Views` and `Episode_Views`.
+2. Delete episodes from `Episodes`.
+3. Delete seasons from `Seasons`.
+4. Delete records from `Films` or `Series`.
+5. Delete records from `Content_Genres`.
+6. Delete genres from `Genres`, only if they are no longer used.
+7. Delete content from `Content`.
+8. Delete renewals from `Renewals`.
+9. Delete subscriptions from `Subscriptions`.
+10. Delete profiles from `Profiles`.
+11. Finally, delete the account from `Accounts`.
+
+Referential integrity prevents deleting an account if it still has profiles, subscriptions, or related records. In Access, this is controlled with foreign keys and referential integrity rules
