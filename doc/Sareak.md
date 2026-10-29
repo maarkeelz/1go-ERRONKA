@@ -1,72 +1,263 @@
+---
+layout: default
+title: "Sareak"
+---
+
 # Sare Azpiegitura Fisikoa eta Seinaleak
 
-Ikasgelako rack-ean kableatu egituratuaren muntaia (T568B), OSI 1-2 geruzen analisia, `Admin_121` pasahitzaren ASCII kodeketa, CRC-6-GSM erroreen kontrola eta konexio probak.
+Lan honetan sarearen osagai fisikoak, datuen kodeketa, erroreen detekzioa eta seinaleen adierazpena landu ditugu. Horretarako, ikasgelako rack-eko kableatua, OSI ereduaren lehen bi geruzak, ASCII kodeketa, CRC kalkulua eta modulazio desberdinak aztertu ditugu.
+
+Dokumentazioaren azken ataletan kableatuaren muntaia, haririk gabeko konexioa eta konektibitate-probak jasotzen dira.
 
 ## 1. OSI Ereduaren 1. eta 2. Geruzak
 
-### 1. Geruza: Fisikoa (Physical Layer)
+### 1.1. Geruza fisikoa
 
-Bit-sekuentziak seinale elektriko moduan garraiatzen ditu kobrean zehar:
+Geruza fisikoak bitak seinale fisikoen bidez transmititzen ditu. Gure kobre-kableatuan, datuak seinale elektrikoen bidez garraiatzen dira.
 
-- **Bitartekoa:** UTP Cat 6 kableatua (4 pare bihurritu).
-- **Konektoreak:** RJ-45 arrak eta patch-paneleko keystone emeak.
+| Osagaia | Gure proiektuan |
+|---|---|
+| Transmisio-bitartekoa | UTP Cat 6 kablea, lau pare bihurriturekin. |
+| Konektoreak | RJ-45 konektore arrak eta patch-paneleko keystone konektore emeak. |
+| Kableatuaren estandarra | T568B. |
 
-![Irudia: UTP Cat 6 kablea eta RJ-45 konektoreak](img/sareak/kableatu-egituratua.jpg)
+### 1.2. Datu-lotura geruza
 
-### 2. Geruza: Datu-Lotura (Data Link Layer)
+Datu-lotura geruzak sare lokaleko tramak eta MAC helbideak erabiltzen ditu.
 
-Sare lokaleko tramen antolaketa eta helbideratze fisikoa kudeatzen ditu:
+Switch-ak tramak helmugako MAC helbidearen arabera birbidaltzen ditu. Gure zerbitzariaren sare-interfazearen MAC helbidea `52:54:00:1e:ab:f1` da.
 
-- **Helbideratzea:** MAC helbideak (zerbitzaria: `52:54:00:1e:ab:f1`).
-- **Gailua:** 2. geruzako switch-a (talka-domeinuak banatzeko).
+| Elementua | Funtzioa |
+|---|---|
+| MAC helbidea | Sare-interfazea identifikatzea datu-lotura geruzan. |
+| 2. geruzako switch-a | Sare lokaleko gailuak konektatzea eta tramak dagokien atakara birbidaltzea. |
+| Patch-panela | Kableatu fisikoa antolatzea; ez ditu tramak prozesatzen. |
 
-![Irudia: Switch-a eta MAC helbideak](img/sareak/switch-mac.jpg)
+## 2. ASCII Kodeketa
 
-## 2. Admin_121 Pasahitzaren ASCII eta CRC-6 Kalkulua
+Ariketarako erabilitako karaktere-katea `Admin_121` izan da. Bederatzi karaktere ditu, eta karaktere bakoitza 8 biteko byte batean adierazi dugu. Guztira, 72 bit dira.
 
-Sistemako probako pasahitza (`Admin_121`) ASCII formatura pasatuta. 9 karaktere, 72 bit:
-
-| Karakterea | Hamartarra | Bitarra (8 bit) | Hex |
+| Karakterea | Hamartarra | Bitarra (8 bit) | Hamaseitarra |
 |---|---|---|---|
-| A / d / m | 65 / 100 / 109 | `01000001 01100100 01101101` | 0x41 / 0x64 / 0x6D |
-| i / n / _ | 105 / 110 / 95 | `01101001 01101110 01011111` | 0x69 / 0x6E / 0x5F |
-| 1 / 2 / 1 | 49 / 50 / 49 | `00110001 00110010 00110001` | 0x31 / 0x32 / 0x31 |
+| A | 65 | 01000001 | 41 |
+| d | 100 | 01100100 | 64 |
+| m | 109 | 01101101 | 6D |
+| i | 105 | 01101001 | 69 |
+| n | 110 | 01101110 | 6E |
+| _ | 95 | 01011111 | 5F |
+| 1 | 49 | 00110001 | 31 |
+| 2 | 50 | 00110010 | 32 |
+| 1 | 49 | 00110001 | 31 |
 
-**CRC-6-GSM Polinomio sortzailea:** `G(x) = x^6 + x^5 + x^3 + x^2 + x + 1` (Bitarrean: `1101111`)
-
-Kalkulua: 72 biteko mezuari 6 zero gehitu eta modulo-2 XOR zatiketa egin da (78 bit guztira).
+Mezuaren bit-sekuentzia:
 
 ```text
-Lortutako CRC-6 hondarra: 101011 (Hamaseitarra: 0x2B | Hamartarra: 43)
+01000001 01100100 01101101 01101001 01101110 01011111 00110001 00110010 00110001
 ```
 
-Egiaztapena: mezuari hondarra (`101011`) gehituta zatiketak `000000` ematen du, beraz marko osoa zuzena da.
+> Oharra: karaktere-kate hau ikasgelako kodeketa-ariketaren adibidea da. Dokumentazio publikoan ez dira benetako sarbide-pasahitzak argitaratu behar.
 
-### CRC kalkulua
+## 3. CRC-6 Kalkulua eta Egiaztapena
 
-![Irudia: CRC-6 kalkulua eskuz egina](img/sareak/crc-kalkulua.jpg)
+CRC erroreak detektatzeko erabiltzen den mekanismoa da. Mezuaren bitetatik hondar bat kalkulatzen da eta mezuari gehitzen zaio.
 
-*Erantzuna 101011*
+### 3.1. Polinomio sortzailea
 
-### CRC baieztapena
+Ariketan erabilitako polinomioa:
 
-![Irudia: CRC-6 baieztapena eskuz egina](img/sareak/crc-baieztapena.jpg)
+```text
+G(x) = x^6 + x^5 + x^3 + x^2 + x + 1
+```
 
-*Hondarra 000000*
+Bitarrean:
 
-## 3. Seinale Modulazioak eta Manchester
+```text
+1101111
+```
 
-Marko osoa (78 bit: 72 bit mezua + 6 bit CRC) 6 biteko 13 bloketan banatuta dago, eta bloke bakoitza seinale bihurtu da:
+Polinomioaren gradua 6 denez, hondarrak 6 bit ditu.
 
-- **ASK (2):** Anplitudearen aldaketa bitaren arabera (`1` altua, `0` baxua).
-- **FSK (2):** Maiztasunaren aldaketa (`1` maiztasun handia, `0` baxua).
-- **PSK (2):** Fasearen aldaketa 180 gradu bit-aldaketetan (zarata aurrean sendoa).
+### 3.2. Kalkuluaren urratsak
 
-![Irudia: PSK, ASK eta FSK modulazioen seinaleak](img/sareak/psk-ask-fsk.jpg)
+1. `Admin_121` karaktere-katea 72 biteko sekuentzia bihurtu dugu.
+2. Mezuaren amaieran sei zero gehitu ditugu.
+3. Lortutako 78 biteko sekuentzia `1101111` polinomioarekin zatitu dugu.
+4. Zatiketa modulo-2 egin dugu, XOR eragiketak erabiliz.
+5. Azken sei bitak CRC hondarra dira.
 
-Manchester kodifikazioa:
+Lortutako hondarra:
 
-- **Manchester:** Tentsio-trantsizioa bit bakoitzaren erdian sinkronizaziorako.
+```text
+101011
+```
+
+| Adierazpena | Balioa |
+|---|---|
+| Bitarra | 101011 |
+| Hamaseitarra | 2B |
+| Hamartarra | 43 |
+
+![CRC kalkulua eskuz egina](img/sareak/crc-kalkulua.jpg)
+
+### 3.3. Egiaztapena
+
+Jatorrizko 72 biteko mezuari kalkulatutako hondarra gehitu diogu:
+
+```text
+Mezua + CRC = 72 bit + 6 bit = 78 bit
+```
+
+Ondoren, sekuentzia osoa polinomio berarekin zatitu dugu. Lortutako hondarra:
+
+```text
+000000
+```
+
+Beraz, sortutako sekuentziak CRC egiaztapena gainditzen du.
+
+Hondar nulua lortzeak ez du esan nahi errore posible guztiak baztertu daitezkeenik; CRCak detekta ditzakeen erroreen aurkako egiaztapena da.
+
+![CRC egiaztapena eskuz egina](img/sareak/crc-baieztapena.jpg)
+
+> Ariketa honetan XOR zatiketaren hondar zuzena erabili dugu, azken XOR gehigarririk aplikatu gabe.
+
+## 4. ASK, FSK eta PSK Modulazioak
+
+Mezuari CRCa gehitu ondoren, 78 biteko sekuentzia lortu dugu. Marrazkiak antolatzeko, sei biteko 13 bloketan banatu dugu.
+
+Banaketa hori irudikapena errazteko erabili dugu; ez du esan nahi bit bakoitzak sei biteko sinbolo baten parte izan behar duenik.
+
+### 4.1. ASK
+
+ASK modulazioan, seinale eramailearen anplitudea aldatzen da bitaren arabera.
+
+Gure ariketako irizpidea:
+
+- `1`: anplitude handiagoa.
+- `0`: anplitude txikiagoa.
+
+### 4.2. FSK
+
+FSK modulazioan, seinale eramailearen maiztasuna aldatzen da bitaren arabera.
+
+Gure ariketako irizpidea:
+
+- `1`: maiztasun handiagoa.
+- `0`: maiztasun txikiagoa.
+
+### 4.3. PSK
+
+PSK modulazioan, seinale eramailearen fasea aldatzen da.
+
+BPSK edo PSK bitarrean, bi fase erabiltzen dira, elkarren artean 180 graduko aldearekin. Bit bakoitzari fase bat esleitzen zaio; bitaren balioa aldatzean, fasea ere aldatzen da.
+
+### 4.4. Egindako irudikapenak
+
+![ASK, FSK eta PSK modulazioen marrazkiak](img/sareak/psk-ask-fsk.jpg)
+
+## 5. Manchester Kodeketak
+
+Manchester eta Manchester diferentziala lerro-kodeketak dira. Bi kasuetan, bitaren erdiko trantsizioak sinkronizazioa mantentzen laguntzen du.
+
+### 5.1. Manchester
+
+Manchester kodeketan, bitaren balioa bitaren erdiko trantsizioaren noranzkoarekin adierazten da.
+
+Erabilitako konbentzioa argi adierazi behar da, bi konbentzio kontrajarri baitaude:
+
+- `0`: [OSATU: baxutik altura edo altutik baxura].
+- `1`: [OSATU: kontrako trantsizioa].
+
+### 5.2. Manchester diferentziala
+
+Manchester diferentzialean, bitaren erdian trantsizio bat dago beti. Bitaren balioa bitaren hasieran trantsizioa egoteak edo ez egoteak adierazten du.
+
+Gure marrazkian erabilitako irizpidea:
+
+- `0`: [OSATU: hasierako trantsizioarekin edo gabe].
+- `1`: [OSATU: kontrako irizpidea].
+- Hasierako seinale-maila: [OSATU].
+
+### 5.3. Egindako irudikapenak
+
+![Manchester eta Manchester diferentzialaren marrazkiak](img/sareak/manchester-normala-diferentziala.jpg)
+
+## 6. Kableatuaren Muntaia
+
+> Atal hau benetan egindako muntaiaren datuekin eta argazkiekin osatu.
+
+### 6.1. Erabilitako materiala
+
+- UTP Cat 6 kablea.
+- RJ-45 konektoreak.
+- Patch-panela eta keystone konektoreak.
+- [OSATU: erabilitako tresnak].
+- [OSATU: egiaztapenerako erabilitako tresna].
+
+### 6.2. Muntaiaren prozedura
+
+[OSATU: azaldu kablea nola prestatu duzuen, T568B ordena nola aplikatu duzuen eta konektoreak nola muntatu dituzuen.]
+
+### 6.3. Kableatuaren egiaztapena
+
+[OSATU: azaldu nola egiaztatu duzuen kablea eta zer emaitza lortu duzuen.]
+
+[GEHITU: kableatuaren, patch-panelaren eta egiaztapenaren argazkiak.]
+
+## 7. Sare Kableatuaren eta Wi-Fiaren Konfigurazioa
+
+### 7.1. Gailuen konfigurazioa
+
+| Gailua | Konexio mota | IP helbidea | Azpisare-maskara | Pasabidea |
+|---|---|---|---|---|
+| WindowsServer6Taldea | [OSATU] | 192.168.70.2 | [OSATU] | [OSATU] |
+| Bezeroaren ordenagailua | [OSATU] | [OSATU] | [OSATU] | [OSATU] |
+| Wi-Fi bidezko gailua | Wi-Fi | [OSATU] | [OSATU] | [OSATU] |
+
+Zerbitzaria VirtualBox ingurunean dago. Makina birtualaren sare-moldagailuaren konfigurazioa:
+
+[OSATU: adierazi erabilitako konexio-modua eta sare-interfazea.]
+
+### 7.2. Konexio fisikoak
+
+[OSATU: azaldu ordenagailuak, switch-ak eta patch-panela nola konektatu dituzuen.]
+
+### 7.3. Haririk gabeko konexioa
+
+[OSATU: azaldu zein gailu konektatu duzuen Wi-Fi bidez eta nola egiaztatu duzuen sare lokaleko gailuetara iristen dela.]
+
+[GEHITU: sare-konfigurazioaren eta konexioen pantaila-argazkiak.]
+
+## 8. Konektibitate-probak
+
+Gailuen arteko konektibitatea egiaztatzeko, ping probak dokumentatuko ditugu.
+
+Zerbitzarira konektibitatea probatzeko komandoa:
+
+```text
+ping 192.168.70.2
+```
+
+### 8.1. Proben emaitzak
+
+| Jatorria | Helmuga | Emaitza | Ebidentzia |
+|---|---|---|---|
+| Kable bidezko bezeroa | Zerbitzaria | [OSATU] | [OSATU] |
+| Zerbitzaria | Kable bidezko bezeroa | [OSATU] | [OSATU] |
+| Wi-Fi bidezko gailua | Zerbitzaria | [OSATU] | [OSATU] |
+| Zerbitzaria | Wi-Fi bidezko gailua | [OSATU] | [OSATU] |
+| Kable bidezko bezeroa | Wi-Fi bidezko gailua | [OSATU] | [OSATU] |
+| Wi-Fi bidezko gailua | Kable bidezko bezeroa | [OSATU] | [OSATU] |
+
+Beste gailu batzuk badaude, gehitu horien arteko probak ere.
+
+### 8.2. Gorabeherak eta konponbideak
+
+[OSATU: probetan aurkitutako arazoak, egindako aldaketak eta ondorengo emaitzak. Arazorik izan ez baduzue, adierazi.]
+
+### 8.3. Azken egiaztapena
+
+[OSATU: laburbildu kable bidezko eta Wi-Fi bidezko konexioek funtzionatzen duten, eta zein gailuren arteko ping probak gainditu diren.]
 
 ![Irudia: Manchester eta Manchester diferentziala kodifikazioak](img/sareak/manchester-normala-diferentziala.jpg)
 
