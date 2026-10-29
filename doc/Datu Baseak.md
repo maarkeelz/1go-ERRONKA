@@ -230,3 +230,9 @@ When deleting data, we must follow the same order in reverse to avoid breaking r
 11. Finally, delete the account from `Accounts`.
 
 Referential integrity prevents deleting an account if it still has profiles, subscriptions, or related records. In Access, this is controlled with foreign keys and referential integrity rules
+
+## Download the Database
+
+You can download our Microsoft Access database using the link below:
+
+[Download the Access database](https://drive.google.com/file/d/1fZtDt5AWXAVG9XCuIC_Ef3AzZj-5blWS/view?usp=sharing)
