@@ -151,8 +151,8 @@ Manchester kodeketan, bitaren balioa bitaren erdiko trantsizioaren noranzkoareki
 
 Erabilitako konbentzioa argi adierazi behar da, bi konbentzio kontrajarri baitaude:
 
-- `0`: [OSATU: baxutik altura edo altutik baxura].
-- `1`: [OSATU: kontrako trantsizioa].
+- `0`: Behera.
+- `1`: Gora.
 
 ### 5.2. Manchester diferentziala
 
@@ -160,9 +160,8 @@ Manchester diferentzialean, bitaren erdian trantsizio bat dago beti. Bitaren bal
 
 Gure marrazkian erabilitako irizpidea:
 
-- `0`: [OSATU: hasierako trantsizioarekin edo gabe].
-- `1`: [OSATU: kontrako irizpidea].
-- Hasierako seinale-maila: [OSATU].
+- `0`: Aurrekoaren berdina.
+- `1`: Aurrekoaren kontrakoa.
 
 ### 5.3. Egindako irudikapenak
 
