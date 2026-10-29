@@ -165,8 +165,6 @@ Gure marrazkian erabilitako irizpidea:
 
 ## 6. Kableatuaren Muntaia
 
-> Atal hau benetan egindako muntaiaren datuekin eta argazkiekin osatu.
-
 ### 6.1. Erabilitako materiala
 
 - UTP Cat 6 kablea.
