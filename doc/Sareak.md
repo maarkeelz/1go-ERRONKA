@@ -222,8 +222,7 @@ ping 192.168.70.2
 
 ### 8.1. Proben emaitzak
 
-
-[PIN](../img/sareak/pin.png)
+![PIN](../img/sareak/pin.png)
 Beste gailu batzuk badaude, gehitu horien arteko probak ere.
 
 ### 8.2. Gorabeherak eta konponbideak
