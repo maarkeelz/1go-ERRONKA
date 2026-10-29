@@ -199,17 +199,16 @@ Kablea tester batekin egiaztatu dugu, konexio guztiak ondo zeuden ikusteko. Emai
 
 Zerbitzaria VirtualBox ingurunean dago. Makina birtualaren sare-moldagailuaren konfigurazioa:
 
-Ordenagailua routera konektatu dugu eta patch panela hembrara konektatu dugu. Azkenik, frogatu eta ondo eginda dagoen frogatu dugu. 
 
 ### 7.2. Konexio fisikoak
 
-[OSATU: azaldu ordenagailuak, switch-ak eta patch-panela nola konektatu dituzuen.]
+Ordenagailua routera konektatu dugu eta patch panela hembrara konektatu dugu. Azkenik, frogatu eta ondo eginda dagoen frogatu dugu. 
 
 ### 7.3. Haririk gabeko konexioa
 
-[OSATU: azaldu zein gailu konektatu duzuen Wi-Fi bidez eta nola egiaztatu duzuen sare lokaleko gailuetara iristen dela.]
+Wi-Fi bidez, mugikor bat konektatu dugu sarera. Ondoren, sare lokaleko gailuetara konexioa egiaztatu dugu, ping komandoa erabiliz. Erantzunak jaso ditugu, eta horrek erakutsi digu gailuen arteko komunikazioa ondo funtzionatzen duela.
 
-[GEHITU: sare-konfigurazioaren eta konexioen pantaila-argazkiak.]
+![Mugikorra](../img/sareak/movil.jpg)
 
 ## 8. Konektibitate-probak
 
