@@ -62,12 +62,13 @@ Webguneko orri guztiak HTML5 estandarrean garatuta daude, etiketa semantikoak er
 * **Helburua:** Sare fisikoko muntaia eta geruza fisiko/loturako kontzeptuak azaltzea.
 * **Edukiak:**
   * OSI ereduaren 1. eta 2. geruzen azalpena rack-eko muntaian (UTP Cat 6, RJ-45, switch-a eta MAC helbidea: `52:54:00:1e:ab:f1`).
-  * T568B kableatuaren pin-out taula eta testerraren bidezko jarraitutasun emaitzak.
   * `Admin_121` sistemako pasahitzaren ASCII bihurketa (72 bit).
   * CRC-6-GSM errore-kontrolaren kalkulua eta egiaztapena ($G(x) = x^6 + x^5 + x^3 + x^2 + x + 1$).
   * Modulazio digitalak (ASK, FSK, PSK eta Manchester) eta horien irudiak.
   * Ping bidezko konektibitate probak (kable bidez, Wi-Fi bidez eta gailu mugikorretik sarbidea).
-
+  * Kablatuaren muntaia
+  * Konektibitate probak
+    
 ### 3.3 `datu-baseak.html` (Datu-baseak)
 * **Helburua:** Streaming zerbitzu baten datu-base erlazionalaren diseinu osoa erakustea.
 * **Edukiak:**
