@@ -1,11 +1,11 @@
 title: "Erronka 1 - 6. Taldea"
-description: Dokumentazioa - Erronka 1
+description: "Dokumentazioa - Erronka 1"
 theme: minima
 
 header_pages:
   - doc/index.md
-  - doc/datu-baseak.md
-  - doc/digitalizazioa.md
-  - doc/markatze.md
-  - doc/sareak.md
-  - doc/sistema-eragileak.md
+  - doc/Sareak.md
+  - doc/Datu Baseak.md
+  - doc/Sistema Eragileak.md
+  - doc/Digitalizazioa.md
+  - doc/Markatze.md
