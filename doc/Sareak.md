@@ -222,21 +222,14 @@ ping 192.168.70.2
 
 ### 8.1. Proben emaitzak
 
-| Jatorria | Helmuga | Emaitza | Ebidentzia |
-|---|---|---|---|
-| Kable bidezko bezeroa | Zerbitzaria | [OSATU] | [OSATU] |
-| Zerbitzaria | Kable bidezko bezeroa | [OSATU] | [OSATU] |
-| Wi-Fi bidezko gailua | Zerbitzaria | [OSATU] | [OSATU] |
-| Zerbitzaria | Wi-Fi bidezko gailua | [OSATU] | [OSATU] |
-| Kable bidezko bezeroa | Wi-Fi bidezko gailua | [OSATU] | [OSATU] |
-| Wi-Fi bidezko gailua | Kable bidezko bezeroa | [OSATU] | [OSATU] |
 
+[PIN](../img/sareak/pin.png)
 Beste gailu batzuk badaude, gehitu horien arteko probak ere.
 
 ### 8.2. Gorabeherak eta konponbideak
 
-[OSATU: probetan aurkitutako arazoak, egindako aldaketak eta ondorengo emaitzak. Arazorik izan ez baduzue, adierazi.]
+Probak egitean, hasieran kableen konexioak eta sareko komunikazioa egiaztatu behar izan ditugu. Kableen konexioak berrikusi eta Wi-Fi bidez konektatutako gailuaren komunikazioa probatu dugu ping komandoarekin. Azkenik, konexioa behar bezala funtzionatzen zuela egiaztatu dugu.
 
 ### 8.3. Azken egiaztapena
 
-[OSATU: laburbildu kable bidezko eta Wi-Fi bidezko konexioek funtzionatzen duten, eta zein gailuren arteko ping probak gainditu diren.]
+Kable bidezko konexioa eta Wi-Fi bidezko konexioa probatu ditugu, eta biek behar bezala funtzionatzen dutela egiaztatu dugu. Sare lokaleko gailuen arteko komunikazioa ping komandoarekin probatu dugu, erantzunak jasoz. Horrela, gailuen arteko konexioa zuzena dela baieztatu dugu.
