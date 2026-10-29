@@ -85,7 +85,7 @@ Webguneko orri guztiak HTML5 estandarrean garatuta daude, etiketa semantikoak er
   * Bi Entitate-Erlazio (E-R) proposamen: baztertutako eredua vs hautatutako eredua (`er-eredua-baztertua.jpg` eta `database.png`).
   * Eredu erlazionala taula formatuan, Lehen Mailako Gakoak (PK) eta Kanpoko Gakoak (FK) etiketatuta.
   * 3. Forma Normalerainoko (3NF) justifikazio teorikoa eta praktikoa.
-  * Datuen erlazio-egitura (`Accounts`, `Profiles`, `Plans`, `Subscriptions`, `Titles`, `Episodes`, `Plan_Titles`, `Genres`, `Title_Genres`, `Watch_History`).
+  * Datuen erlazio-egitura: `Accounts`, `Profiles`, `Plans`, `Subscriptions`, `Renewals`, `Content`, `Genres`, `Content_Genres`, `Films`, `Series`, `Seasons`, `Episodes`, `Film_Views` eta `Episode_Views`.
   * Microsoft Access-erako txertatze eta ezabatze hurrenkera egokia (guraso-seme mendekotasunak).
 
 ### 3.4. `sistema-eragileak.html` (Sistema Eragileak)
