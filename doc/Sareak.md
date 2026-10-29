@@ -35,7 +35,7 @@ Switch-ak tramak helmugako MAC helbidearen arabera birbidaltzen ditu. Gure zerbi
 
 ## 2. ASCII Kodeketa
 
-Ariketarako erabilitako karaktere-katea `Admin_121` izan da. Bederatzi karaktere ditu, eta karaktere bakoitza 8 biteko byte batean adierazi dugu. Guztira, 72 bit dira.
+Erronkan erabilitako pasahitza `Admin_121` izan da. Bederatzi karaktere ditu, eta karaktere bakoitza 8 biteko byte batean adierazi dugu. Guztira, 72 bit dira.
 
 | Karakterea | Hamartarra | Bitarra (8 bit) | Hamaseitarra |
 |---|---|---|---|
