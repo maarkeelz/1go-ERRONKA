@@ -117,7 +117,6 @@ Hondar nulua lortzeak ez du esan nahi errore posible guztiak baztertu daitezkeen
 
 ![CRC egiaztapena eskuz egina](../img/sareak/crc-baieztapena.jpg)
 
-> Ariketa honetan XOR zatiketaren hondar zuzena erabili dugu, azken XOR gehigarririk aplikatu gabe.
 
 ## 4. PSK(2), ASK(2) eta FSK(2) Modulazioak
 
@@ -125,17 +124,18 @@ Mezuari CRCa gehitu ondoren, 78 biteko sekuentzia lortu dugu. Marrazkiak antolat
 
 Banaketa hori irudikapena errazteko erabili dugu; ez du esan nahi bit bakoitzak sei biteko sinbolo baten parte izan behar duenik.
 
-### 4.1. ASK
+### 4.1. PSK
+
+PSK modulazioan, seinale eramailearen fasea aldatzen da.
+
+### 4.2. ASK
 
 ASK modulazioan, seinale eramailearen anplitudea aldatzen da bitaren arabera.
 
-### 4.2. FSK
+### 4.3. FSK
 
 FSK modulazioan, seinale eramailearen maiztasuna aldatzen da bitaren arabera.
 
-### 4.3. PSK
-
-PSK modulazioan, seinale eramailearen fasea aldatzen da.
 
 ### 4.4. Egindako irudikapenak
 
