@@ -245,7 +245,236 @@ Zerbitzu modua hautatu dugu, kopien exekuzioa erabiltzailearen interfazea irekit
 
 Konfigurazio honetan, jatorria eta helmuga makina bereko unitate lokaletan daude.
 
-![Windows Server Backup Egiaztatu](../img/sistema-eragileak/doc%20img/image12.png)
+![Cobian Reflector Instalatzen](../img/sistema-eragileak/doc%20img/image5.png)
 
+### 8.2. Babeskopia-zeregina
+
+`Erronkaren Babeskopia` izeneko zeregina sortu dugu.
+
+Kopia osoa hautatu dugu, jatorrizko karpetetako fitxategi guztiak eta azpikarpetak gordetzeko.
+
+Kopia bereiziak sortzeko aukera aktibatu dugu. Horrela, exekuzio bakoitzak data eta ordua dituen bertsio bat sortzen du.
+
+![Cobian Reflector Zeregina  ](../img/sistema-eragileak/doc%20img/image12.png)
+
+### 8.3. Jatorriak eta helmuga
+
+| Mota | Karpeta |
+|---|---|
+| Lehen jatorria | `M:\Erronka` |
+| Bigarren jatorria | `R:\Webgunea` |
+| Helmuga | `C:\Cobian Reflector KOPIAK` |
+
+Bi jatorriak zeregin berean konfiguratu ditugu.
+
+![Cobian Reflector Jatorriak eta Helmuga  ](../img/sistema-eragileak/doc%20img/image14.png)
+
+### 8.4. Exekuzio automatikoa
+
+Zeregina egunero 08:15ean automatikoki exekutatzeko programatu dugu.
+
+Ordu horretan:
+
+- Zerbitzaria piztuta egon behar da.
+- Taldeak laneko fitxategiak aurrez gordeta utziko ditu.
+- Exekuzioa Windows Server Backup tresnaren ordutegiarekin ez gainjartzeko antolatu dugu.
+
+![Cobian Reflector Automatikoki](../img/sistema-eragileak/doc%20img/image16.png)
+
+### 8.5. Bertsioen kontserbazioa
+
+Azken hiru kopia osoak mantentzea konfiguratu dugu, helmugako espazio erabilgarria kontuan hartuta.
+
+Kopiak konpresiorik gabe gordetzen dira, fitxategiak errazago berrikusi eta berreskuratzeko.
+
+Ispilu modua desgaituta mantendu dugu, jatorrian egindako ezabatzeak helmugara automatikoki ez zabaltzeko.
+
+![Cobian Reflector Dinamiko](../img/sistema-eragileak/doc%20img/image7.png)
+![Cobian Reflector Dinamiko](../img/sistema-eragileak/doc%20img/image31.png)
+
+### 8.6. Lehenengo exekuzioaren egiaztapena
+
+Zeregina eskuz exekutatu dugu hasierako konfigurazioa egiaztatzeko.
+
+Amaitzean:
+
+1. Exekuzioaren erregistroa berrikusi dugu.
+2. Helmugan kopiatutako karpetak egiaztatu ditugu.
+3. Kopiatutako fitxategiak egiaztatu ditugu.
+4. Emaitza pantaila-argazkian jaso dugu.
+
+![Lehenengo exekuzioaren Egiaztapena](../img/sistema-eragileak/doc%20img/image23.png)
+![Lehenengo exekuzioaren Egiaztapena 2](../img/sistema-eragileak/doc%20img/image17.png)
+
+## 9. Fitxategi Bat Berreskuratzea
+
+### 9.1. Fitxategia hautatzea
+
+Cobian Reflector-ek sortutako babeskopia ireki dugu eta webguneko index fitxategia hautatu dugu.
+
+Fitxategia babeskopiaren karpetan dagoela egiaztatu dugu, eta ez jatorrizko lan-karpetan.
+
+![Aukeratutako Fitxategia](../img/sistema-eragileak/doc%20img/image48.png)
+
+### 9.2. Beste kokapen batean berreskuratzea
+
+Hautatutako fitxategia babeskopiatik kopiatu eta ondorengo karpetan gorde dugu:
+
+```text
+M:\Berreskuratzea
+```
+
+Jatorrizko fitxategia eta babeskopian gordetako bertsioa aldatu gabe mantendu ditugu.
+
+Berreskuratzea beste kokapen batean egin dugu, laneko fitxategia ustekabean gainidaztea saihesteko.
+
+![Aukeratutako Fitxategia Berreskuratzen](../img/sistema-eragileak/doc%20img/image1.png)
+
+### 9.3. Berreskuratutako edukia egiaztatzea
+
+Berreskuratutako index fitxategia ireki eta haren edukia berrikusi dugu.
+
+Fitxategia irekitzen dela eta hautatutako babeskopiari dagokion informazioa eskuragarri dagoela egiaztatu dugu.
+
+Proba honetan CSS fitxategiak ez ditugu berreskuratu; horregatik, orria jatorrizko diseinurik gabe ikusten da.
+
+Egiaztapen honek fitxategi horren berreskuratzea frogatzen du. Ez du babeskopiako fitxategi guztien edo sistema osoaren berreskuratzea frogatzen.
+
+![Berreskuratutako Fitxategia Egiaztatzen](../img/sistema-eragileak/doc%20img/image2.png)
+
+## 10. IIS Web-zerbitzaria
+
+### 10.1. Webgunearen fitxategiak kokatzea
+
+Webgunearen HTML fitxategiak, estilo-orriak eta irudiak ondorengo karpetan kokatu ditugu:
+
+```text
+R:\Webgunea
+```
+
+Karpeta RAID bolumenean dago, eta IIS webgunearen erro-direktorio gisa erabiltzen dugu.
+
+![IIS Web Zerbitzaria Fitxategiak Kokatzen](../img/sistema-eragileak/doc%20img/image42.png)
+
+### 10.2. IIS prestatzea
+
+Windows Server-en IIS rola eta administrazio-kontsola prestatu ditugu.
+
+Eduki estatikoa eta dokumentu lehenetsia erabiltzeko konfigurazioa egiaztatu dugu.
+
+![IIS Web Zerbitzaria Prestatzen](../img/sistema-eragileak/doc%20img/image28.png)
+
+### 10.3. Webgunea sortzea
+
+IISen `Erronka` izeneko webgunea sortu dugu.
+
+| Parametroa | Konfigurazioa |
+|---|---|
+| Webgunearen izena | Erronka |
+| Bide fisikoa | `R:\Webgunea` |
+| Protokoloa | HTTP |
+| Ataka | 80 |
+| Ostalari-izena | Hutsik |
+
+Hasierako egiaztapenetarako ostalari-izena hutsik utzi dugu, zerbitzariaren IP helbidearen bidez sartzeko.
+
+![IIS Web Zerbitzaria Sortzen](../img/sistema-eragileak/doc%20img/image45.png)
+
+### 10.4. Hasierako dokumentua
+
+`index.html` dokumentu lehenetsi gisa konfiguratu dugu.
+
+Horrela, webgunearen helbidera sartzean hasierako orria zuzenean erakusten da.
+
+![IIS Web Zerbitzaria Hasierako Dokumentua](../img/sistema-eragileak/doc%20img/image24.png)
+
+### 10.5. Autentifikazioa eta NTFS baimenak
+
+Autentifikazio anonimoa gaituta utzi dugu, webgunea erabiltzaile-izena eta pasahitza eskatu gabe kontsultatzeko.
+
+Sarbide anonimoak aplikazio-taldearen identitatea erabiltzen du.
+
+Ondorengo identitateari irakurtzeko eta exekutatzeko baimenak eman dizkiogu webgunearen karpetan:
+
+```text
+IIS AppPool\Erronka
+```
+
+Ez diogu webguneko fitxategiak aldatzeko baimenik eman.
+
+![IIS Web Zerbitzaria Baimenak](../img/sistema-eragileak/doc%20img/image26.png)
+![IIS Web Zerbitzaria Baimenak](../img/sistema-eragileak/doc%20img/image22.png)
+
+### 10.6. Tokiko egiaztapena
+
+Zerbitzariko arakatzailean ondorengo helbidea ireki dugu:
+
+```text
+http://localhost
+```
+
+Webgunea IIS bidez kargatzen dela egiaztatu dugu. Halaber, estiloak, irudiak eta nabigazio-estekak berrikusi ditugu.
+
+![Tokiko Egiaztapenak](../img/sistema-eragileak/doc%20img/image47.png)
+
+## 11. Suebakiaren Konfigurazioa
+
+Windows Defender suebakian HTTP trafikorako sarrera-araua egiaztatu dugu.
+
+| Parametroa | Konfigurazioa |
+|---|---|
+| Noranzkoa | Sarrerako trafikoa |
+| Protokoloa | TCP |
+| Tokiko ataka | 80 |
+| Ekintza | Konexioa baimentzea |
+
+Araua erabilitako sare-profilean aplikatzen dela egiaztatu dugu.
+
+Suebakia gaituta mantendu dugu; ez dugu babes osoa desgaitu webgunera sartzeko
+
+![World Wide Web](../img/sistema-eragileak/doc%20img/image41.png)
+
+
+## 12. Sareko Sarbidearen Egiaztapena
+
+Beste gailu batetik zerbitzariaren IP helbidera sartu gara, HTTP erabiliz:
+
+```text
+http://192.168.70.2
+```
+
+Ondoren, haririk gabeko konexioa duen gailu batetik ere sarbidea egiaztatu dugu.
+
+Bi probetan ondorengo elementuak berrikusi ditugu:
+
+- Hasierako orria.
+- Nabigazio-menua.
+- Irudiak.
+- Estiloak.
+
+Probaren helbidea eta emaitza pantaila-argazkietan jaso ditugu.
+
+![Sare Bidezko Sarbidea Egiaztatzen](../img/sistema-eragileak/doc%20img/image9.png)
+
+## 13. Haririk Gabeko Konexiorako Routerraren Konfigurazioa
+
+Routerra sarbide-puntu gisa konfiguratu dugu eta ikasgelako sarera konektatu dugu.
+
+Ondoren:
+
+1. Haririk gabeko sareari izena jarri diogu.
+2. Sarbide-pasahitza ezarri dugu.
+3. Mugikorra Wi-Fi sarera konektatu dugu.
+4. Mugikorreko arakatzailean zerbitzariaren IP helbidea sartu dugu.
+5. Webgunerako sarbidea egiaztatu dugu.
+
+Erabilitako helbidea:
+
+```text
+http://192.168.70.2
+```
+
+![Router Konfigurazioa](../img/sistema-eragileak/doc%20img/image46.png)
+![Hari Gabeko Froga](../img/sistema-eragileak/doc%20img/image44.jpg)
 
 
