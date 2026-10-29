@@ -9,7 +9,7 @@ Dokumentu honek SISA 1 zikloko 1. Erronkaren web proiektuaren egitura osoa, karp
 
 ---
 
-## 2. Karpetaren Egitura Orokorra
+## Karpetaren Egitura Orokorra
 
 Proiektua biltegi bakar batean antolatuta dago, bide erlatiboak erabiliz eramangarritasuna (portabilitatea) bermatzeko. Karpeta nagusiak ondorengo zuhaitz-egitura dauka:
 
@@ -46,7 +46,7 @@ Proiektua biltegi bakar batean antolatuta dago, bide erlatiboak erabiliz eramang
 
 ---
 
-## 3. Webguneko Fitxategi Nagusiak (HTML5)
+## Webguneko Fitxategi Nagusiak (HTML5)
 
 Webguneko orri guztiak HTML5 estandarrean garatuta daude, etiketa semantikoak erabiliz (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`).
 
@@ -68,7 +68,7 @@ Webguneko orri guztiak HTML5 estandarrean garatuta daude, etiketa semantikoak er
   * Modulazio digitalak (ASK, FSK, PSK eta Manchester) eta horien irudiak.
   * Ping bidezko konektibitate probak (kable bidez, Wi-Fi bidez eta gailu mugikorretik sarbidea).
 
-### 3.3. `datu-baseak.html` (Datu-baseak)
+### 3.3 `datu-baseak.html` (Datu-baseak)
 * **Helburua:** Streaming zerbitzu baten datu-base erlazionalaren diseinu osoa erakustea.
 * **Edukiak:**
   * Beharren analisia eta DBKG baten abantailak kalkulu-orri lauekin alderatuta.
@@ -100,7 +100,7 @@ Webguneko orri guztiak HTML5 estandarrean garatuta daude, etiketa semantikoak er
 
 ---
 
-## 4. Estiloak eta Diseinua (`css/estiloak.css`)
+## Estiloak eta Diseinua (`css/estiloak.css`)
 
 Webgune osoak estilo-orri bakar eta bateratua erabiltzen du (`css/estiloak.css`), Markatzeko Lengoaiak moduluaren **UD-02** unitateko edukiak zorrotz jarraituz:
 
@@ -117,7 +117,7 @@ Webgune osoak estilo-orri bakar eta bateratua erabiltzen du (`css/estiloak.css`)
 
 ---
 
-## 5. Baliabide Grafikoak (`img/`)
+## Baliabide Grafikoak (`img/`)
 
 Irudi guztiak tematikoki antolatuta daude azpikarpetetan, erraz aurkitzeko:
 
@@ -131,7 +131,7 @@ Irudi guztiak tematikoki antolatuta daude azpikarpetetan, erraz aurkitzeko:
 
 ---
 
-## 6. Dokumentazio Karpetaren Kudeaketa (`doc/`) eta GitHub Pages
+## Dokumentazio Karpetaren Kudeaketa (`doc/`) eta GitHub Pages
 
 Erronkaren beste eskakizun garrantzitsu bat dokumentazioa Markdown lengoaiaz idaztea eta GitHub Pages bidez hedatzea da:
 
