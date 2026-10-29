@@ -9,16 +9,6 @@ Dokumentu honek SISA 1 zikloko 1. Erronkaren web proiektuaren egitura osoa, karp
 
 ---
 
-## 1. Proiektuaren Deskribapena eta Testuingurua
-
-* **Zikloa:** Sareko Informatika Sistemen Administrazioa (SISA 1).
-* **Erronka:** 1. Erronka Integratua — *«Informazioaren digitalizazio webgunea»*.
-* **Taldea:** 6. Taldea.
-* **Ikasturtea:** 2026/2027.
-* **Helburua:** Enpresa simulatu baten azpiegitura informatiko osoa (Sareak, Datu-baseak, Sistema Eragileak eta Digitalizazioa) aurkezten duen webgune estatiko semantikoa eta moldagarria garatzea, eta haren dokumentazio teknikoa GitHub Pages bidez argitaratzea.
-
----
-
 ## 2. Karpetaren Egitura Orokorra
 
 Proiektua biltegi bakar batean antolatuta dago, bide erlatiboak erabiliz eramangarritasuna (portabilitatea) bermatzeko. Karpeta nagusiak ondorengo zuhaitz-egitura dauka:
