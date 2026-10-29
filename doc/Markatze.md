@@ -133,7 +133,7 @@ Irudi guztiak tematikoki antolatuta daude azpikarpetetan, erraz aurkitzeko:
 
 | Karpeta | Deskribapena | Fitxategi aipagarriak |
 |---|---|---|
-| `img/orokorrak/` | Webguneko elementu korporatiboak | `logo.svg` (ikur bektoriala). |
+| `img/orokorrak/` | Webguneko elementu orokorrak | `logo.svg`. |
 | `img/sareak/` | Sareetako kalkulu eta eskema errealak | `crc-kalkulua.jpg`, `crc-baieztapena.jpg`, `psk-ask-fsk.jpg`, `manchester-normala-diferentziala.jpg`. |
 | `img/datu-baseak/` | E-R diagramak eta Access harremanak | `er-eredua-baztertua.jpg`, `database.png`, `accs-rela.jpg`, `datubaseak.png`. |
 | `img/sistema-eragileak/` | Zerbitzariaren ebidentzia errealak | `isardvdi-makina.png`, `ip-konfigurazioa.png`, `windows-update.png`, `pasahitz-politikak.png`, `blokeo-politikak.png`, `tokiko-erabiltzaileak.png`, `tokiko-taldeak.png`, `ntfs-baimenak-proba.png`, `raid-kudeaketa.png`, `backup-instalazioa.png`. |
@@ -145,23 +145,12 @@ Irudi guztiak tematikoki antolatuta daude azpikarpetetan, erraz aurkitzeko:
 
 Erronkaren beste eskakizun garrantzitsu bat dokumentazioa Markdown lengoaiaz idaztea eta GitHub Pages bidez hedatzea da:
 
-* **`_config.yml`:** Jekyll motorra konfiguratzen du (`jekyll-theme-primer` gaiarekin), `.md` fitxategiak web-orri bihur daitezen automatikoki.
+* **`_config.yml`:** Jekyll motorra konfiguratzen du, `.md` fitxategiak web-orri bihur daitezen automatikoki.
 * **`doc/index.md`:** Dokumentazioaren orri nagusia, modulu bakoitzeko txostenetara eramaten duten estekekin.
 * **`doc/Sareak.md`:** Sareetako memoria integrala (Kableatua, OSI, ASCII kodeketa, CRC-6, modulazioak eta ping-ak).
 * **`doc/Digitalizazioa.md`:** Digitalizazioaren txosten teorikoa eta praktikoa (IT vs OT, THD kontzeptuak, Gantt eta GitHub Projects kudeaketa).
 * **`doc/Datu Baseak.md`:** Streaming datu-basearen memoria sakona (E-R erabakiak, Access-eko taulak, datu-motak eta erlazioak).
-* **`doc/Sistema Eragileak.md`:** Zerbitzariaren instalazio eta mantentze gida teknikoa.
+* **`doc/Sistema Eragileak.md`:** Zerbitzariaren instalazio eta mantentze gida.
 * **`doc/files/Streaming.accdb`:** Microsoft Access formatuko fitxategi fisikoa, irakasleek zuzenean deskargatu eta erlazioak egiaztatu ahal izateko.
 
----
 
-## 7. Markatze Lengoaiak Moduluaren Ebaluazio Irizpideak
-
-Proiektu honek Markatzeko Lengoaiak moduluan eskatutako konpetentzia tekniko guztiak betetzen ditu:
-
-1. **HTML5 Dokumentu Egituratua:** Egitura semantikoa zorrotz erabili da, edukia modu logikoan banatuz (`header`, `nav`, `main`, `section`, `footer`).
-2. **Irisgarritasuna eta Irakurgarritasuna:** Irudi guztiek `alt` atributu deskribatzailea daukate, estekek testu esanguratsuak dituzte eta kontraste egokia mantentzen da testu eta hondoen artean.
-3. **Bide Erlatiboak (Portabilitatea):** Esteka eta irudi guztiak bide erlatiboekin lotuta daude (`css/estiloak.css`, `img/...`), webgunea edozein zerbitzaritan (IIS, GitHub Pages, karpeta lokala) errorerik gabe exekuta dadin.
-4. **CSS3 Kanpoko Fitxategian:** Estilo guztiak fitxategi independente batean zentralizatuta daude, HTML fitxategietan inline estiloak ekidinez.
-5. **Diseinu Moldagarria:** Media queries eta Flexbox bidez, edozein pantaila-tamainatara (ordenagailua, tableta edo mugikorra) egokitzen da.
-6. **Lankidetza eta Bertsio-kontrola:** Kodea eta dokumentazioa Git eta GitHub plataforman kudeatu dira.
