@@ -169,6 +169,83 @@ Hau da, karpetari, azpikar petei eta fitxategiei aplikatzen zaizkie.
 ![Baimenak](../img/sistema-eragileak/doc%20img/image38.png)
 ![Baimenak](../img/sistema-eragileak/doc%20img/image43.png)
 
+## 6. Diskoak eta RAID Bolumenak
+
+### 6.1. Disko gehigarriak
+
+VirtualBox-en hiru disko berri gehitu ditugu, bakoitza 20 GB-koa. Windows Server-en GPT partizio-estiloarekin hasieratu ditugu
+
+![Diskoak Gehitu](../img/sistema-eragileak/doc%20img/image20.png)
+
+### 6.2. RAID 1 eta RAID 5
+
+Bi RAID bolumen sortu ditugu:
+
+| RAID mota | Erabilitako diskoak | Disko bakoitzean erabilitako espazioa |
+|---|---|---|
+| RAID 1 — Ispilua | 2 disko | 5 GB |
+| RAID 5 — Paritatea | 3 disko | 10 GB |
+
+Diskoetan esleitu gabeko espazioa utzi dugu, etorkizunean behar izanez gero erabiltzeko.
+
+![Diskoak Gehitu](../img/sistema-eragileak/doc%20img/image10.png)
+
+### 6.3. Proiektuko fitxategien antolaketa
+
+Erronkaren fitxategiak bi RAID bolumenetan antolatu ditugu:
+
+| Bolumena | Karpeta | Edukia |
+|---|---|---|
+| RAID 1 | `M:\Erronka` | Datu-basea, dokumentazioa, planifikazioa eta aurkezpena. |
+| RAID 5 | `R:\Webgunea` | Webgunearen HTML fitxategiak, estilo-orriak eta irudiak. |
+
+IIS webgunearen bide fisikoa `R:\Webgunea` karpetara lotu dugu.
+
+### 6.4. Egiaztapena
+
+Fitxategi errealak ireki eta gorde ditugu, eta webgunea IIS bidez atzitu dugu. Egiaztapen horiek bolumenen erabilera eta webgunearen argitalpena erakusten dituzte.
+
+## 7. Windows Server Backup
+
+### 7.1. Instalazioa
+
+Windows Server Backup instalatu dugu zerbitzarian.
+
+![Windows Server Backup Instalatu](../img/sistema-eragileak/doc%20img/image33.png)
+
+### 7.2. Babeskopiaren konfigurazioa
+
+Windows Server Backup erabiliz, ondorengo karpeten babeskopia konfiguratu dugu:
+
+- `M:\Erronka`: datu-basea, dokumentazioa, planifikazioa eta aurkezpena.
+- `R:\Webgunea`: IISen argitaratutako webgunearen fitxategiak.
+
+Kopiak RAID bolumenetatik bereizitako helmuga batean gordetzen dira.
+
+Eguneroko exekuzioa programatu dugu, makina piztuta eta laneko fitxategiak gordeta egongo diren ordutegi batean.
+
+Access datu-basearen fitxategia babeskopia egin aurretik itxiko da.
+
+![Windows Server Backup Konfiguratu](../img/sistema-eragileak/doc%20img/image30.png)
+![Windows Server Backup Konfiguratu](../img/sistema-eragileak/doc%20img/image39.png)
+
+### 7.3. Egiaztapena
+
+Programatutako exekuzioaren emaitza eta erregistroa berrikusi ditugu.
+
+![Windows Server Backup Egiaztatu](../img/sistema-eragileak/doc%20img/image4.png)
+
+## 8. Cobian Reflector Bidezko Babeskopiak
+
+### 8.1. Instalazioa
+
+Cobian Reflector hirugarrenen babeskopia-tresna gisa instalatu dugu.
+
+Zerbitzu modua hautatu dugu, kopien exekuzioa erabiltzailearen interfazea irekita edukitzearen mende ez egoteko.
+
+Konfigurazio honetan, jatorria eta helmuga makina bereko unitate lokaletan daude.
+
+![Windows Server Backup Egiaztatu](../img/sistema-eragileak/doc%20img/image12.png)
 
 
 
