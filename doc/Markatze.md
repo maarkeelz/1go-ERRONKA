@@ -27,7 +27,7 @@ Proiektua biltegi bakar batean antolatuta dago, bide erlatiboak erabiliz eramang
 │   └── estiloak.css         # Webgune osoko estilo-orri orokorra (CSS3)
 │
 ├── img/                     # Baliabide grafikoak eta ebidentziak
-│   ├── orokorrak/           # Webguneko irudi orokorral
+│   ├── orokorrak/           # Webguneko irudi orokorrak
 │   ├── sareak/              # Seinaleak, CRC kalkuluak eta eskemen irudiak
 │   ├── datu-baseak/         # E-R diagramak eta Access erlazioak
 │   ├── sistema-eragileak/   # Zerbitzariaren konfigurazioaren kapturak
