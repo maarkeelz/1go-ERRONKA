@@ -199,7 +199,7 @@ Kablea tester batekin egiaztatu dugu, konexio guztiak ondo zeuden ikusteko. Emai
 
 Zerbitzaria VirtualBox ingurunean dago. Makina birtualaren sare-moldagailuaren konfigurazioa:
 
-[OSATU: adierazi erabilitako konexio-modua eta sare-interfazea.]
+Ordenagailua routera konektatu dugu eta patch panela hembrara konektatu dugu. Azkenik, frogatu eta ondo eginda dagoen frogatu dugu. 
 
 ### 7.2. Konexio fisikoak
 
