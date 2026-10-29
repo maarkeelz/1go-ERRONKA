@@ -208,7 +208,7 @@ Ordenagailua routera konektatu dugu eta patch panela hembrara konektatu dugu. Az
 
 Wi-Fi bidez, mugikor bat konektatu dugu sarera. Ondoren, sare lokaleko gailuetara konexioa egiaztatu dugu, ping komandoa erabiliz. Erantzunak jaso ditugu, eta horrek erakutsi digu gailuen arteko komunikazioa ondo funtzionatzen duela.
 
-![Mugikorra](../img/sareak/movil.jpg)
+![Mugikorra](../img/sareak/movil.png)
 
 ## 8. Konektibitate-probak
 
