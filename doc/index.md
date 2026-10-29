@@ -4,9 +4,15 @@ title: "Dokumentazioa"
 permalink: /doc/
 ---
 
-# Proiektuaren dokumentazioa
+# 1. Proiektuaren Deskribapena eta Testuingurua
 
-Ongi etorri gure erronkaren dokumentaziora. Aukeratu atal bat:
+* **Zikloa:** Sareko Informatika Sistemen Administrazioa (SISA 1).
+* **Erronka:** 1. Erronka Integratua — *«Informazioaren digitalizazio webgunea»*.
+* **Taldea:** 6. Taldea.
+* **Ikasturtea:** 2026/2027.
+* **Helburua:** Enpresa simulatu baten azpiegitura informatiko osoa (Sareak, Datu-baseak, Sistema Eragileak eta Digitalizazioa) aurkezten duen webgune estatiko semantikoa eta moldagarria garatzea, eta haren dokumentazio teknikoa GitHub Pages bidez argitaratzea.
+
+---
 
 ## Menua
 
