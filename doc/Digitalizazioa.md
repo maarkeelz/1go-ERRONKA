@@ -35,17 +35,38 @@ IT eta OT elkarrekin lan egiten dute: OTk datuak biltzen ditu makinetatik, eta I
 
 ### THD nagusiak
 
-- **IoT (Gauzen Internet)**: gailu fisikoak Internetera konektatzea eta datuak denbora errealean biltzea.
-- **Adimen Artifiziala (AA/IA)**: makinei ikasteko eta erabakiak hartzeko aukera ematen dieten teknikak.
-- **Big Data**: datu-bolumen handiak biltzea, gordetzea eta aztertzea.
-- **Cloud computing**: datuak eta aplikazioak Internet bidez gordetzea eta prozesatzea.
-- **Zibersegurtasuna**: sistemak, sareak eta datuak eraso digitalen aurka babestea.
-- **Errealitate areagotua (AR) eta birtuala (VR)**: esperientzia digital murgiltzaileak sortzea.
-- **Blockchain**: transakzioen erregistro deszentralizatu eta segurua.
-- **5G**: konektibitate azkarragoa eta fidagarriagoa.
-- **Robotika, 3D inprimaketa eta biometria**: automatizazioa, fabrikazio digitala eta identifikazio segurua.
-- **Robotika kolaboratzailea (cobots)**: gizakiekin batera lan egiten duten robotak; errepikakorrak edo arriskutsuak diren atazak automatizatzen dituzte fabriketan, biltegietan eta osasun-zerbitzuetan.
-- **Digital twins (biki digitalak)**: objektu, makina edo prozesu fisiko baten eredu digitala, datuak erabiliz denbora errealean simulatzeko, kontrolatzeko eta hobetzeko.
+- **IoT (Gauzen Internet)**: gailu fisikoak Internetera konektatzea eta datuak denbora errealean biltzea.  
+  **Adibidea:** biltegi batek sentsore adimendunak erabiltzen ditu tenperatura, hezetasuna eta produktuen kokapena kontrolatzeko.
+
+- **Adimen Artifiziala (AA/IA)**: makinei ikasteko eta erabakiak hartzeko aukera ematen dieten teknikak.  
+  **Adibidea:** online denda batek IA erabiltzen du bezero bakoitzari produktu pertsonalizatuak gomendatzeko.
+
+- **Big Data**: datu-bolumen handiak biltzea, gordetzea eta aztertzea.  
+  **Adibidea:** supermerkatu-kate batek salmenta-datuak aztertzen ditu zein produktu gehiago saltzen diren jakiteko eta stocka hobeto kudeatzeko.
+
+- **Cloud computing**: datuak eta aplikazioak Internet bidez gordetzea eta prozesatzea.  
+  **Adibidea:** enpresa txiki batek bere fitxategiak eta webgunea Microsoft Azure edo Google Cloud-en gordetzen ditu.
+
+- **Zibersegurtasuna**: sistemak, sareak eta datuak eraso digitalen aurka babestea.  
+  **Adibidea:** banku batek autentifikazio bifaktorekoa eta enkriptatzea erabiltzen ditu bezeroen kontuak babesteko.
+
+- **Errealitate areagotua (AR) eta birtuala (VR)**: esperientzia digital murgiltzaileak sortzea.  
+  **Adibidea:** altzari-denda batek AR aplikazioa eskaintzen du bezeroei altzariak beren etxean nola ikusiko diren erakusteko.
+
+- **Blockchain**: transakzioen erregistro deszentralizatu eta segurua.  
+  **Adibidea:** janari-enpresa batek blockchain erabiltzen du produktuaren jatorria eta garraio-bidea jarraitzeko.
+
+- **5G**: konektibitate azkarragoa eta fidagarriagoa.  
+  **Adibidea:** fabrika batek 5G erabiltzen du makinek eta robotek datuak denbora errealean bidaltzeko.
+
+- **Robotika, 3D inprimaketa eta biometria**: automatizazioa, fabrikazio digitala eta identifikazio segurua.  
+  **Adibidea:** enpresa batek 3D inprimaketa erabiltzen du piezaak eskatu ahala fabrikatzeko eta biometria erabiltzen du langileak identifikatzeko.
+
+- **Robotika kolaboratzailea (cobots)**: gizakiekin batera lan egiten duten robotak; errepikakorrak edo arriskutsuak diren atazak automatizatzen dituzte fabriketan, biltegietan eta osasun-zerbitzuetan.  
+  **Adibidea:** auto-fabrika bateko cobot batek langileari pieza astunak mugatzen eta muntatzen laguntzen dio.
+
+- **Digital twins (biki digitalak)**: objektu, makina edo prozesu fisiko baten eredu digitala, datuak erabiliz denbora errealean simulatzeko, kontrolatzeko eta hobetzeko.  
+  **Adibidea:** energia-enpresa batek sorgailu eoliko baten biki digitala sortzen du haize-baldintzen arabera errendimendua simulatzeko.
 
 ### THDren ezaugarriak
 
@@ -168,4 +189,40 @@ Edge, Fog eta Mist Computing datuak sortzen diren lekutik hurbil prozesatzeko mo
 - **Edge**: datuak sortzen diren tokian edo oso hurbil prozesatzeari ematen dio garrantzia.
 - **Fog**: hainbat gailuren eta hodeiaren arteko prozesamendu banatua eta koordinazioa antolatzen ditu.
 - **Mist**: prozesamendurik arinena egiten du, sentsoreetan eta mikrokontrolagailuetan bertan.
+
+## Digitalizazioaren arriskuak eta segurtasun-neurriak
+
+Digitalizazioak abantaila asko ekartzen ditu, baina arrisku berriak ere sortzen ditu. Enpresa batek bere datuak, sistemak eta prozesuak digitalki kudeatzen dituenean, horiek babestea ezinbestekoa da.
+
+### Arrisku nagusiak
+
+- **Zibererasoak**: malwarea, phishing-a, ransomware-a edo sistemetara sartzeko saiakerak datuak lapurtu, blokeatu edo aldatu ditzakete.
+- **Datu pertsonalen galera edo filtrazioa**: bezeroen, langileen edo enpresaren informazio sentikorra argitara atera daiteke segurtasun-neurriak ez badira egokiak.
+- **Sistemaren erasoa edo hutsegitea**: zerbitzari batek, sareak edo aplikazio batek funtzionatzeari utziko balio, enpresaren jarduerak gelditu daitezke.
+- **Cloudaren mendekotasuna**: datuak hodeian gordetzeak Interneteko konexioaren eta hornitzailearen mende jartzen du enpresa.
+- **Pribatutasunaren urraketa**: datuak biltzeak eta analizatzeak erabiltzaileen pribatutasuna arriskuan jar dezake, legeak betetzen ez badira.
+- **Brezia digitala**: teknologia berriak erabiltzen ez dakiten langile edo erabiltzaileek zailtasunak izan ditzakete.
+- **Baliabide digitalen gehiegizko erabilera**: datu-zentroek, gailuek eta sareek energia kontsumitzen dute eta hondakin elektronikoak sortzen dituzte.
+
+### Segurtasun-neurriak
+
+- **Babeskopiak egitea**: datu garrantzitsuak aldizka kopiatu eta leku seguruan gorde.
+- **Pasahitz sendoak eta autentifikazio bifaktorekoa (MFA)**: kontuetara sarrera ez baimendua saihesteko.
+- **Suebakiak, antibirusak eta eguneraketak**: sistemak eta sareak mehatxuen aurka babesteko.
+- **Datuak enkriptatzea**: informazioa irakurtezina izatea baimenik gabeko pertsonentzat.
+- **Erabiltzaile-baimenak mugatzea**: pertsona bakoitzak bere lanerako behar duen informazioa bakarrik atzitzeko.
+- **Langileei formakuntza ematea**: phishing-a, pasahitzak eta segurtasun-ohiturak ezagutzeko.
+- **Legeak betetzea**: datu pertsonalak babesteko arauak aplikatu, adibidez RGPD.
+
+Laburbilduz, digitalizazioa segurua izan dadin, enpresak datuak, sareak, sistemak eta erabiltzaileak babestu behar ditu. Segurtasun-neurri egokiak aplikatuz gero, arriskuak murriztu eta digitalizazioaren onurak baliatu daitezke.
+
+# Kasu Praktikoa - Planifikazioa Digitalizatzen
+
+Erronkaren planifikazioa **GitHub Projects** erabiliz digitalizatu dugu, taldearen lana modu antolatuan eta partekatuan kudeatzeko. Egin beharreko jarduerak issues bidez erregistratu ditugu, zeregin bakoitzean egin beharreko lana azalduz eta arduradunak esleituz. Gainera, etiketak erabili ditugu jarduerak arloaren arabera sailkatzeko: sistema eragileak, sareak, datu-baseak eta digitalizazioa.
+
+Entrega-epeak zehazteko, milestones edo mugarriak sortu ditugu, egun bakoitzean amaitu beharreko zereginak multzokatuz. Mugarri bakoitzean entrega-data, amaitutako jarduerak, egiteko daudenak eta aurrerapenaren ehunekoa ikus daitezke. Planifikazioa bi ikuspegitan antolatu dugu: Kanban taulan zereginak egoeraren arabera sailkatu ditugu, eta Gantt diagraman jardueren hasiera- eta amaiera-datak eta denboran duten banaketa adierazi ditugu. Bi ikuspegi horiek proiektuaren egoera ulertzen, aldi berean egiten diren lanak ikusten eta atzeratutako zereginak identifikatzen lagundu digute.
+
+Lanak amaitu ahala, dagozkien issues itxi ditugu, eta mugarrien aurrerapena eguneratu da. Beraz, digitalizazioa ez da izan zereginen zerrenda ordenagailuan idaztea soilik: lana banatzeko, epeak kontrolatzeko eta aurrerapena partekatzeko modua antolatu dugu tresna digital baten bidez. Taldeko kide guztiek planifikazio bera kontsulta dezakete, zer egin den eta zer falta den jakiteko. Horrek koordinazioa eta lanaren jarraipena erraztu ditu, eta erronkaren garapenaren erregistro partekatua izatea ahalbidetu digu.
+
+[Ikusi erronkaren planifikazioa GitHub-en](https://github.com/users/maarkeelz/projects/2/views/1)
 
