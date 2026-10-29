@@ -31,7 +31,7 @@ Proiektua biltegi bakar batean antolatuta dago, bide erlatiboak erabiliz eramang
 ├── datu-baseak.html         # Streaming datu-basearen diseinua eta 3NF
 ├── sistema-eragileak.html   # Windows Server, erabiltzaileak, RAID eta backup
 ├── digitalizazioa.html      # IT/OT, THD teknologiak eta GitHub Projects
-├── Markatze.md              # Markatze Lengoaiak moduluaren dokumentazio orokorra
+├── markatze.html              # Markatze Lengoaiak moduluaren dokumentazio orokorra
 │
 ├── css/
 │   └── estiloak.css         # Webgune osoko estilo-orri orokorra (CSS3)
