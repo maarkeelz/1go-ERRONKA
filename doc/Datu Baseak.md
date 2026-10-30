@@ -36,7 +36,7 @@ This is the proposal we have selected to move forward with. To reach this point,
 
 ## Description
 
-This database models a streaming platform with films and series. It manages accounts, viewer profiles, subscriptions and payments, the content catalog, and the viewing history of each profile. It is designed in Third Normal Form (3NF).
+This database models a streaming platform with films, series and documentals. It manages accounts, viewer profiles, subscriptions and payments, the content catalog, and the viewing history of each profile. It is designed in Third Normal Form (3NF).
 
 This streaming platform offers series and movies with three different types of plans:
 
